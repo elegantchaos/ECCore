@@ -17,7 +17,7 @@
 // Shared Settings
 // --------------------------------------------------------------------------
 
-#import <TargetConditionals.h>
+#import <CoreFoundation/CoreFoundation.h>
 
 #define EC_FOUNDATION 1
 
