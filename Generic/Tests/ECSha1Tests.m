@@ -48,7 +48,7 @@
 
 - (void)testSHA1URL
 {
-	NSString* sha1 = [[[self testBundleURL] URLByAppendingPathComponent:@"Info.plist"] sha1Digest];
+	NSString* sha1 = [[[self exampleBundleURL] URLByAppendingPathComponent:@"Info.plist"] sha1Digest];
 	ECTestAssertStringIsEqual(sha1, @"68ae7e56e867185bf263f1528d708e4592a599a7");
 }
 

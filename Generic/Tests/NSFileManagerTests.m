@@ -27,7 +27,7 @@
 
 - (void)testFileExistsURL
 {
-	NSURL* url = [self testBundleURL];
+	NSURL* url = [self exampleBundleURL];
 	ECTestAssertTrue([self.fm fileExistsAtURL:url]);
 	
 	BOOL isDirectory = NO;

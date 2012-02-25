@@ -18,7 +18,7 @@
 
 - (void)testOpenAtLogin
 {
-	NSURL* url = [self testBundleURL];
+	NSURL* url = [self exampleBundleURL];
 	ECTestAssertFalse([ECLaunchServices willOpenAtLogin:url]);
 
 	[ECLaunchServices setOpenAtLogin:url enabled:YES];

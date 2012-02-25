@@ -18,7 +18,7 @@
 
 - (void)testUniqueFilename
 {
-	NSURL* unique = [[self testBundleURL] getUniqueFileWithName:@"Info" andExtension:@"plist"];
+	NSURL* unique = [[self exampleBundleURL] getUniqueFileWithName:@"Info" andExtension:@"plist"];
 	ECTestAssertStringIsEqual([unique lastPathComponent], @"Info 1.plist");
 }
 
@@ -32,7 +32,7 @@
 - (void)testResolvingLinks
 {
 	// there's a test link inside the test bundle which links to the bunde's Info.plist
-	NSURL* url = [[self testBundleURL] URLByAppendingPathComponent:@"test link"];
+	NSURL* url = [[self exampleBundleURL] URLByAppendingPathComponent:@"test link"];
 	NSURL* resolved = [url URLByResolvingLinksAndAliases];
 	ECTestAssertStringIsEqual([resolved lastPathComponent], @"Info.plist");
 }
