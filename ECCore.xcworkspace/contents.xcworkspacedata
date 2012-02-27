@@ -4,4 +4,10 @@
    <FileRef
       location = "group:ECCore.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../ECLogging/ECLogging.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../ECUnitTests/ECUnitTests.xcodeproj">
+   </FileRef>
 </Workspace>
