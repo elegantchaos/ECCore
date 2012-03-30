@@ -1,0 +1,1654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		22552BB3134B9D8400B8894E /* ECCoreEverything */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 22552BB4134B9D8500B8894E /* Build configuration list for PBXAggregateTarget "ECCoreEverything" */;
+			buildPhases = (
+			);
+			dependencies = (
+				22D55C4C14FB8D2C0052EA01 /* PBXTargetDependency */,
+			);
+			name = ECCoreEverything;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2283A3E914F52EC0009142F7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
+		2283A3F614F52EC0009142F7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3CD14F52E93009142F7 /* SenTestingKit.framework */; };
+		2283A3F714F52EC0009142F7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
+		2283A3FA14F52EC0009142F7 /* libECCoreMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3E814F52EC0009142F7 /* libECCoreMac.a */; };
+		2283A40C14F52F02009142F7 /* CGGeometry+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA555F13DA09FF007E89E2 /* CGGeometry+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A40D14F52F02009142F7 /* CGGeometry+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556013DA09FF007E89E2 /* CGGeometry+ECCore.m */; };
+		2283A40E14F52F02009142F7 /* ECClang.h in Headers */ = {isa = PBXBuildFile; fileRef = 22672DBF132321AA00CD8BC7 /* ECClang.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A40F14F52F02009142F7 /* ECCoercion.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EA2D1E14ED9B500043ABFA /* ECCoercion.h */; };
+		2283A41014F52F02009142F7 /* ECCoercion.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2D1F14ED9B500043ABFA /* ECCoercion.m */; };
+		2283A41114F52F02009142F7 /* ECLazyProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E99E9F148E51800034E167 /* ECLazyProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A41214F52F02009142F7 /* ECLazyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E99EA0148E51800034E167 /* ECLazyProperties.m */; };
+		2283A41314F52F02009142F7 /* ECMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2213C7949E00E13577 /* ECMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A41414F52F02009142F7 /* ECProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2313C7949E00E13577 /* ECProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A41514F52F02009142F7 /* ECRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 228BCFE9144DF3CE00D22ED5 /* ECRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A41614F52F02009142F7 /* ECRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 228BCFEA144DF3CE00D22ED5 /* ECRandom.m */; };
+		2283A41714F52F02009142F7 /* ECRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 228A510614991FB3002907A6 /* ECRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A41814F52F02009142F7 /* ECRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 228A510714991FB3002907A6 /* ECRuntime.m */; };
+		2283A41914F52F02009142F7 /* ECSha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 2206F96C14923FAA00AAC9B0 /* ECSha1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A41A14F52F02009142F7 /* ECSha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F96D14923FAB00AAC9B0 /* ECSha1.m */; };
+		2283A41B14F52F02009142F7 /* ECSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EA2D2414ED9BFD0043ABFA /* ECSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A41C14F52F02009142F7 /* ECSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2D2514ED9BFD0043ABFA /* ECSingleton.m */; };
+		2283A41D14F52F02009142F7 /* NSArray+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2256927D14210BE000C4F852 /* NSArray+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A41E14F52F02009142F7 /* NSArray+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256927E14210BE000C4F852 /* NSArray+ECCore.m */; };
+		2283A41F14F52F02009142F7 /* NSBundle+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556313DA09FF007E89E2 /* NSBundle+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A42014F52F02009142F7 /* NSBundle+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556413DA09FF007E89E2 /* NSBundle+ECCore.m */; };
+		2283A42114F52F02009142F7 /* NSData+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556513DA09FF007E89E2 /* NSData+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A42214F52F02009142F7 /* NSData+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556613DA09FF007E89E2 /* NSData+ECCore.m */; };
+		2283A42314F52F02009142F7 /* NSDate+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556713DA09FF007E89E2 /* NSDate+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A42414F52F02009142F7 /* NSDate+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556813DA09FF007E89E2 /* NSDate+ECCore.m */; };
+		2283A42514F52F02009142F7 /* NSDictionary+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556913DA09FF007E89E2 /* NSDictionary+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A42614F52F02009142F7 /* NSDictionary+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556A13DA09FF007E89E2 /* NSDictionary+ECCore.m */; };
+		2283A42714F52F02009142F7 /* NSException+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E99EA1148E51800034E167 /* NSException+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A42814F52F02009142F7 /* NSException+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E99EA2148E51800034E167 /* NSException+ECCore.m */; };
+		2283A42914F52F02009142F7 /* NSFileManager+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556B13DA09FF007E89E2 /* NSFileManager+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A42A14F52F02009142F7 /* NSFileManager+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556C13DA09FF007E89E2 /* NSFileManager+ECCore.m */; };
+		2283A42B14F52F02009142F7 /* NSIndexSet+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 225260E61455C01100061EDD /* NSIndexSet+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A42C14F52F02009142F7 /* NSIndexSet+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 225260E71455C01100061EDD /* NSIndexSet+ECCore.m */; };
+		2283A42D14F52F02009142F7 /* NSMutableAttributedString+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22198AB314580FA4006BE993 /* NSMutableAttributedString+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A42E14F52F02009142F7 /* NSMutableAttributedString+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22198AB414580FA4006BE993 /* NSMutableAttributedString+ECCore.m */; };
+		2283A42F14F52F02009142F7 /* NSString+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556D13DA09FF007E89E2 /* NSString+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A43014F52F02009142F7 /* NSString+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556E13DA09FF007E89E2 /* NSString+ECCore.m */; };
+		2283A43114F52F02009142F7 /* NSURL+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556F13DA09FF007E89E2 /* NSURL+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2283A43214F52F02009142F7 /* NSURL+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557013DA09FF007E89E2 /* NSURL+ECCore.m */; };
+		22C2DB3714FB9867005D2E89 /* NSURL+ECCoreMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 226021A4141F86F30044644C /* NSURL+ECCoreMac.m */; };
+		22C2DB3914FB9882005D2E89 /* ECKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91EF1492628A008EF8E2 /* ECKeychain.m */; };
+		22C2DB3A14FB9882005D2E89 /* ECLaunchServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 223CB8A81437334D003F6D01 /* ECLaunchServices.m */; };
+		22C2DB3B14FB9882005D2E89 /* ECMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91F11492628A008EF8E2 /* ECMachine.m */; };
+		22C2DB3C14FB9882005D2E89 /* NSAppleEventDescriptor+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2260219A141F86F30044644C /* NSAppleEventDescriptor+ECCore.m */; };
+		22C2DB3D14FB9882005D2E89 /* NSAppleScript+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2260219C141F86F30044644C /* NSAppleScript+ECCore.m */; };
+		22C2DB3E14FB9882005D2E89 /* NSApplication+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2260219E141F86F30044644C /* NSApplication+ECCore.m */; };
+		22C2DB3F14FB9882005D2E89 /* NSButton+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22198ABB14585B48006BE993 /* NSButton+ECCore.m */; };
+		22C2DB4014FB9882005D2E89 /* NSColor+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CEFD581421391600565841 /* NSColor+ECCore.m */; };
+		22C2DB4114FB9882005D2E89 /* NSGeometry+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 226021A0141F86F30044644C /* NSGeometry+ECCore.m */; };
+		22C2DB4214FB9882005D2E89 /* NSMenu+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 226021A2141F86F30044644C /* NSMenu+ECCore.m */; };
+		22C2DB4314FB9882005D2E89 /* NSUserDefaults+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 226021A6141F86F30044644C /* NSUserDefaults+ECCore.m */; };
+		22C2DB4414FB9882005D2E89 /* NSWindow+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 226021A8141F86F30044644C /* NSWindow+ECCore.m */; };
+		22C2DB4514FB9882005D2E89 /* NSWorkspace+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91F31492628A008EF8E2 /* NSWorkspace+ECCore.m */; };
+		22C2DB4614FB988A005D2E89 /* ECLaunchServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91D814925F24008EF8E2 /* ECLaunchServicesTests.m */; };
+		22C2DB4714FB988A005D2E89 /* NSAppleEventDescriptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91D914925F24008EF8E2 /* NSAppleEventDescriptorTests.m */; };
+		22C2DB4814FB988A005D2E89 /* NSAppleScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DA14925F24008EF8E2 /* NSAppleScriptTests.m */; };
+		22C2DB4914FB988A005D2E89 /* NSApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DB14925F24008EF8E2 /* NSApplicationTests.m */; };
+		22C2DB4A14FB988A005D2E89 /* NSButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DC14925F24008EF8E2 /* NSButtonTests.m */; };
+		22C2DB4B14FB988A005D2E89 /* NSColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DD14925F24008EF8E2 /* NSColorTests.m */; };
+		22C2DB4C14FB988A005D2E89 /* NSGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DE14925F24008EF8E2 /* NSGeometryTests.m */; };
+		22C2DB4D14FB988A005D2E89 /* NSMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DF14925F24008EF8E2 /* NSMenuTests.m */; };
+		22C2DB4E14FB988A005D2E89 /* NSUserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91E014925F24008EF8E2 /* NSUserDefaultsTests.m */; };
+		22C2DB4F14FB988A005D2E89 /* NSWindowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91E114925F24008EF8E2 /* NSWindowTests.m */; };
+		22C2DB5014FB988A005D2E89 /* NSWorkspaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91FD14926304008EF8E2 /* NSWorkspaceTests.m */; };
+		22C2DB5614FB98CB005D2E89 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB5514FB98CB005D2E89 /* IOKit.framework */; };
+		22C2DB5714FB98D7005D2E89 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB5114FB98AA005D2E89 /* Security.framework */; };
+		22C2DB5E14FB9ADC005D2E89 /* Test.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22C2DB5D14FB9ADC005D2E89 /* Test.bundle */; };
+		22C2DB6514FB9CC8005D2E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB6414FB9CC8005D2E89 /* Foundation.framework */; };
+		22C2DB7214FB9CC8005D2E89 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3CD14F52E93009142F7 /* SenTestingKit.framework */; };
+		22C2DB7414FB9CC8005D2E89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB7314FB9CC8005D2E89 /* UIKit.framework */; };
+		22C2DB7514FB9CC8005D2E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB6414FB9CC8005D2E89 /* Foundation.framework */; };
+		22C2DB7814FB9CC8005D2E89 /* libECCoreIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB6314FB9CC8005D2E89 /* libECCoreIOS.a */; };
+		22C2DB8A14FB9D0F005D2E89 /* CGGeometry+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA555F13DA09FF007E89E2 /* CGGeometry+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB8B14FB9D0F005D2E89 /* CGGeometry+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556013DA09FF007E89E2 /* CGGeometry+ECCore.m */; };
+		22C2DB8C14FB9D0F005D2E89 /* ECClang.h in Headers */ = {isa = PBXBuildFile; fileRef = 22672DBF132321AA00CD8BC7 /* ECClang.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB8D14FB9D0F005D2E89 /* ECCoercion.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EA2D1E14ED9B500043ABFA /* ECCoercion.h */; };
+		22C2DB8E14FB9D0F005D2E89 /* ECCoercion.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2D1F14ED9B500043ABFA /* ECCoercion.m */; };
+		22C2DB8F14FB9D0F005D2E89 /* ECLazyProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E99E9F148E51800034E167 /* ECLazyProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9014FB9D0F005D2E89 /* ECLazyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E99EA0148E51800034E167 /* ECLazyProperties.m */; };
+		22C2DB9114FB9D0F005D2E89 /* ECMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2213C7949E00E13577 /* ECMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9214FB9D0F005D2E89 /* ECProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2313C7949E00E13577 /* ECProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9314FB9D0F005D2E89 /* ECRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 228BCFE9144DF3CE00D22ED5 /* ECRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9414FB9D0F005D2E89 /* ECRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 228BCFEA144DF3CE00D22ED5 /* ECRandom.m */; };
+		22C2DB9514FB9D0F005D2E89 /* ECRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 228A510614991FB3002907A6 /* ECRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9614FB9D0F005D2E89 /* ECRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 228A510714991FB3002907A6 /* ECRuntime.m */; };
+		22C2DB9714FB9D0F005D2E89 /* ECSha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 2206F96C14923FAA00AAC9B0 /* ECSha1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9814FB9D0F005D2E89 /* ECSha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F96D14923FAB00AAC9B0 /* ECSha1.m */; };
+		22C2DB9914FB9D0F005D2E89 /* ECSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EA2D2414ED9BFD0043ABFA /* ECSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9A14FB9D0F005D2E89 /* ECSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2D2514ED9BFD0043ABFA /* ECSingleton.m */; };
+		22C2DB9B14FB9D0F005D2E89 /* NSArray+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2256927D14210BE000C4F852 /* NSArray+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9C14FB9D0F005D2E89 /* NSArray+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256927E14210BE000C4F852 /* NSArray+ECCore.m */; };
+		22C2DB9D14FB9D0F005D2E89 /* NSBundle+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556313DA09FF007E89E2 /* NSBundle+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DB9E14FB9D0F005D2E89 /* NSBundle+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556413DA09FF007E89E2 /* NSBundle+ECCore.m */; };
+		22C2DB9F14FB9D0F005D2E89 /* NSData+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556513DA09FF007E89E2 /* NSData+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBA014FB9D0F005D2E89 /* NSData+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556613DA09FF007E89E2 /* NSData+ECCore.m */; };
+		22C2DBA114FB9D0F005D2E89 /* NSDate+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556713DA09FF007E89E2 /* NSDate+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBA214FB9D0F005D2E89 /* NSDate+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556813DA09FF007E89E2 /* NSDate+ECCore.m */; };
+		22C2DBA314FB9D0F005D2E89 /* NSDictionary+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556913DA09FF007E89E2 /* NSDictionary+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBA414FB9D0F005D2E89 /* NSDictionary+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556A13DA09FF007E89E2 /* NSDictionary+ECCore.m */; };
+		22C2DBA514FB9D0F005D2E89 /* NSException+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E99EA1148E51800034E167 /* NSException+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBA614FB9D0F005D2E89 /* NSException+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E99EA2148E51800034E167 /* NSException+ECCore.m */; };
+		22C2DBA714FB9D0F005D2E89 /* NSFileManager+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556B13DA09FF007E89E2 /* NSFileManager+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBA814FB9D0F005D2E89 /* NSFileManager+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556C13DA09FF007E89E2 /* NSFileManager+ECCore.m */; };
+		22C2DBA914FB9D0F005D2E89 /* NSIndexSet+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 225260E61455C01100061EDD /* NSIndexSet+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBAA14FB9D0F005D2E89 /* NSIndexSet+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 225260E71455C01100061EDD /* NSIndexSet+ECCore.m */; };
+		22C2DBAB14FB9D0F005D2E89 /* NSMutableAttributedString+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22198AB314580FA4006BE993 /* NSMutableAttributedString+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBAC14FB9D0F005D2E89 /* NSMutableAttributedString+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22198AB414580FA4006BE993 /* NSMutableAttributedString+ECCore.m */; };
+		22C2DBAD14FB9D0F005D2E89 /* NSString+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556D13DA09FF007E89E2 /* NSString+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBAE14FB9D0F005D2E89 /* NSString+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556E13DA09FF007E89E2 /* NSString+ECCore.m */; };
+		22C2DBAF14FB9D0F005D2E89 /* NSURL+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA556F13DA09FF007E89E2 /* NSURL+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBB014FB9D0F005D2E89 /* NSURL+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557013DA09FF007E89E2 /* NSURL+ECCore.m */; };
+		22C2DBB114FB9D1D005D2E89 /* UIFont+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22177AC41495707400C7BDBE /* UIFont+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBB214FB9D1D005D2E89 /* UIFont+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22177AC51495707400C7BDBE /* UIFont+ECCore.m */; };
+		22C2DBB314FB9D1D005D2E89 /* UIViewController+ECUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 22177AC61495707400C7BDBE /* UIViewController+ECUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBB414FB9D1D005D2E89 /* UIViewController+ECUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 22177AC71495707400C7BDBE /* UIViewController+ECUtilities.m */; };
+		22C2DBB514FB9D1D005D2E89 /* UIApplication+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA557913DA09FF007E89E2 /* UIApplication+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBB614FB9D1D005D2E89 /* UIApplication+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557A13DA09FF007E89E2 /* UIApplication+ECCore.m */; };
+		22C2DBB714FB9D1D005D2E89 /* UIColor+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA557B13DA09FF007E89E2 /* UIColor+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBB814FB9D1D005D2E89 /* UIColor+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557C13DA09FF007E89E2 /* UIColor+ECCore.m */; };
+		22C2DBB914FB9D1D005D2E89 /* UIImage+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA557D13DA09FF007E89E2 /* UIImage+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22C2DBBA14FB9D1D005D2E89 /* UIImage+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557E13DA09FF007E89E2 /* UIImage+ECCore.m */; };
+		22C2DBBB14FB9D1D005D2E89 /* NSURL+ECCoreIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F9661492236400AAC9B0 /* NSURL+ECCoreIOS.m */; };
+		22C2DBC214FB9EE1005D2E89 /* libECLoggingIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DBC014FB9EE1005D2E89 /* libECLoggingIOS.a */; };
+		22C2DBC314FB9EE1005D2E89 /* libECUnitTestsIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DBC114FB9EE1005D2E89 /* libECUnitTestsIOS.a */; };
+		22C2DBC414FB9F2F005D2E89 /* CGGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E24014910560004DA13E /* CGGeometryTests.m */; };
+		22C2DBC514FB9F2F005D2E89 /* ECLazyPropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E18F1490BF6D004DA13E /* ECLazyPropertiesTests.m */; };
+		22C2DBC614FB9F2F005D2E89 /* ECRandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E2361490FAE0004DA13E /* ECRandomTests.m */; };
+		22C2DBC714FB9F2F005D2E89 /* ECSha1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F9741492403200AAC9B0 /* ECSha1Tests.m */; };
+		22C2DBC814FB9F2F005D2E89 /* NSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22177DBC14913A6800358975 /* NSArrayTests.m */; };
+		22C2DBC914FB9F2F005D2E89 /* NSBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200188D1491869F002F1D1D /* NSBundleTests.m */; };
+		22C2DBCA14FB9F2F005D2E89 /* NSDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22001888149183C2002F1D1D /* NSDataTests.m */; };
+		22C2DBCB14FB9F2F005D2E89 /* NSDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557313DA09FF007E89E2 /* NSDateTests.m */; };
+		22C2DBCC14FB9F2F005D2E89 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557513DA09FF007E89E2 /* NSDictionaryTests.m */; };
+		22C2DBCD14FB9F2F005D2E89 /* NSExceptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E19D1490CC27004DA13E /* NSExceptionTests.m */; };
+		22C2DBCE14FB9F2F005D2E89 /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F96214921CDC00AAC9B0 /* NSFileManagerTests.m */; };
+		22C2DBCF14FB9F2F005D2E89 /* NSIndexSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F969149235DC00AAC9B0 /* NSIndexSetTests.m */; };
+		22C2DBD014FB9F2F005D2E89 /* NSMutableAttributedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200188214917A9F002F1D1D /* NSMutableAttributedStringTests.m */; };
+		22C2DBD114FB9F2F005D2E89 /* NSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557713DA09FF007E89E2 /* NSStringTests.m */; };
+		22C2DBD214FB9F2F005D2E89 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F977149246CF00AAC9B0 /* NSURLTests.m */; };
+		22C2DBD314FB9F3B005D2E89 /* UIApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F97B14924D6300AAC9B0 /* UIApplicationTests.m */; };
+		22C2DBD414FB9F3B005D2E89 /* UIColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F97C14924D6300AAC9B0 /* UIColorTests.m */; };
+		22C2DBD514FB9F3B005D2E89 /* UIImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F97D14924D6300AAC9B0 /* UIImageTests.m */; };
+		22C2DBD714FB9F7D005D2E89 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DBD614FB9F7D005D2E89 /* QuartzCore.framework */; };
+		22C2DBD914FB9F8A005D2E89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DBD814FB9F8A005D2E89 /* CoreGraphics.framework */; };
+		22C2DBDB14FB9FD8005D2E89 /* Test.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22C2DB5D14FB9ADC005D2E89 /* Test.bundle */; };
+		22D1337214FBA45D00001EC9 /* ECKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AE91EE14926289008EF8E2 /* ECKeychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337314FBA45D00001EC9 /* ECLaunchServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 223CB8A71437334D003F6D01 /* ECLaunchServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337414FBA45D00001EC9 /* ECMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AE91F01492628A008EF8E2 /* ECMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337514FBA45D00001EC9 /* NSAppleEventDescriptor+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22602199141F86F30044644C /* NSAppleEventDescriptor+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337614FBA45D00001EC9 /* NSAppleScript+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2260219B141F86F30044644C /* NSAppleScript+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337714FBA45D00001EC9 /* NSApplication+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2260219D141F86F30044644C /* NSApplication+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337814FBA45D00001EC9 /* NSButton+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22198ABA14585B48006BE993 /* NSButton+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337914FBA45D00001EC9 /* NSColor+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CEFD571421391600565841 /* NSColor+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337A14FBA45D00001EC9 /* NSGeometry+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2260219F141F86F30044644C /* NSGeometry+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337B14FBA45D00001EC9 /* NSMenu+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 226021A1141F86F30044644C /* NSMenu+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337C14FBA45D00001EC9 /* NSURL+ECCoreMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 226021A3141F86F30044644C /* NSURL+ECCoreMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337D14FBA45D00001EC9 /* NSUserDefaults+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 226021A5141F86F30044644C /* NSUserDefaults+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337E14FBA45D00001EC9 /* NSWindow+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 226021A7141F86F30044644C /* NSWindow+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D1337F14FBA45D00001EC9 /* NSWorkspace+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22AE91F21492628A008EF8E2 /* NSWorkspace+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22D55C0F14FB8A230052EA01 /* CGGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E24014910560004DA13E /* CGGeometryTests.m */; };
+		22D55C1014FB8A230052EA01 /* ECLazyPropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E18F1490BF6D004DA13E /* ECLazyPropertiesTests.m */; };
+		22D55C1114FB8A230052EA01 /* ECRandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E2361490FAE0004DA13E /* ECRandomTests.m */; };
+		22D55C1214FB8A230052EA01 /* ECSha1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F9741492403200AAC9B0 /* ECSha1Tests.m */; };
+		22D55C1314FB8A230052EA01 /* NSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22177DBC14913A6800358975 /* NSArrayTests.m */; };
+		22D55C1414FB8A230052EA01 /* NSBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200188D1491869F002F1D1D /* NSBundleTests.m */; };
+		22D55C1514FB8A230052EA01 /* NSDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22001888149183C2002F1D1D /* NSDataTests.m */; };
+		22D55C1614FB8A230052EA01 /* NSDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557313DA09FF007E89E2 /* NSDateTests.m */; };
+		22D55C1714FB8A230052EA01 /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557513DA09FF007E89E2 /* NSDictionaryTests.m */; };
+		22D55C1814FB8A230052EA01 /* NSExceptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E19D1490CC27004DA13E /* NSExceptionTests.m */; };
+		22D55C1914FB8A230052EA01 /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F96214921CDC00AAC9B0 /* NSFileManagerTests.m */; };
+		22D55C1A14FB8A230052EA01 /* NSIndexSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F969149235DC00AAC9B0 /* NSIndexSetTests.m */; };
+		22D55C1B14FB8A230052EA01 /* NSMutableAttributedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200188214917A9F002F1D1D /* NSMutableAttributedStringTests.m */; };
+		22D55C1C14FB8A230052EA01 /* NSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557713DA09FF007E89E2 /* NSStringTests.m */; };
+		22D55C1D14FB8A230052EA01 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F977149246CF00AAC9B0 /* NSURLTests.m */; };
+		22D55C4F14FB8D640052EA01 /* libECLoggingMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D55C4D14FB8D640052EA01 /* libECLoggingMac.a */; };
+		22D55C5014FB8D640052EA01 /* libECUnitTestsMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D55C4E14FB8D640052EA01 /* libECUnitTestsMac.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2283A3F814F52EC0009142F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2283A3E714F52EC0009142F7;
+			remoteInfo = libECCoreMac;
+		};
+		22C2DB7614FB9CC8005D2E89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22C2DB6214FB9CC8005D2E89;
+			remoteInfo = ECCoreIOS;
+		};
+		22D55C4B14FB8D2C0052EA01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2283A3E714F52EC0009142F7;
+			remoteInfo = ECCoreMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		2200188214917A9F002F1D1D /* NSMutableAttributedStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableAttributedStringTests.m; sourceTree = "<group>"; };
+		22001888149183C2002F1D1D /* NSDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataTests.m; sourceTree = "<group>"; };
+		2200188D1491869F002F1D1D /* NSBundleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBundleTests.m; sourceTree = "<group>"; };
+		220375D3141FF4B80040E740 /* ECFoundationIOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ECFoundationIOS.plist; sourceTree = "<group>"; };
+		220375D7141FF4C00040E740 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		220375DA141FF4DD0040E740 /* ECFoundationMac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ECFoundationMac.plist; path = Modules/ECCore/Resources/Mac/ECFoundationMac.plist; sourceTree = SOURCE_ROOT; };
+		220375DB141FF4DD0040E740 /* finder support.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = "finder support.scpt"; path = "Modules/ECCore/Resources/Mac/finder support.scpt"; sourceTree = SOURCE_ROOT; };
+		220375E1141FF4E60040E740 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = Modules/ECCore/Resources/Mac/en.lproj/ECAboutBox.xib; sourceTree = SOURCE_ROOT; };
+		220375E3141FF4E60040E740 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Modules/ECCore/Resources/Mac/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		2206F96214921CDC00AAC9B0 /* NSFileManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFileManagerTests.m; sourceTree = "<group>"; };
+		2206F9661492236400AAC9B0 /* NSURL+ECCoreIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ECCoreIOS.m"; sourceTree = "<group>"; };
+		2206F969149235DC00AAC9B0 /* NSIndexSetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSIndexSetTests.m; sourceTree = "<group>"; };
+		2206F96C14923FAA00AAC9B0 /* ECSha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSha1.h; sourceTree = "<group>"; };
+		2206F96D14923FAB00AAC9B0 /* ECSha1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSha1.m; sourceTree = "<group>"; };
+		2206F9741492403200AAC9B0 /* ECSha1Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSha1Tests.m; sourceTree = "<group>"; };
+		2206F977149246CF00AAC9B0 /* NSURLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLTests.m; sourceTree = "<group>"; };
+		2206F97B14924D6300AAC9B0 /* UIApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationTests.m; sourceTree = "<group>"; };
+		2206F97C14924D6300AAC9B0 /* UIColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorTests.m; sourceTree = "<group>"; };
+		2206F97D14924D6300AAC9B0 /* UIImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTests.m; sourceTree = "<group>"; };
+		221662E914FB9315009B975D /* ECCoreTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ECCoreTests.plist; path = Resources/Tests/ECCoreTests.plist; sourceTree = SOURCE_ROOT; };
+		22177AC41495707400C7BDBE /* UIFont+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ECCore.h"; sourceTree = "<group>"; };
+		22177AC51495707400C7BDBE /* UIFont+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ECCore.m"; sourceTree = "<group>"; };
+		22177AC61495707400C7BDBE /* UIViewController+ECUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECUtilities.h"; sourceTree = "<group>"; };
+		22177AC71495707400C7BDBE /* UIViewController+ECUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECUtilities.m"; sourceTree = "<group>"; };
+		22177DBC14913A6800358975 /* NSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSArrayTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		22198AB314580FA4006BE993 /* NSMutableAttributedString+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+ECCore.h"; sourceTree = "<group>"; };
+		22198AB414580FA4006BE993 /* NSMutableAttributedString+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+ECCore.m"; sourceTree = "<group>"; };
+		22198ABA14585B48006BE993 /* NSButton+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+ECCore.h"; sourceTree = "<group>"; };
+		22198ABB14585B48006BE993 /* NSButton+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+ECCore.m"; sourceTree = "<group>"; };
+		2229674F1354EDC5005F42E7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		223CB8A71437334D003F6D01 /* ECLaunchServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLaunchServices.h; sourceTree = "<group>"; };
+		223CB8A81437334D003F6D01 /* ECLaunchServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLaunchServices.m; sourceTree = "<group>"; };
+		223CBAE61205C6380008A641 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2248BC2213C7949E00E13577 /* ECMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMacros.h; sourceTree = "<group>"; };
+		2248BC2313C7949E00E13577 /* ECProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECProperties.h; sourceTree = "<group>"; };
+		225260E61455C01100061EDD /* NSIndexSet+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+ECCore.h"; sourceTree = "<group>"; };
+		225260E71455C01100061EDD /* NSIndexSet+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+ECCore.m"; sourceTree = "<group>"; };
+		22552BC7134B9E5300B8894E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		22552BC9134B9E5300B8894E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		22552BCB134B9E5300B8894E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		22552BE6134BA0C900B8894E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		22552C12134BA18A00B8894E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		2256927D14210BE000C4F852 /* NSArray+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ECCore.h"; sourceTree = "<group>"; };
+		2256927E14210BE000C4F852 /* NSArray+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ECCore.m"; sourceTree = "<group>"; };
+		22602199141F86F30044644C /* NSAppleEventDescriptor+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAppleEventDescriptor+ECCore.h"; sourceTree = "<group>"; };
+		2260219A141F86F30044644C /* NSAppleEventDescriptor+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAppleEventDescriptor+ECCore.m"; sourceTree = "<group>"; };
+		2260219B141F86F30044644C /* NSAppleScript+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAppleScript+ECCore.h"; sourceTree = "<group>"; };
+		2260219C141F86F30044644C /* NSAppleScript+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAppleScript+ECCore.m"; sourceTree = "<group>"; };
+		2260219D141F86F30044644C /* NSApplication+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+ECCore.h"; sourceTree = "<group>"; };
+		2260219E141F86F30044644C /* NSApplication+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+ECCore.m"; sourceTree = "<group>"; };
+		2260219F141F86F30044644C /* NSGeometry+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSGeometry+ECCore.h"; sourceTree = "<group>"; };
+		226021A0141F86F30044644C /* NSGeometry+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSGeometry+ECCore.m"; sourceTree = "<group>"; };
+		226021A1141F86F30044644C /* NSMenu+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMenu+ECCore.h"; sourceTree = "<group>"; };
+		226021A2141F86F30044644C /* NSMenu+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMenu+ECCore.m"; sourceTree = "<group>"; };
+		226021A3141F86F30044644C /* NSURL+ECCoreMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+ECCoreMac.h"; sourceTree = "<group>"; };
+		226021A4141F86F30044644C /* NSURL+ECCoreMac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ECCoreMac.m"; sourceTree = "<group>"; };
+		226021A5141F86F30044644C /* NSUserDefaults+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+ECCore.h"; sourceTree = "<group>"; };
+		226021A6141F86F30044644C /* NSUserDefaults+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+ECCore.m"; sourceTree = "<group>"; };
+		226021A7141F86F30044644C /* NSWindow+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWindow+ECCore.h"; sourceTree = "<group>"; };
+		226021A8141F86F30044644C /* NSWindow+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWindow+ECCore.m"; sourceTree = "<group>"; };
+		22602234141F8A160044644C /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
+		22602236141F8A230044644C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		22602238141F8A460044644C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		2260223A141F8A4E0044644C /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = SDKs/MacOSX10.7.sdk/usr/lib/libcrypto.dylib; sourceTree = DEVELOPER_DIR; };
+		22672DBF132321AA00CD8BC7 /* ECClang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECClang.h; sourceTree = "<group>"; };
+		226C205C14FBCB8F00D2751B /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Scripts; sourceTree = "<group>"; };
+		22728A65124A240500A9881F /* ECCoreAdHocPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCoreAdHocPrefix.pch; sourceTree = "<group>"; };
+		22728A66124A240500A9881F /* ECCoreDebugPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCoreDebugPrefix.pch; sourceTree = "<group>"; };
+		22728A67124A240500A9881F /* ECCoreReleasePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCoreReleasePrefix.pch; sourceTree = "<group>"; };
+		22728A68124A240500A9881F /* ECCoreSharedPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCoreSharedPrefix.pch; sourceTree = "<group>"; };
+		227333B811EBBA3000695FB4 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = Library/Frameworks/GHUnit.framework; sourceTree = SDKROOT; };
+		2274C97D11FF881E00E5C351 /* ECFoundationAdHocSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECFoundationAdHocSettings.xcconfig; sourceTree = "<group>"; };
+		2274C97E11FF881E00E5C351 /* ECIOSAdHocSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECIOSAdHocSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB3911A6BC66009420F7 /* ECFoundationDebugSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECFoundationDebugSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB3A11A6BC66009420F7 /* ECFoundationReleaseSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECFoundationReleaseSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB3B11A6BC66009420F7 /* ECFoundationSharedSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECFoundationSharedSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB3C11A6BC66009420F7 /* ECMacDebugSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECMacDebugSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB3D11A6BC66009420F7 /* ECMacReleaseSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECMacReleaseSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB3E11A6BC66009420F7 /* ECMacSharedSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECMacSharedSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB3F11A6BC66009420F7 /* ECIOSDebugSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECIOSDebugSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB4011A6BC66009420F7 /* ECIOSReleaseSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECIOSReleaseSettings.xcconfig; sourceTree = "<group>"; };
+		227EEB4111A6BC66009420F7 /* ECIOSSharedSettings.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ECIOSSharedSettings.xcconfig; sourceTree = "<group>"; };
+		2283A3BB14F52E93009142F7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2283A3BE14F52E93009142F7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2283A3BF14F52E93009142F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2283A3C014F52E93009142F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2283A3CD14F52E93009142F7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2283A3E814F52EC0009142F7 /* libECCoreMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libECCoreMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2283A3F514F52EC0009142F7 /* ECCoreMacTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECCoreMacTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		228A510614991FB3002907A6 /* ECRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECRuntime.h; sourceTree = "<group>"; };
+		228A510714991FB3002907A6 /* ECRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECRuntime.m; sourceTree = "<group>"; };
+		228BCFE9144DF3CE00D22ED5 /* ECRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECRandom.h; sourceTree = "<group>"; };
+		228BCFEA144DF3CE00D22ED5 /* ECRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECRandom.m; sourceTree = "<group>"; };
+		22AE91D814925F24008EF8E2 /* ECLaunchServicesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLaunchServicesTests.m; sourceTree = "<group>"; };
+		22AE91D914925F24008EF8E2 /* NSAppleEventDescriptorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAppleEventDescriptorTests.m; sourceTree = "<group>"; };
+		22AE91DA14925F24008EF8E2 /* NSAppleScriptTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAppleScriptTests.m; sourceTree = "<group>"; };
+		22AE91DB14925F24008EF8E2 /* NSApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSApplicationTests.m; sourceTree = "<group>"; };
+		22AE91DC14925F24008EF8E2 /* NSButtonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSButtonTests.m; sourceTree = "<group>"; };
+		22AE91DD14925F24008EF8E2 /* NSColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSColorTests.m; sourceTree = "<group>"; };
+		22AE91DE14925F24008EF8E2 /* NSGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGeometryTests.m; sourceTree = "<group>"; };
+		22AE91DF14925F24008EF8E2 /* NSMenuTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMenuTests.m; sourceTree = "<group>"; };
+		22AE91E014925F24008EF8E2 /* NSUserDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUserDefaultsTests.m; sourceTree = "<group>"; };
+		22AE91E114925F24008EF8E2 /* NSWindowTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWindowTests.m; sourceTree = "<group>"; };
+		22AE91EE14926289008EF8E2 /* ECKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECKeychain.h; sourceTree = "<group>"; };
+		22AE91EF1492628A008EF8E2 /* ECKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECKeychain.m; sourceTree = "<group>"; };
+		22AE91F01492628A008EF8E2 /* ECMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMachine.h; sourceTree = "<group>"; };
+		22AE91F11492628A008EF8E2 /* ECMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMachine.m; sourceTree = "<group>"; };
+		22AE91F21492628A008EF8E2 /* NSWorkspace+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace+ECCore.h"; sourceTree = "<group>"; };
+		22AE91F31492628A008EF8E2 /* NSWorkspace+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace+ECCore.m"; sourceTree = "<group>"; };
+		22AE91FD14926304008EF8E2 /* NSWorkspaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSWorkspaceTests.m; sourceTree = "<group>"; };
+		22BE50B8149662D0007CC214 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		22BE51331496BD00007CC214 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		22BE51351496BD25007CC214 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		22C1E18F1490BF6D004DA13E /* ECLazyPropertiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ECLazyPropertiesTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		22C1E19D1490CC27004DA13E /* NSExceptionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSExceptionTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		22C1E2361490FAE0004DA13E /* ECRandomTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECRandomTests.m; sourceTree = "<group>"; };
+		22C1E24014910560004DA13E /* CGGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CGGeometryTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		22C2DB5114FB98AA005D2E89 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		22C2DB5314FB98B5005D2E89 /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = System/Library/Frameworks/SecurityFoundation.framework; sourceTree = SDKROOT; };
+		22C2DB5514FB98CB005D2E89 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		22C2DB5D14FB9ADC005D2E89 /* Test.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Test.bundle; path = ../ECUnitTests/Resources/Test.bundle; sourceTree = SOURCE_ROOT; };
+		22C2DB6314FB9CC8005D2E89 /* libECCoreIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libECCoreIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C2DB6414FB9CC8005D2E89 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		22C2DB7114FB9CC8005D2E89 /* ECCoreIOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECCoreIOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C2DB7314FB9CC8005D2E89 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		22C2DBC014FB9EE1005D2E89 /* libECLoggingIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libECLoggingIOS.a; path = "../ECLogging/build/Release-iphoneos/libECLoggingIOS.a"; sourceTree = "<group>"; };
+		22C2DBC114FB9EE1005D2E89 /* libECUnitTestsIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libECUnitTestsIOS.a; path = "../ECUnitTests/build/Release-iphoneos/libECUnitTestsIOS.a"; sourceTree = "<group>"; };
+		22C2DBD614FB9F7D005D2E89 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		22C2DBD814FB9F8A005D2E89 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		22CA555F13DA09FF007E89E2 /* CGGeometry+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+ECCore.h"; sourceTree = "<group>"; };
+		22CA556013DA09FF007E89E2 /* CGGeometry+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+ECCore.m"; sourceTree = "<group>"; };
+		22CA556313DA09FF007E89E2 /* NSBundle+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+ECCore.h"; sourceTree = "<group>"; };
+		22CA556413DA09FF007E89E2 /* NSBundle+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+ECCore.m"; sourceTree = "<group>"; };
+		22CA556513DA09FF007E89E2 /* NSData+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ECCore.h"; sourceTree = "<group>"; };
+		22CA556613DA09FF007E89E2 /* NSData+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ECCore.m"; sourceTree = "<group>"; };
+		22CA556713DA09FF007E89E2 /* NSDate+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ECCore.h"; sourceTree = "<group>"; };
+		22CA556813DA09FF007E89E2 /* NSDate+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ECCore.m"; sourceTree = "<group>"; };
+		22CA556913DA09FF007E89E2 /* NSDictionary+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ECCore.h"; sourceTree = "<group>"; };
+		22CA556A13DA09FF007E89E2 /* NSDictionary+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ECCore.m"; sourceTree = "<group>"; };
+		22CA556B13DA09FF007E89E2 /* NSFileManager+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+ECCore.h"; sourceTree = "<group>"; };
+		22CA556C13DA09FF007E89E2 /* NSFileManager+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+ECCore.m"; sourceTree = "<group>"; };
+		22CA556D13DA09FF007E89E2 /* NSString+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ECCore.h"; sourceTree = "<group>"; };
+		22CA556E13DA09FF007E89E2 /* NSString+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECCore.m"; sourceTree = "<group>"; };
+		22CA556F13DA09FF007E89E2 /* NSURL+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+ECCore.h"; sourceTree = "<group>"; };
+		22CA557013DA09FF007E89E2 /* NSURL+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ECCore.m"; sourceTree = "<group>"; };
+		22CA557313DA09FF007E89E2 /* NSDateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateTests.m; sourceTree = "<group>"; };
+		22CA557513DA09FF007E89E2 /* NSDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryTests.m; sourceTree = "<group>"; };
+		22CA557713DA09FF007E89E2 /* NSStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSStringTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		22CA557913DA09FF007E89E2 /* UIApplication+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ECCore.h"; sourceTree = "<group>"; };
+		22CA557A13DA09FF007E89E2 /* UIApplication+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ECCore.m"; sourceTree = "<group>"; };
+		22CA557B13DA09FF007E89E2 /* UIColor+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ECCore.h"; sourceTree = "<group>"; };
+		22CA557C13DA09FF007E89E2 /* UIColor+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ECCore.m"; sourceTree = "<group>"; };
+		22CA557D13DA09FF007E89E2 /* UIImage+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ECCore.h"; sourceTree = "<group>"; };
+		22CA557E13DA09FF007E89E2 /* UIImage+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ECCore.m"; sourceTree = "<group>"; };
+		22CEFD571421391600565841 /* NSColor+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+ECCore.h"; sourceTree = "<group>"; };
+		22CEFD581421391600565841 /* NSColor+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+ECCore.m"; sourceTree = "<group>"; };
+		22D55C4D14FB8D640052EA01 /* libECLoggingMac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libECLoggingMac.a; path = ../ECLogging/build/Release/libECLoggingMac.a; sourceTree = "<group>"; };
+		22D55C4E14FB8D640052EA01 /* libECUnitTestsMac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libECUnitTestsMac.a; path = ../ECUnitTests/build/Release/libECUnitTestsMac.a; sourceTree = "<group>"; };
+		22E99E9F148E51800034E167 /* ECLazyProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLazyProperties.h; sourceTree = "<group>"; };
+		22E99EA0148E51800034E167 /* ECLazyProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLazyProperties.m; sourceTree = "<group>"; };
+		22E99EA1148E51800034E167 /* NSException+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSException+ECCore.h"; sourceTree = "<group>"; };
+		22E99EA2148E51800034E167 /* NSException+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSException+ECCore.m"; sourceTree = "<group>"; };
+		22EA2D1E14ED9B500043ABFA /* ECCoercion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECCoercion.h; sourceTree = "<group>"; };
+		22EA2D1F14ED9B500043ABFA /* ECCoercion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECCoercion.m; sourceTree = "<group>"; };
+		22EA2D2414ED9BFD0043ABFA /* ECSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSingleton.h; sourceTree = "<group>"; };
+		22EA2D2514ED9BFD0043ABFA /* ECSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSingleton.m; sourceTree = "<group>"; };
+		22EC40A61358A0D1005C1F1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		22FAC46C132149E900103630 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2283A3E514F52EC0009142F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2283A3E914F52EC0009142F7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2283A3F114F52EC0009142F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C2DB5714FB98D7005D2E89 /* Security.framework in Frameworks */,
+				22C2DB5614FB98CB005D2E89 /* IOKit.framework in Frameworks */,
+				22D55C4F14FB8D640052EA01 /* libECLoggingMac.a in Frameworks */,
+				22D55C5014FB8D640052EA01 /* libECUnitTestsMac.a in Frameworks */,
+				2283A3FA14F52EC0009142F7 /* libECCoreMac.a in Frameworks */,
+				2283A3F614F52EC0009142F7 /* SenTestingKit.framework in Frameworks */,
+				2283A3F714F52EC0009142F7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C2DB6014FB9CC8005D2E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C2DB6514FB9CC8005D2E89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C2DB6D14FB9CC8005D2E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C2DBD914FB9F8A005D2E89 /* CoreGraphics.framework in Frameworks */,
+				22C2DBD714FB9F7D005D2E89 /* QuartzCore.framework in Frameworks */,
+				22C2DBC214FB9EE1005D2E89 /* libECLoggingIOS.a in Frameworks */,
+				22C2DBC314FB9EE1005D2E89 /* libECUnitTestsIOS.a in Frameworks */,
+				22C2DB7214FB9CC8005D2E89 /* SenTestingKit.framework in Frameworks */,
+				22C2DB7414FB9CC8005D2E89 /* UIKit.framework in Frameworks */,
+				22C2DB7514FB9CC8005D2E89 /* Foundation.framework in Frameworks */,
+				22C2DB7814FB9CC8005D2E89 /* libECCoreIOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2283A3E814F52EC0009142F7 /* libECCoreMac.a */,
+				2283A3F514F52EC0009142F7 /* ECCoreMacTests.octest */,
+				22C2DB6314FB9CC8005D2E89 /* libECCoreIOS.a */,
+				22C2DB7114FB9CC8005D2E89 /* ECCoreIOSTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* ECFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				2210B5D41152E630006C6CCA /* Configuration */,
+				22CA555E13DA09FF007E89E2 /* Generic */,
+				22CA557813DA09FF007E89E2 /* iOS */,
+				22CA557F13DA09FF007E89E2 /* Mac */,
+				22728A64124A240500A9881F /* Prefix */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				226C205C14FBCB8F00D2751B /* Scripts */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = ECFoundation;
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22C2DBD814FB9F8A005D2E89 /* CoreGraphics.framework */,
+				22C2DBD614FB9F7D005D2E89 /* QuartzCore.framework */,
+				22C2DBC014FB9EE1005D2E89 /* libECLoggingIOS.a */,
+				22C2DBC114FB9EE1005D2E89 /* libECUnitTestsIOS.a */,
+				22C2DB5514FB98CB005D2E89 /* IOKit.framework */,
+				22C2DB5314FB98B5005D2E89 /* SecurityFoundation.framework */,
+				22C2DB5114FB98AA005D2E89 /* Security.framework */,
+				22D55C4D14FB8D640052EA01 /* libECLoggingMac.a */,
+				22D55C4E14FB8D640052EA01 /* libECUnitTestsMac.a */,
+				223CBAE11205C5930008A641 /* iOS */,
+				1058C7B0FEA5585E11CA2CBB /* MacOS */,
+				1058C7B2FEA5585E11CA2CBB /* Testing */,
+				2283A3BB14F52E93009142F7 /* Cocoa.framework */,
+				2283A3CD14F52E93009142F7 /* SenTestingKit.framework */,
+				22C2DB6414FB9CC8005D2E89 /* Foundation.framework */,
+				22C2DB7314FB9CC8005D2E89 /* UIKit.framework */,
+				2283A3BD14F52E93009142F7 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				225409811354F25800DC8205 /* ios */,
+				227290AB124A4CC200A9881F /* mac */,
+				223CBAFB1205C7680008A641 /* tests */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				2260223A141F8A4E0044644C /* libcrypto.dylib */,
+				22602238141F8A460044644C /* Security.framework */,
+				22602236141F8A230044644C /* IOKit.framework */,
+				22602234141F8A160044644C /* Carbon.framework */,
+				2229674F1354EDC5005F42E7 /* CoreFoundation.framework */,
+				22EC40A61358A0D1005C1F1A /* SystemConfiguration.framework */,
+				22552C12134BA18A00B8894E /* CoreLocation.framework */,
+				22FAC46C132149E900103630 /* CoreLocation.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = MacOS;
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				227333B811EBBA3000695FB4 /* GHUnit.framework */,
+			);
+			name = Testing;
+			sourceTree = "<group>";
+		};
+		2206F97A14924D6200AAC9B0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2206F97B14924D6300AAC9B0 /* UIApplicationTests.m */,
+				2206F97C14924D6300AAC9B0 /* UIColorTests.m */,
+				2206F97D14924D6300AAC9B0 /* UIImageTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		2210B5D41152E630006C6CCA /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2274C97D11FF881E00E5C351 /* ECFoundationAdHocSettings.xcconfig */,
+				227EEB3911A6BC66009420F7 /* ECFoundationDebugSettings.xcconfig */,
+				227EEB3A11A6BC66009420F7 /* ECFoundationReleaseSettings.xcconfig */,
+				227EEB3B11A6BC66009420F7 /* ECFoundationSharedSettings.xcconfig */,
+				227EEB3C11A6BC66009420F7 /* ECMacDebugSettings.xcconfig */,
+				227EEB3D11A6BC66009420F7 /* ECMacReleaseSettings.xcconfig */,
+				227EEB3E11A6BC66009420F7 /* ECMacSharedSettings.xcconfig */,
+				2274C97E11FF881E00E5C351 /* ECIOSAdHocSettings.xcconfig */,
+				227EEB3F11A6BC66009420F7 /* ECIOSDebugSettings.xcconfig */,
+				227EEB4011A6BC66009420F7 /* ECIOSReleaseSettings.xcconfig */,
+				227EEB4111A6BC66009420F7 /* ECIOSSharedSettings.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		223CBAE11205C5930008A641 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				22BE51351496BD25007CC214 /* QuartzCore.framework */,
+				22BE51331496BD00007CC214 /* CoreData.framework */,
+				22BE50B8149662D0007CC214 /* CoreText.framework */,
+				22552BC7134B9E5300B8894E /* UIKit.framework */,
+				22552BC9134B9E5300B8894E /* Foundation.framework */,
+				22552BCB134B9E5300B8894E /* CoreGraphics.framework */,
+				22552BE6134BA0C900B8894E /* CoreLocation.framework */,
+				223CBAE61205C6380008A641 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		223CBAFB1205C7680008A641 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				221662E914FB9315009B975D /* ECCoreTests.plist */,
+				22C2DB5D14FB9ADC005D2E89 /* Test.bundle */,
+			);
+			name = tests;
+			path = resources/tests;
+			sourceTree = "<group>";
+		};
+		225409811354F25800DC8205 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				220375D6141FF4C00040E740 /* InfoPlist.strings */,
+				220375D3141FF4B80040E740 /* ECFoundationIOS.plist */,
+			);
+			name = ios;
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		22728A64124A240500A9881F /* Prefix */ = {
+			isa = PBXGroup;
+			children = (
+				22728A65124A240500A9881F /* ECCoreAdHocPrefix.pch */,
+				22728A66124A240500A9881F /* ECCoreDebugPrefix.pch */,
+				22728A67124A240500A9881F /* ECCoreReleasePrefix.pch */,
+				22728A68124A240500A9881F /* ECCoreSharedPrefix.pch */,
+			);
+			path = Prefix;
+			sourceTree = "<group>";
+		};
+		227290AB124A4CC200A9881F /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				220375E0141FF4E60040E740 /* ECAboutBox.xib */,
+				220375E2141FF4E60040E740 /* InfoPlist.strings */,
+				220375DA141FF4DD0040E740 /* ECFoundationMac.plist */,
+				220375DB141FF4DD0040E740 /* finder support.scpt */,
+			);
+			name = mac;
+			path = resources/mac;
+			sourceTree = "<group>";
+		};
+		2283A3BD14F52E93009142F7 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2283A3BE14F52E93009142F7 /* AppKit.framework */,
+				2283A3BF14F52E93009142F7 /* CoreData.framework */,
+				2283A3C014F52E93009142F7 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		22AE91D714925F24008EF8E2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				22AE91D814925F24008EF8E2 /* ECLaunchServicesTests.m */,
+				22AE91D914925F24008EF8E2 /* NSAppleEventDescriptorTests.m */,
+				22AE91DA14925F24008EF8E2 /* NSAppleScriptTests.m */,
+				22AE91DB14925F24008EF8E2 /* NSApplicationTests.m */,
+				22AE91DC14925F24008EF8E2 /* NSButtonTests.m */,
+				22AE91DD14925F24008EF8E2 /* NSColorTests.m */,
+				22AE91DE14925F24008EF8E2 /* NSGeometryTests.m */,
+				22AE91DF14925F24008EF8E2 /* NSMenuTests.m */,
+				22AE91E014925F24008EF8E2 /* NSUserDefaultsTests.m */,
+				22AE91E114925F24008EF8E2 /* NSWindowTests.m */,
+				22AE91FD14926304008EF8E2 /* NSWorkspaceTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		22CA555E13DA09FF007E89E2 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				22CA555F13DA09FF007E89E2 /* CGGeometry+ECCore.h */,
+				22CA556013DA09FF007E89E2 /* CGGeometry+ECCore.m */,
+				22672DBF132321AA00CD8BC7 /* ECClang.h */,
+				22EA2D1E14ED9B500043ABFA /* ECCoercion.h */,
+				22EA2D1F14ED9B500043ABFA /* ECCoercion.m */,
+				22E99E9F148E51800034E167 /* ECLazyProperties.h */,
+				22E99EA0148E51800034E167 /* ECLazyProperties.m */,
+				2248BC2213C7949E00E13577 /* ECMacros.h */,
+				2248BC2313C7949E00E13577 /* ECProperties.h */,
+				228BCFE9144DF3CE00D22ED5 /* ECRandom.h */,
+				228BCFEA144DF3CE00D22ED5 /* ECRandom.m */,
+				228A510614991FB3002907A6 /* ECRuntime.h */,
+				228A510714991FB3002907A6 /* ECRuntime.m */,
+				2206F96C14923FAA00AAC9B0 /* ECSha1.h */,
+				2206F96D14923FAB00AAC9B0 /* ECSha1.m */,
+				22EA2D2414ED9BFD0043ABFA /* ECSingleton.h */,
+				22EA2D2514ED9BFD0043ABFA /* ECSingleton.m */,
+				2256927D14210BE000C4F852 /* NSArray+ECCore.h */,
+				2256927E14210BE000C4F852 /* NSArray+ECCore.m */,
+				22CA556313DA09FF007E89E2 /* NSBundle+ECCore.h */,
+				22CA556413DA09FF007E89E2 /* NSBundle+ECCore.m */,
+				22CA556513DA09FF007E89E2 /* NSData+ECCore.h */,
+				22CA556613DA09FF007E89E2 /* NSData+ECCore.m */,
+				22CA556713DA09FF007E89E2 /* NSDate+ECCore.h */,
+				22CA556813DA09FF007E89E2 /* NSDate+ECCore.m */,
+				22CA556913DA09FF007E89E2 /* NSDictionary+ECCore.h */,
+				22CA556A13DA09FF007E89E2 /* NSDictionary+ECCore.m */,
+				22E99EA1148E51800034E167 /* NSException+ECCore.h */,
+				22E99EA2148E51800034E167 /* NSException+ECCore.m */,
+				22CA556B13DA09FF007E89E2 /* NSFileManager+ECCore.h */,
+				22CA556C13DA09FF007E89E2 /* NSFileManager+ECCore.m */,
+				225260E61455C01100061EDD /* NSIndexSet+ECCore.h */,
+				225260E71455C01100061EDD /* NSIndexSet+ECCore.m */,
+				22198AB314580FA4006BE993 /* NSMutableAttributedString+ECCore.h */,
+				22198AB414580FA4006BE993 /* NSMutableAttributedString+ECCore.m */,
+				22CA556D13DA09FF007E89E2 /* NSString+ECCore.h */,
+				22CA556E13DA09FF007E89E2 /* NSString+ECCore.m */,
+				22CA556F13DA09FF007E89E2 /* NSURL+ECCore.h */,
+				22CA557013DA09FF007E89E2 /* NSURL+ECCore.m */,
+				22CA557113DA09FF007E89E2 /* Tests */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		22CA557113DA09FF007E89E2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				22C1E24014910560004DA13E /* CGGeometryTests.m */,
+				22C1E18F1490BF6D004DA13E /* ECLazyPropertiesTests.m */,
+				22C1E2361490FAE0004DA13E /* ECRandomTests.m */,
+				2206F9741492403200AAC9B0 /* ECSha1Tests.m */,
+				22177DBC14913A6800358975 /* NSArrayTests.m */,
+				2200188D1491869F002F1D1D /* NSBundleTests.m */,
+				22001888149183C2002F1D1D /* NSDataTests.m */,
+				22CA557313DA09FF007E89E2 /* NSDateTests.m */,
+				22CA557513DA09FF007E89E2 /* NSDictionaryTests.m */,
+				22C1E19D1490CC27004DA13E /* NSExceptionTests.m */,
+				2206F96214921CDC00AAC9B0 /* NSFileManagerTests.m */,
+				2206F969149235DC00AAC9B0 /* NSIndexSetTests.m */,
+				2200188214917A9F002F1D1D /* NSMutableAttributedStringTests.m */,
+				22CA557713DA09FF007E89E2 /* NSStringTests.m */,
+				2206F977149246CF00AAC9B0 /* NSURLTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		22CA557813DA09FF007E89E2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				22177AC41495707400C7BDBE /* UIFont+ECCore.h */,
+				22177AC51495707400C7BDBE /* UIFont+ECCore.m */,
+				22177AC61495707400C7BDBE /* UIViewController+ECUtilities.h */,
+				22177AC71495707400C7BDBE /* UIViewController+ECUtilities.m */,
+				22CA557913DA09FF007E89E2 /* UIApplication+ECCore.h */,
+				22CA557A13DA09FF007E89E2 /* UIApplication+ECCore.m */,
+				22CA557B13DA09FF007E89E2 /* UIColor+ECCore.h */,
+				22CA557C13DA09FF007E89E2 /* UIColor+ECCore.m */,
+				22CA557D13DA09FF007E89E2 /* UIImage+ECCore.h */,
+				22CA557E13DA09FF007E89E2 /* UIImage+ECCore.m */,
+				2206F9661492236400AAC9B0 /* NSURL+ECCoreIOS.m */,
+				2206F97A14924D6200AAC9B0 /* Tests */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		22CA557F13DA09FF007E89E2 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				22AE91EE14926289008EF8E2 /* ECKeychain.h */,
+				22AE91EF1492628A008EF8E2 /* ECKeychain.m */,
+				223CB8A71437334D003F6D01 /* ECLaunchServices.h */,
+				223CB8A81437334D003F6D01 /* ECLaunchServices.m */,
+				22AE91F01492628A008EF8E2 /* ECMachine.h */,
+				22AE91F11492628A008EF8E2 /* ECMachine.m */,
+				22602199141F86F30044644C /* NSAppleEventDescriptor+ECCore.h */,
+				2260219A141F86F30044644C /* NSAppleEventDescriptor+ECCore.m */,
+				2260219B141F86F30044644C /* NSAppleScript+ECCore.h */,
+				2260219C141F86F30044644C /* NSAppleScript+ECCore.m */,
+				2260219D141F86F30044644C /* NSApplication+ECCore.h */,
+				2260219E141F86F30044644C /* NSApplication+ECCore.m */,
+				22198ABA14585B48006BE993 /* NSButton+ECCore.h */,
+				22198ABB14585B48006BE993 /* NSButton+ECCore.m */,
+				22CEFD571421391600565841 /* NSColor+ECCore.h */,
+				22CEFD581421391600565841 /* NSColor+ECCore.m */,
+				2260219F141F86F30044644C /* NSGeometry+ECCore.h */,
+				226021A0141F86F30044644C /* NSGeometry+ECCore.m */,
+				226021A1141F86F30044644C /* NSMenu+ECCore.h */,
+				226021A2141F86F30044644C /* NSMenu+ECCore.m */,
+				226021A3141F86F30044644C /* NSURL+ECCoreMac.h */,
+				226021A4141F86F30044644C /* NSURL+ECCoreMac.m */,
+				226021A5141F86F30044644C /* NSUserDefaults+ECCore.h */,
+				226021A6141F86F30044644C /* NSUserDefaults+ECCore.m */,
+				226021A7141F86F30044644C /* NSWindow+ECCore.h */,
+				226021A8141F86F30044644C /* NSWindow+ECCore.m */,
+				22AE91F21492628A008EF8E2 /* NSWorkspace+ECCore.h */,
+				22AE91F31492628A008EF8E2 /* NSWorkspace+ECCore.m */,
+				22AE91D714925F24008EF8E2 /* Tests */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2283A3E614F52EC0009142F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2283A40C14F52F02009142F7 /* CGGeometry+ECCore.h in Headers */,
+				2283A40E14F52F02009142F7 /* ECClang.h in Headers */,
+				2283A40F14F52F02009142F7 /* ECCoercion.h in Headers */,
+				2283A41114F52F02009142F7 /* ECLazyProperties.h in Headers */,
+				2283A41314F52F02009142F7 /* ECMacros.h in Headers */,
+				2283A41414F52F02009142F7 /* ECProperties.h in Headers */,
+				2283A41514F52F02009142F7 /* ECRandom.h in Headers */,
+				2283A41714F52F02009142F7 /* ECRuntime.h in Headers */,
+				2283A41914F52F02009142F7 /* ECSha1.h in Headers */,
+				2283A41B14F52F02009142F7 /* ECSingleton.h in Headers */,
+				2283A41D14F52F02009142F7 /* NSArray+ECCore.h in Headers */,
+				2283A41F14F52F02009142F7 /* NSBundle+ECCore.h in Headers */,
+				2283A42114F52F02009142F7 /* NSData+ECCore.h in Headers */,
+				2283A42314F52F02009142F7 /* NSDate+ECCore.h in Headers */,
+				2283A42514F52F02009142F7 /* NSDictionary+ECCore.h in Headers */,
+				2283A42714F52F02009142F7 /* NSException+ECCore.h in Headers */,
+				2283A42914F52F02009142F7 /* NSFileManager+ECCore.h in Headers */,
+				2283A42B14F52F02009142F7 /* NSIndexSet+ECCore.h in Headers */,
+				2283A42D14F52F02009142F7 /* NSMutableAttributedString+ECCore.h in Headers */,
+				2283A42F14F52F02009142F7 /* NSString+ECCore.h in Headers */,
+				2283A43114F52F02009142F7 /* NSURL+ECCore.h in Headers */,
+				22D1337214FBA45D00001EC9 /* ECKeychain.h in Headers */,
+				22D1337314FBA45D00001EC9 /* ECLaunchServices.h in Headers */,
+				22D1337414FBA45D00001EC9 /* ECMachine.h in Headers */,
+				22D1337514FBA45D00001EC9 /* NSAppleEventDescriptor+ECCore.h in Headers */,
+				22D1337614FBA45D00001EC9 /* NSAppleScript+ECCore.h in Headers */,
+				22D1337714FBA45D00001EC9 /* NSApplication+ECCore.h in Headers */,
+				22D1337814FBA45D00001EC9 /* NSButton+ECCore.h in Headers */,
+				22D1337914FBA45D00001EC9 /* NSColor+ECCore.h in Headers */,
+				22D1337A14FBA45D00001EC9 /* NSGeometry+ECCore.h in Headers */,
+				22D1337B14FBA45D00001EC9 /* NSMenu+ECCore.h in Headers */,
+				22D1337C14FBA45D00001EC9 /* NSURL+ECCoreMac.h in Headers */,
+				22D1337D14FBA45D00001EC9 /* NSUserDefaults+ECCore.h in Headers */,
+				22D1337E14FBA45D00001EC9 /* NSWindow+ECCore.h in Headers */,
+				22D1337F14FBA45D00001EC9 /* NSWorkspace+ECCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C2DB6114FB9CC8005D2E89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C2DB8A14FB9D0F005D2E89 /* CGGeometry+ECCore.h in Headers */,
+				22C2DB8C14FB9D0F005D2E89 /* ECClang.h in Headers */,
+				22C2DB8D14FB9D0F005D2E89 /* ECCoercion.h in Headers */,
+				22C2DB8F14FB9D0F005D2E89 /* ECLazyProperties.h in Headers */,
+				22C2DB9114FB9D0F005D2E89 /* ECMacros.h in Headers */,
+				22C2DB9214FB9D0F005D2E89 /* ECProperties.h in Headers */,
+				22C2DB9314FB9D0F005D2E89 /* ECRandom.h in Headers */,
+				22C2DB9514FB9D0F005D2E89 /* ECRuntime.h in Headers */,
+				22C2DB9714FB9D0F005D2E89 /* ECSha1.h in Headers */,
+				22C2DB9914FB9D0F005D2E89 /* ECSingleton.h in Headers */,
+				22C2DB9B14FB9D0F005D2E89 /* NSArray+ECCore.h in Headers */,
+				22C2DB9D14FB9D0F005D2E89 /* NSBundle+ECCore.h in Headers */,
+				22C2DB9F14FB9D0F005D2E89 /* NSData+ECCore.h in Headers */,
+				22C2DBA114FB9D0F005D2E89 /* NSDate+ECCore.h in Headers */,
+				22C2DBA314FB9D0F005D2E89 /* NSDictionary+ECCore.h in Headers */,
+				22C2DBA514FB9D0F005D2E89 /* NSException+ECCore.h in Headers */,
+				22C2DBA714FB9D0F005D2E89 /* NSFileManager+ECCore.h in Headers */,
+				22C2DBA914FB9D0F005D2E89 /* NSIndexSet+ECCore.h in Headers */,
+				22C2DBAB14FB9D0F005D2E89 /* NSMutableAttributedString+ECCore.h in Headers */,
+				22C2DBAD14FB9D0F005D2E89 /* NSString+ECCore.h in Headers */,
+				22C2DBAF14FB9D0F005D2E89 /* NSURL+ECCore.h in Headers */,
+				22C2DBB114FB9D1D005D2E89 /* UIFont+ECCore.h in Headers */,
+				22C2DBB314FB9D1D005D2E89 /* UIViewController+ECUtilities.h in Headers */,
+				22C2DBB514FB9D1D005D2E89 /* UIApplication+ECCore.h in Headers */,
+				22C2DBB714FB9D1D005D2E89 /* UIColor+ECCore.h in Headers */,
+				22C2DBB914FB9D1D005D2E89 /* UIImage+ECCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2283A3E714F52EC0009142F7 /* ECCoreMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2283A40414F52EC0009142F7 /* Build configuration list for PBXNativeTarget "ECCoreMac" */;
+			buildPhases = (
+				2283A3E414F52EC0009142F7 /* Sources */,
+				2283A3E514F52EC0009142F7 /* Frameworks */,
+				2283A3E614F52EC0009142F7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ECCoreMac;
+			productName = libECCoreMac;
+			productReference = 2283A3E814F52EC0009142F7 /* libECCoreMac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2283A3F414F52EC0009142F7 /* ECCoreMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2283A40814F52EC0009142F7 /* Build configuration list for PBXNativeTarget "ECCoreMacTests" */;
+			buildPhases = (
+				2283A3F014F52EC0009142F7 /* Sources */,
+				2283A3F114F52EC0009142F7 /* Frameworks */,
+				2283A3F214F52EC0009142F7 /* Resources */,
+				2283A3F314F52EC0009142F7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2283A3F914F52EC0009142F7 /* PBXTargetDependency */,
+			);
+			name = ECCoreMacTests;
+			productName = libECCoreMacTests;
+			productReference = 2283A3F514F52EC0009142F7 /* ECCoreMacTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		22C2DB6214FB9CC8005D2E89 /* ECCoreIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C2DB8214FB9CC8005D2E89 /* Build configuration list for PBXNativeTarget "ECCoreIOS" */;
+			buildPhases = (
+				22C2DB5F14FB9CC8005D2E89 /* Sources */,
+				22C2DB6014FB9CC8005D2E89 /* Frameworks */,
+				22C2DB6114FB9CC8005D2E89 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ECCoreIOS;
+			productName = ECCoreIOS;
+			productReference = 22C2DB6314FB9CC8005D2E89 /* libECCoreIOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		22C2DB7014FB9CC8005D2E89 /* ECCoreIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22C2DB8614FB9CC8005D2E89 /* Build configuration list for PBXNativeTarget "ECCoreIOSTests" */;
+			buildPhases = (
+				22C2DB6C14FB9CC8005D2E89 /* Sources */,
+				22C2DB6D14FB9CC8005D2E89 /* Frameworks */,
+				22C2DB6E14FB9CC8005D2E89 /* Resources */,
+				22C2DB6F14FB9CC8005D2E89 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22C2DB7714FB9CC8005D2E89 /* PBXTargetDependency */,
+			);
+			name = ECCoreIOSTests;
+			productName = ECCoreIOSTests;
+			productReference = 22C2DB7114FB9CC8005D2E89 /* ECCoreIOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Elegant Chaos";
+			};
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "ECCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				ec,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* ECFoundation */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22552BB3134B9D8400B8894E /* ECCoreEverything */,
+				2283A3E714F52EC0009142F7 /* ECCoreMac */,
+				2283A3F414F52EC0009142F7 /* ECCoreMacTests */,
+				22C2DB6214FB9CC8005D2E89 /* ECCoreIOS */,
+				22C2DB7014FB9CC8005D2E89 /* ECCoreIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2283A3F214F52EC0009142F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C2DB5E14FB9ADC005D2E89 /* Test.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C2DB6E14FB9CC8005D2E89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C2DBDB14FB9FD8005D2E89 /* Test.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2283A3F314F52EC0009142F7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		22C2DB6F14FB9CC8005D2E89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2283A3E414F52EC0009142F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2283A40D14F52F02009142F7 /* CGGeometry+ECCore.m in Sources */,
+				2283A41014F52F02009142F7 /* ECCoercion.m in Sources */,
+				2283A41214F52F02009142F7 /* ECLazyProperties.m in Sources */,
+				2283A41614F52F02009142F7 /* ECRandom.m in Sources */,
+				2283A41814F52F02009142F7 /* ECRuntime.m in Sources */,
+				2283A41A14F52F02009142F7 /* ECSha1.m in Sources */,
+				2283A41C14F52F02009142F7 /* ECSingleton.m in Sources */,
+				2283A41E14F52F02009142F7 /* NSArray+ECCore.m in Sources */,
+				2283A42014F52F02009142F7 /* NSBundle+ECCore.m in Sources */,
+				2283A42214F52F02009142F7 /* NSData+ECCore.m in Sources */,
+				2283A42414F52F02009142F7 /* NSDate+ECCore.m in Sources */,
+				2283A42614F52F02009142F7 /* NSDictionary+ECCore.m in Sources */,
+				2283A42814F52F02009142F7 /* NSException+ECCore.m in Sources */,
+				2283A42A14F52F02009142F7 /* NSFileManager+ECCore.m in Sources */,
+				2283A42C14F52F02009142F7 /* NSIndexSet+ECCore.m in Sources */,
+				2283A42E14F52F02009142F7 /* NSMutableAttributedString+ECCore.m in Sources */,
+				2283A43014F52F02009142F7 /* NSString+ECCore.m in Sources */,
+				2283A43214F52F02009142F7 /* NSURL+ECCore.m in Sources */,
+				22C2DB3714FB9867005D2E89 /* NSURL+ECCoreMac.m in Sources */,
+				22C2DB3914FB9882005D2E89 /* ECKeychain.m in Sources */,
+				22C2DB3A14FB9882005D2E89 /* ECLaunchServices.m in Sources */,
+				22C2DB3B14FB9882005D2E89 /* ECMachine.m in Sources */,
+				22C2DB3C14FB9882005D2E89 /* NSAppleEventDescriptor+ECCore.m in Sources */,
+				22C2DB3D14FB9882005D2E89 /* NSAppleScript+ECCore.m in Sources */,
+				22C2DB3E14FB9882005D2E89 /* NSApplication+ECCore.m in Sources */,
+				22C2DB3F14FB9882005D2E89 /* NSButton+ECCore.m in Sources */,
+				22C2DB4014FB9882005D2E89 /* NSColor+ECCore.m in Sources */,
+				22C2DB4114FB9882005D2E89 /* NSGeometry+ECCore.m in Sources */,
+				22C2DB4214FB9882005D2E89 /* NSMenu+ECCore.m in Sources */,
+				22C2DB4314FB9882005D2E89 /* NSUserDefaults+ECCore.m in Sources */,
+				22C2DB4414FB9882005D2E89 /* NSWindow+ECCore.m in Sources */,
+				22C2DB4514FB9882005D2E89 /* NSWorkspace+ECCore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2283A3F014F52EC0009142F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D55C0F14FB8A230052EA01 /* CGGeometryTests.m in Sources */,
+				22D55C1014FB8A230052EA01 /* ECLazyPropertiesTests.m in Sources */,
+				22D55C1114FB8A230052EA01 /* ECRandomTests.m in Sources */,
+				22D55C1214FB8A230052EA01 /* ECSha1Tests.m in Sources */,
+				22D55C1314FB8A230052EA01 /* NSArrayTests.m in Sources */,
+				22D55C1414FB8A230052EA01 /* NSBundleTests.m in Sources */,
+				22D55C1514FB8A230052EA01 /* NSDataTests.m in Sources */,
+				22D55C1614FB8A230052EA01 /* NSDateTests.m in Sources */,
+				22D55C1714FB8A230052EA01 /* NSDictionaryTests.m in Sources */,
+				22D55C1814FB8A230052EA01 /* NSExceptionTests.m in Sources */,
+				22D55C1914FB8A230052EA01 /* NSFileManagerTests.m in Sources */,
+				22D55C1A14FB8A230052EA01 /* NSIndexSetTests.m in Sources */,
+				22D55C1B14FB8A230052EA01 /* NSMutableAttributedStringTests.m in Sources */,
+				22D55C1C14FB8A230052EA01 /* NSStringTests.m in Sources */,
+				22D55C1D14FB8A230052EA01 /* NSURLTests.m in Sources */,
+				22C2DB4614FB988A005D2E89 /* ECLaunchServicesTests.m in Sources */,
+				22C2DB4714FB988A005D2E89 /* NSAppleEventDescriptorTests.m in Sources */,
+				22C2DB4814FB988A005D2E89 /* NSAppleScriptTests.m in Sources */,
+				22C2DB4914FB988A005D2E89 /* NSApplicationTests.m in Sources */,
+				22C2DB4A14FB988A005D2E89 /* NSButtonTests.m in Sources */,
+				22C2DB4B14FB988A005D2E89 /* NSColorTests.m in Sources */,
+				22C2DB4C14FB988A005D2E89 /* NSGeometryTests.m in Sources */,
+				22C2DB4D14FB988A005D2E89 /* NSMenuTests.m in Sources */,
+				22C2DB4E14FB988A005D2E89 /* NSUserDefaultsTests.m in Sources */,
+				22C2DB4F14FB988A005D2E89 /* NSWindowTests.m in Sources */,
+				22C2DB5014FB988A005D2E89 /* NSWorkspaceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C2DB5F14FB9CC8005D2E89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C2DB8B14FB9D0F005D2E89 /* CGGeometry+ECCore.m in Sources */,
+				22C2DB8E14FB9D0F005D2E89 /* ECCoercion.m in Sources */,
+				22C2DB9014FB9D0F005D2E89 /* ECLazyProperties.m in Sources */,
+				22C2DB9414FB9D0F005D2E89 /* ECRandom.m in Sources */,
+				22C2DB9614FB9D0F005D2E89 /* ECRuntime.m in Sources */,
+				22C2DB9814FB9D0F005D2E89 /* ECSha1.m in Sources */,
+				22C2DB9A14FB9D0F005D2E89 /* ECSingleton.m in Sources */,
+				22C2DB9C14FB9D0F005D2E89 /* NSArray+ECCore.m in Sources */,
+				22C2DB9E14FB9D0F005D2E89 /* NSBundle+ECCore.m in Sources */,
+				22C2DBA014FB9D0F005D2E89 /* NSData+ECCore.m in Sources */,
+				22C2DBA214FB9D0F005D2E89 /* NSDate+ECCore.m in Sources */,
+				22C2DBA414FB9D0F005D2E89 /* NSDictionary+ECCore.m in Sources */,
+				22C2DBA614FB9D0F005D2E89 /* NSException+ECCore.m in Sources */,
+				22C2DBA814FB9D0F005D2E89 /* NSFileManager+ECCore.m in Sources */,
+				22C2DBAA14FB9D0F005D2E89 /* NSIndexSet+ECCore.m in Sources */,
+				22C2DBAC14FB9D0F005D2E89 /* NSMutableAttributedString+ECCore.m in Sources */,
+				22C2DBAE14FB9D0F005D2E89 /* NSString+ECCore.m in Sources */,
+				22C2DBB014FB9D0F005D2E89 /* NSURL+ECCore.m in Sources */,
+				22C2DBB214FB9D1D005D2E89 /* UIFont+ECCore.m in Sources */,
+				22C2DBB414FB9D1D005D2E89 /* UIViewController+ECUtilities.m in Sources */,
+				22C2DBB614FB9D1D005D2E89 /* UIApplication+ECCore.m in Sources */,
+				22C2DBB814FB9D1D005D2E89 /* UIColor+ECCore.m in Sources */,
+				22C2DBBA14FB9D1D005D2E89 /* UIImage+ECCore.m in Sources */,
+				22C2DBBB14FB9D1D005D2E89 /* NSURL+ECCoreIOS.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C2DB6C14FB9CC8005D2E89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22C2DBC414FB9F2F005D2E89 /* CGGeometryTests.m in Sources */,
+				22C2DBC514FB9F2F005D2E89 /* ECLazyPropertiesTests.m in Sources */,
+				22C2DBC614FB9F2F005D2E89 /* ECRandomTests.m in Sources */,
+				22C2DBC714FB9F2F005D2E89 /* ECSha1Tests.m in Sources */,
+				22C2DBC814FB9F2F005D2E89 /* NSArrayTests.m in Sources */,
+				22C2DBC914FB9F2F005D2E89 /* NSBundleTests.m in Sources */,
+				22C2DBCA14FB9F2F005D2E89 /* NSDataTests.m in Sources */,
+				22C2DBCB14FB9F2F005D2E89 /* NSDateTests.m in Sources */,
+				22C2DBCC14FB9F2F005D2E89 /* NSDictionaryTests.m in Sources */,
+				22C2DBCD14FB9F2F005D2E89 /* NSExceptionTests.m in Sources */,
+				22C2DBCE14FB9F2F005D2E89 /* NSFileManagerTests.m in Sources */,
+				22C2DBCF14FB9F2F005D2E89 /* NSIndexSetTests.m in Sources */,
+				22C2DBD014FB9F2F005D2E89 /* NSMutableAttributedStringTests.m in Sources */,
+				22C2DBD114FB9F2F005D2E89 /* NSStringTests.m in Sources */,
+				22C2DBD214FB9F2F005D2E89 /* NSURLTests.m in Sources */,
+				22C2DBD314FB9F3B005D2E89 /* UIApplicationTests.m in Sources */,
+				22C2DBD414FB9F3B005D2E89 /* UIColorTests.m in Sources */,
+				22C2DBD514FB9F3B005D2E89 /* UIImageTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2283A3F914F52EC0009142F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2283A3E714F52EC0009142F7 /* ECCoreMac */;
+			targetProxy = 2283A3F814F52EC0009142F7 /* PBXContainerItemProxy */;
+		};
+		22C2DB7714FB9CC8005D2E89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22C2DB6214FB9CC8005D2E89 /* ECCoreIOS */;
+			targetProxy = 22C2DB7614FB9CC8005D2E89 /* PBXContainerItemProxy */;
+		};
+		22D55C4C14FB8D2C0052EA01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2283A3E714F52EC0009142F7 /* ECCoreMac */;
+			targetProxy = 22D55C4B14FB8D2C0052EA01 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		220375D6141FF4C00040E740 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				220375D7141FF4C00040E740 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		220375E0141FF4E60040E740 /* ECAboutBox.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				220375E1141FF4E60040E740 /* en */,
+			);
+			name = ECAboutBox.xib;
+			sourceTree = "<group>";
+		};
+		220375E2141FF4E60040E740 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				220375E3141FF4E60040E740 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(CONFIGURATION_BUILD_DIR)/includes/eclogging",
+					"$(CONFIGURATION_BUILD_DIR)/includes/ecunittests",
+				);
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(CONFIGURATION_BUILD_DIR)/includes/eclogging",
+					"$(CONFIGURATION_BUILD_DIR)/includes/ecunittests",
+				);
+			};
+			name = Release;
+		};
+		22552BB5134B9D8500B8894E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22552BB6134B9D8500B8894E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		22552BB7134B9D8500B8894E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = AdHoc;
+		};
+		2274C8E811FF841B00E5C351 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(CONFIGURATION_BUILD_DIR)/includes/eclogging",
+					"$(CONFIGURATION_BUILD_DIR)/includes/ecunittests",
+				);
+			};
+			name = AdHoc;
+		};
+		2283A40514F52EC0009142F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = includes/ecunittests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2283A40614F52EC0009142F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = includes/ecunittests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2283A40714F52EC0009142F7 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = includes/ecunittests;
+				SDKROOT = macosx;
+			};
+			name = AdHoc;
+		};
+		2283A40914F52EC0009142F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Tests/ECCoreTests.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2283A40A14F52EC0009142F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Tests/ECCoreTests.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		2283A40B14F52EC0009142F7 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Tests/ECCoreTests.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = AdHoc;
+		};
+		22C2DB8314FB9CC8005D2E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = includes/eccore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		22C2DB8414FB9CC8005D2E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = includes/eccore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22C2DB8514FB9CC8005D2E89 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = includes/eccore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		22C2DB8714FB9CC8005D2E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Tests/ECCoreTests.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		22C2DB8814FB9CC8005D2E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Tests/ECCoreTests.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		22C2DB8914FB9CC8005D2E89 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Prefix/ECCore$(CONFIGURATION)Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Resources/Tests/ECCoreTests.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = AdHoc;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "ECCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+				2274C8E811FF841B00E5C351 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22552BB4134B9D8500B8894E /* Build configuration list for PBXAggregateTarget "ECCoreEverything" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22552BB5134B9D8500B8894E /* Debug */,
+				22552BB6134B9D8500B8894E /* Release */,
+				22552BB7134B9D8500B8894E /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2283A40414F52EC0009142F7 /* Build configuration list for PBXNativeTarget "ECCoreMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2283A40514F52EC0009142F7 /* Debug */,
+				2283A40614F52EC0009142F7 /* Release */,
+				2283A40714F52EC0009142F7 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2283A40814F52EC0009142F7 /* Build configuration list for PBXNativeTarget "ECCoreMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2283A40914F52EC0009142F7 /* Debug */,
+				2283A40A14F52EC0009142F7 /* Release */,
+				2283A40B14F52EC0009142F7 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C2DB8214FB9CC8005D2E89 /* Build configuration list for PBXNativeTarget "ECCoreIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C2DB8314FB9CC8005D2E89 /* Debug */,
+				22C2DB8414FB9CC8005D2E89 /* Release */,
+				22C2DB8514FB9CC8005D2E89 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22C2DB8614FB9CC8005D2E89 /* Build configuration list for PBXNativeTarget "ECCoreIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C2DB8714FB9CC8005D2E89 /* Debug */,
+				22C2DB8814FB9CC8005D2E89 /* Release */,
+				22C2DB8914FB9CC8005D2E89 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

@@ -48,8 +48,12 @@
 
 - (void)testSHA1URL
 {
-	NSString* sha1 = [[[self testBundleURL] URLByAppendingPathComponent:@"Info.plist"] sha1Digest];
-	ECTestAssertStringIsEqual(sha1, @"68ae7e56e867185bf263f1528d708e4592a599a7");
+	NSError* error = nil;
+	NSString* testString = @"This is a test string";
+	NSURL* testFile = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:@"test.txt"];
+	ECTestAssertOkNoError([testString writeToURL:testFile atomically:NO encoding:NSUTF8StringEncoding error:&error], error);
+	NSString* sha1 = [testFile sha1Digest];
+	ECTestAssertStringIsEqual(sha1, @"e2f67c772368acdeee6a2242c535c6cc28d8e0ed");
 }
 
 - (void)testEmptySHA1URL

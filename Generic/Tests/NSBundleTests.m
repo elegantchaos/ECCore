@@ -18,7 +18,7 @@
 
 - (void)testBundleInfo
 {
-	NSBundle* bundle = [self testBundle];
+	NSBundle* bundle = [self exampleBundle];
 	
 	ECTestAssertStringIsEqual([bundle bundleName],@"Test Name");
 	ECTestAssertStringIsEqual([bundle bundleVersion],@"1.0");
