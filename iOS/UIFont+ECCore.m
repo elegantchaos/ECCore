@@ -66,6 +66,16 @@ NSString *const ECFontSizeKey = @"size";
     return font;
 }
 
+- (NSDictionary*)asDictionary
+{
+	NSDictionary* result = [NSDictionary dictionaryWithObjectsAndKeys:
+							self.fontName, ECFontNameKey,
+							[NSNumber numberWithFloat:self.pointSize], ECFontSizeKey,
+							nil];
+	
+	return result;
+}
+
 - (UIFont*)boldVariant
 {
     UIFont* result = self;
