@@ -37,14 +37,11 @@
 
 - (void)testURLStuff
 {
-	// test app seems to live in the /usr/bin inside the Xcode folder
+	// can't really test the actual path - the best we can do is test that it's non zero, and that it exists
 	// NB not sure if this will always be true, so this unit test may need changing at some point
 	NSString* path = [[self.fm URLForApplication] path];
-#if EC_PLATFORM_MAC
-	ECTestAssertStringEndsWith(path, @"/Tools");
-#else
-	ECTestAssertStringEndsWith(path, @"/usr/bin");
-#endif
+	ECTestAssertIntegerIsGreater([path length], 0);
+	ECTestAssertTrue([fm fileExistsAtPath:path]);
 	
 	// NB not sure if this test will pass for non-English language systems
 	path = [[self.fm URLForUserDesktop] path];
