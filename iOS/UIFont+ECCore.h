@@ -18,6 +18,8 @@ extern NSString *const ECFontSizeKey;
 + (UIFont*)fontFromDictionary:(NSDictionary*)dictionary;
 - (UIFont*)fontFromDictionary:(NSDictionary*)dictionary;
 
+- (NSDictionary*)asDictionary;
+
 - (UIFont*)boldVariant;
 - (UIFont*)italicVariant;
 
