@@ -218,6 +218,15 @@ ECDefineDebugChannel(NSApplicationChannel);
 }
 
 // --------------------------------------------------------------------------
+//! Is this a pre-release version?
+// --------------------------------------------------------------------------
+
+- (BOOL)isPrerelease
+{
+	return [[self applicationVersion] rangeOfCharacterFromSet:[NSCharacterSet letterCharacterSet]].location != NSNotFound;
+}
+
+// --------------------------------------------------------------------------
 //! Are we running on OS X Lion or greater?
 // --------------------------------------------------------------------------
 

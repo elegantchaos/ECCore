@@ -22,6 +22,7 @@
 - (NSString*)applicationBuild;
 - (NSString*)applicationCopyright;
 - (NSString*)applicationFullVersion;
+- (BOOL)isPrerelease;
 - (NSString*)licenseFileType;
 + (BOOL)isLionOrGreater;
 
