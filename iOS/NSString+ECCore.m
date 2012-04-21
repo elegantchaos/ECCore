@@ -11,4 +11,49 @@
 
 @implementation NSString(ECCore)
 
+- (NSDictionary*)entities
+{
+	NSDictionary* entities = [NSDictionary dictionaryWithObjectsAndKeys:
+							  @"&", @"&amp;",
+							  @"<", @"&lt;",
+							  @">", @"&gt;",
+							  nil];
+
+	return entities;
+}
+
+// --------------------------------------------------------------------------
+//! Escape any standard XML entities
+// --------------------------------------------------------------------------
+
+- (NSString*)stringByEscapingEntities
+{
+	NSDictionary* entities = [self entities];
+	NSString* result = self;
+	for (NSString* entity in entities)
+	{
+		NSString* character = [entities objectForKey:entity];
+		result = [self stringByReplacingOccurrencesOfString:character withString:entity];
+	}
+
+	return result;
+}
+
+// --------------------------------------------------------------------------
+//! Escape any standard XML entities
+// --------------------------------------------------------------------------
+
+- (NSString*)stringByUnescapingEntities
+{
+	NSDictionary* entities = [self entities];
+	NSString* result = self;
+	for (NSString* entity in entities)
+	{
+		NSString* character = [entities objectForKey:entity];
+		result = [self stringByReplacingOccurrencesOfString:entity withString:character];
+	}
+	
+	return result;
+}
+
 @end

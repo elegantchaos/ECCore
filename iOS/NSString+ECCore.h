@@ -14,4 +14,7 @@
 
 @interface NSString(ECCore)
 
+- (NSString*)stringByEscapingEntities;
+- (NSString*)stringByUnescapingEntities;
+
 @end
