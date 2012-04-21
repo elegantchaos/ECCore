@@ -8,11 +8,10 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import "NSString+ECCore.h"
+#import "NSString+ECCoreGeneric.h"
 #import "NSData+ECCore.h"
 
-@implementation NSString(ECCore)
-
+@implementation NSString(ECCoreGeneric)
 
 + (NSString*)stringWithOrdinal:(NSInteger)ordinal
 {
@@ -268,6 +267,5 @@
 	
 	return range.location != NSNotFound;
 }
-
 
 @end

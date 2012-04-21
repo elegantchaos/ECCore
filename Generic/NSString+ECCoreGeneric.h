@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSString(ECCore)
+@interface NSString(ECCoreGeneric)
 
 - (BOOL)containsString:(NSString*)string;
 - (BOOL)beginsWithString:(NSString*)string;
@@ -29,7 +29,6 @@
 + (NSString*)stringWithUppercaseFromWords:(NSArray*)words separator:(NSString*)separator;
 + (NSString*)stringWithLowercaseFromWords:(NSArray*)words separator:(NSString*)separator;
 + (NSString*)stringWithNewUUID;
-
 
 + (NSString*)stringWithOrdinal:(NSInteger)ordinal;
 
