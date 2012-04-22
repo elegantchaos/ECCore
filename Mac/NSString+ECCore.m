@@ -21,7 +21,7 @@
 {
 	NSString* result = (NSString*)CFXMLCreateStringByEscapingEntities(NULL, (CFStringRef)self, NULL);
 	
-	return result;
+	return [result autorelease];
 }
 
 // --------------------------------------------------------------------------
@@ -32,7 +32,7 @@
 {
 	NSString* result = (NSString*)CFXMLCreateStringByUnescapingEntities(NULL, (CFStringRef)self, NULL);
 	
-	return result;
+	return [result autorelease];
 }
 
 @end
