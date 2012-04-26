@@ -49,7 +49,7 @@
 	BOOL result = [self createDirectoryAtPath: [url path] withIntermediateDirectories: createIntermediates attributes: attributes error: error];
     if (!result && error)
     {
-        [ECErrorReporter reportError:*error message:@"failed to create directory at @%", url];
+        [ECErrorReporter reportError:*error message:@"failed to create directory at %@", url];
     }
     
     return result;
