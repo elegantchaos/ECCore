@@ -45,6 +45,8 @@ void* ECObservationContext = &ECObservationContext;
 	// if something else is observing this private object, then some weird shit is going on
     ECAssert(context == &ECObservationContext);
 	
+	ECDebug(ECKVOChannel, @"path %@ on %@ changed: %@", path, object, change);
+	
 	if (self.queue == nil) 
 	{
 		self.action(change);

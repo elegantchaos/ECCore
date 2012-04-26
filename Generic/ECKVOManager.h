@@ -7,9 +7,12 @@
 //
 
 #import "ECSingleton.h"
+#import "ECLogging.h"
 
 @class ECObserver;
 @interface ECKVOManager : NSObject
+
+ECDeclareDebugChannel(ECKVOChannel);
 
 EC_SINGLETON(ECKVOManager);
 
