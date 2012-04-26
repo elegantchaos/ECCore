@@ -97,10 +97,8 @@ CFDataRef copyMacAddress(void)
 	
 	if ([NSGarbageCollector defaultCollector])
 		[[NSGarbageCollector defaultCollector] enableCollectorForPointer:guidData];
-	else 
-		[guidData autorelease];
 	
-    return guidData;
+    return [guidData autorelease];
 }
 
 // --------------------------------------------------------------------------
