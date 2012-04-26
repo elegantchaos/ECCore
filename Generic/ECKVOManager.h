@@ -19,5 +19,7 @@ EC_SINGLETON(ECKVOManager);
 - (void)addObserver:(ECObserver*)observer;
 - (void)removeObserver:(ECObserver*)observer;
 - (void)dumpObservers;
+- (NSUInteger)observerCount;
+- (ECObserver*)observerAtIndex:(NSUInteger)index;
 
 @end

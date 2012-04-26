@@ -9,6 +9,7 @@
 
 #import "ECTestCase.h"
 #import "ECKVO.h"
+#import "ECKVOManager.h"
 
 @interface KVOTestClass : NSObject
 
@@ -44,6 +45,29 @@
 	
 	[test removeObserver:observer];
 	[test release];
+}
+
+- (void)testAutoRemove
+{
+	@autoreleasepool 
+	{
+		KVOTestClass* test = [[KVOTestClass alloc] init];
+		test.name = @"fred";
+		__block BOOL blockRan = NO;
+		
+		[test addObserverForKeyPath:@"name" options:0 action:^(NSDictionary *change) {
+			blockRan = YES;
+		}];
+		
+		test.name = @"jim";
+		
+		ECTestAssertTrue(blockRan);
+		
+		[test release];
+	}
+	
+	NSUInteger registeredObservers = [[ECKVOManager sharedInstance] observerCount];
+	ECTestAssertIntegerIsEqual(registeredObservers, 0);
 }
 
 @end

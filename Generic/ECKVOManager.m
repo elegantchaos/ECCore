@@ -84,4 +84,14 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 	ECDebug(ECKVOChannel, @"%@", [self description]);
 }
 
+- (NSUInteger)observerCount
+{
+	return CFArrayGetCount(self.observers);
+}
+
+- (ECObserver*)observerAtIndex:(NSUInteger)index
+{
+	return CFArrayGetValueAtIndex(self.observers, index);
+}
+
 @end
