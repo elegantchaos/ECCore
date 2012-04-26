@@ -35,8 +35,10 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 
 - (void)dealloc
 {
-	[[ECKVOManager sharedInstance] removeObserver:self];
-
+	#if EC_DEBUG
+		[[ECKVOManager sharedInstance] removeObserver:self];
+	#endif
+	
     [_path release];
     [_queue release];
     [_action release];
@@ -116,7 +118,11 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 	@synchronized(observers)
 	{
 		[observers addObject:observer];
-		[[ECKVOManager sharedInstance] addObserver:observer];
+		
+		// in debug builds the ECKVOManager tracks a list of all active observers
+		#if EC_DEBUG 
+			[[ECKVOManager sharedInstance] addObserver:observer];
+		#endif
 	}
     
 	[observer release];
