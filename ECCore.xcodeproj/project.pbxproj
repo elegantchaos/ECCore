@@ -35,6 +35,8 @@
 		223D561B15495C9000CD569D /* ECKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DA3A7D154957D6006C8A5E /* ECKVO.m */; };
 		223D561C15495C9000CD569D /* ECKVOManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 223D561315495C4600CD569D /* ECKVOManager.h */; };
 		223D561D15495C9000CD569D /* ECKVOManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D561415495C4600CD569D /* ECKVOManager.m */; };
+		223D56221549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
+		223D56231549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
 		2283A3E914F52EC0009142F7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
 		2283A3F614F52EC0009142F7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3CD14F52E93009142F7 /* SenTestingKit.framework */; };
 		2283A3F714F52EC0009142F7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
@@ -283,6 +285,7 @@
 		223CBAE61205C6380008A641 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		223D561315495C4600CD569D /* ECKVOManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECKVOManager.h; sourceTree = "<group>"; };
 		223D561415495C4600CD569D /* ECKVOManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECKVOManager.m; sourceTree = "<group>"; };
+		223D56211549629600CD569D /* ECKVOTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECKVOTests.m; sourceTree = "<group>"; };
 		2248BC2213C7949E00E13577 /* ECMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMacros.h; sourceTree = "<group>"; };
 		2248BC2313C7949E00E13577 /* ECProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECProperties.h; sourceTree = "<group>"; };
 		225260E61455C01100061EDD /* NSIndexSet+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+ECCore.h"; sourceTree = "<group>"; };
@@ -727,6 +730,7 @@
 			isa = PBXGroup;
 			children = (
 				22C1E24014910560004DA13E /* CGGeometryTests.m */,
+				223D56211549629600CD569D /* ECKVOTests.m */,
 				22C1E18F1490BF6D004DA13E /* ECLazyPropertiesTests.m */,
 				22C1E2361490FAE0004DA13E /* ECRandomTests.m */,
 				2206F9741492403200AAC9B0 /* ECSha1Tests.m */,
@@ -1120,6 +1124,7 @@
 				22C2DB4F14FB988A005D2E89 /* NSWindowTests.m in Sources */,
 				22C2DB5014FB988A005D2E89 /* NSWorkspaceTests.m in Sources */,
 				22351D0B1544489A00A24099 /* NSString+ECCore.m in Sources */,
+				223D56221549629600CD569D /* ECKVOTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1180,6 +1185,7 @@
 				22C2DBD414FB9F3B005D2E89 /* UIColorTests.m in Sources */,
 				22C2DBD514FB9F3B005D2E89 /* UIImageTests.m in Sources */,
 				22351D061544487000A24099 /* NSString+ECCore.m in Sources */,
+				223D56231549629600CD569D /* ECKVOTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
