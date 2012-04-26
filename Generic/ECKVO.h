@@ -20,3 +20,4 @@ typedef void (^ECObserverAction)(NSDictionary *change);
 - (void)removeObserver:(ECObserver*)observer;
 
 @end
+
