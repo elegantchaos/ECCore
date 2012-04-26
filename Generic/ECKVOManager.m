@@ -7,10 +7,14 @@
 //
 
 #import "ECKVOManager.h"
+#import "ECKVO.h"
+#import "ECLogging.h"
 
 @implementation ECKVOManager
 
-ECSYNTHESIZE_SINGLETON(ECKVOManager);
+ECDefineDebugChannel(ECKVOChannel);
+
+EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 
 @synthesize observers = _observers;
 
@@ -20,6 +24,8 @@ ECSYNTHESIZE_SINGLETON(ECKVOManager);
 	{
 		self.observers = [NSMutableArray array];
 	}
+	
+	return self;
 }
 
 - (void)dealloc
@@ -31,18 +37,36 @@ ECSYNTHESIZE_SINGLETON(ECKVOManager);
 
 - (void)addObserver:(ECObserver*)observer
 {
-	@synchronized(self.observer)
+	@synchronized(self.observers)
 	{
-		[self.observer addObject:observer];
+		[self.observers addObject:observer];
+		ECDebug(ECKVOChannel, @"added observer %@", observer);
 	}
 }
 
 - (void)removeObserver:(ECObserver*)observer
 {
-	@synchronized(self.observer)
+	@synchronized(self.observers)
 	{
-		[self.observer removeObject:observer];
+		[self.observers removeObject:observer];
+		ECDebug(ECKVOChannel, @"removed observer %@", observer);
 	}
+}
+
+- (NSString*)description
+{
+	NSMutableString* description = [NSMutableString stringWithString:@"Registered observers:\n"];
+	for (ECObserver* observer in self.observers)
+	{
+		[description appendFormat:@"\t%@\n", observer];
+	}
+	
+	return description;
+}
+
+- (void)dumpObservers
+{
+	ECDebug(ECKVOChannel, @"%@", [self description]);
 }
 
 @end

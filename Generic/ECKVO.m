@@ -14,11 +14,13 @@
 
 void* ECObservationContext = &ECObservationContext;
 
+
 @interface ECObserver : NSObject 
 
 @property (copy) ECObserverAction action;
 @property (copy) NSString* path;
 @property (retain) NSOperationQueue* queue;
+@property (assign) id observed;
 
 @end
 
@@ -27,6 +29,7 @@ void* ECObservationContext = &ECObservationContext;
 @synthesize action = _action;
 @synthesize path = _path;
 @synthesize queue = _queue;
+@synthesize observed = _observed;
 
 - (void)dealloc
 {
@@ -60,6 +63,11 @@ void* ECObservationContext = &ECObservationContext;
 	}
 }
 
+- (NSString*)description
+{
+	return [NSString stringWithFormat:@"<ECObserver %P for %@ on %@", self, self.path, self.observed];
+}
+
 @end
 
 @implementation NSObject(ECKVO)
@@ -78,7 +86,8 @@ void* ECObservationContext = &ECObservationContext;
     observer.action = action;
     observer.path = path;
     observer.queue = queue;
-    
+    observer.observed = self;
+	
     [self addObserver:observer forKeyPath:path options:options context:&ECObservationContext];
     
 	[[ECKVOManager sharedInstance] addObserver:observer];

@@ -8,6 +8,7 @@
 
 #import "ECSingleton.h"
 
+@class ECObserver;
 @interface ECKVOManager : NSObject
 
 EC_SINGLETON(ECKVOManager);
@@ -16,5 +17,6 @@ EC_SINGLETON(ECKVOManager);
 
 - (void)addObserver:(ECObserver*)observer;
 - (void)removeObserver:(ECObserver*)observer;
+- (void)dumpObservers;
 
 @end
