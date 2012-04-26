@@ -10,6 +10,14 @@
 #import "ECKVO.h"
 #import "ECLogging.h"
 
+#import <CoreFoundation/CoreFoundation.h>
+
+@interface ECKVOManager()
+
+@property (assign, nonatomic) CFMutableArrayRef observers;
+
+@end
+
 @implementation ECKVOManager
 
 ECDefineDebugChannel(ECKVOChannel);
@@ -22,7 +30,7 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 {
 	if ((self = [super init]) != nil)
 	{
-		self.observers = [NSMutableArray array];
+		self.observers = CFArrayCreateMutable(nil, 0, nil);
 	}
 	
 	return self;
@@ -30,25 +38,30 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 
 - (void)dealloc
 {
-	[_observers release];
+	CFRelease(_observers);
 	
 	[super dealloc];
 }
 
 - (void)addObserver:(ECObserver*)observer
 {
-	@synchronized(self.observers)
+	@synchronized(self)
 	{
-		[self.observers addObject:observer];
+		CFMutableArrayRef array = self.observers;
+		CFArrayAppendValue(array, observer);
 		ECDebug(ECKVOChannel, @"added observer %@", observer);
 	}
 }
 
 - (void)removeObserver:(ECObserver*)observer
 {
-	@synchronized(self.observers)
+	@synchronized(self)
 	{
-		[self.observers removeObject:observer];
+		CFMutableArrayRef array = self.observers;
+		CFRange range = CFRangeMake(0, CFArrayGetCount(array));
+		CFIndex index = CFArrayGetFirstIndexOfValue(array, range, observer);
+		CFArrayRemoveValueAtIndex(array, index);
+
 		ECDebug(ECKVOChannel, @"removed observer %@", observer);
 	}
 }
@@ -56,9 +69,11 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 - (NSString*)description
 {
 	NSMutableString* description = [NSMutableString stringWithString:@"Registered observers:\n"];
-	for (ECObserver* observer in self.observers)
+	CFMutableArrayRef array = self.observers;
+	CFIndex count = CFArrayGetCount(array);
+	for (CFIndex n = 0; n < count; ++n)
 	{
-		[description appendFormat:@"\t%@\n", observer];
+		[description appendFormat:@"\t%@\n", CFArrayGetValueAtIndex(array, n)];
 	}
 	
 	return description;

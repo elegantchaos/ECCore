@@ -16,8 +16,6 @@ ECDeclareDebugChannel(ECKVOChannel);
 
 EC_SINGLETON(ECKVOManager);
 
-@property (strong, nonatomic) NSMutableArray* observers;
-
 - (void)addObserver:(ECObserver*)observer;
 - (void)removeObserver:(ECObserver*)observer;
 - (void)dumpObservers;

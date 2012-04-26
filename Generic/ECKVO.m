@@ -11,9 +11,11 @@
 #import "ECSingleton.h"
 #import "ECKVOManager.h"
 
+#import <objc/runtime.h>
+
 
 void* ECObservationContext = &ECObservationContext;
-
+void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 
 @interface ECObserver : NSObject 
 
@@ -33,6 +35,8 @@ void* ECObservationContext = &ECObservationContext;
 
 - (void)dealloc
 {
+	[[ECKVOManager sharedInstance] removeObserver:self];
+
     [_path release];
     [_queue release];
     [_action release];
@@ -67,12 +71,28 @@ void* ECObservationContext = &ECObservationContext;
 
 - (NSString*)description
 {
-	return [NSString stringWithFormat:@"<ECObserver %P for %@ on %@", self, self.path, self.observed];
+	return [NSString stringWithFormat:@"<ECObserver %p for %@ on %@", self, self.path, self.observed];
 }
 
 @end
 
 @implementation NSObject(ECKVO)
+
+- (NSMutableArray*)registeredObservers
+{
+    @synchronized (self)
+	{
+		NSMutableArray* observers = objc_getAssociatedObject(self, ECObserversAssociatedObjectsKey);
+		
+        if (!observers)
+		{
+            observers = [NSMutableArray array];
+            objc_setAssociatedObject(self, ECObserversAssociatedObjectsKey, observers, OBJC_ASSOCIATION_RETAIN);
+        }
+        
+        return observers;
+    }
+}
 
 - (ECObserver*)addObserverForKeyPath:(NSString*)path options:(NSKeyValueObservingOptions)options action:(ECObserverAction)action
 {
@@ -84,16 +104,22 @@ void* ECObservationContext = &ECObservationContext;
 	ECAssertNonNil(path);
 	ECAssertNonNil(action);
     
-    ECObserver* observer = [[ECObserver alloc] init];
-    observer.action = action;
-    observer.path = path;
-    observer.queue = queue;
-    observer.observed = self;
-	
-    [self addObserver:observer forKeyPath:path options:options context:&ECObservationContext];
+	ECObserver* observer = [[ECObserver alloc] init];
+	observer.action = action;
+	observer.path = path;
+	observer.queue = queue;
+	observer.observed = self;
+
+	[self addObserver:observer forKeyPath:path options:options context:&ECObservationContext];
+
+	NSMutableArray* observers = [self registeredObservers];
+	@synchronized(observers)
+	{
+		[observers addObject:observer];
+		[[ECKVOManager sharedInstance] addObserver:observer];
+	}
     
-	[[ECKVOManager sharedInstance] addObserver:observer];
-	[observer release];    
+	[observer release];
 	
     return observer;
 }
@@ -101,7 +127,12 @@ void* ECObservationContext = &ECObservationContext;
 - (void)removeObserver:(ECObserver *)observer
 {
     [self removeObserver:observer forKeyPath:observer.path];
-	[[ECKVOManager sharedInstance] removeObserver:observer];
+
+	NSMutableArray* observers = [self registeredObservers];
+	@synchronized(observers)
+	{
+		[observers removeObject:observer];
+	}
 }
 
 @end
