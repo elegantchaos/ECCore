@@ -35,7 +35,7 @@
 		}
     }
     
-    NSString* result = [NSString stringWithFormat:@"%ld%@", ordinal, suffix];
+    NSString* result = [NSString stringWithFormat:@"%d%@", ordinal, suffix];
     return result;
 }
 

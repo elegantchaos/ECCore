@@ -58,7 +58,7 @@
     NSArray* addresses = [self callStackReturnAddresses];
     NSMutableString* stack = [[[NSMutableString alloc] init] autorelease];
     for (NSNumber* address in addresses) {
-        [stack appendFormat:@"%lx\n", [address integerValue]];
+        [stack appendFormat:@"%x\n", [address integerValue]];
     }
     
     return stack;

@@ -79,7 +79,7 @@ ECDefineDebugChannel(NSURLChannel);
         {
             result = [result URLByAppendingPathExtension: extension];
         }
-		newName = [NSString stringWithFormat: @"%@ %ld", name, ++iteration];
+		newName = [NSString stringWithFormat: @"%@ %d", name, ++iteration];
 	} while ([fileManager fileExistsAtPath: [result path]]);
 	
 	ECDebug(NSURLChannel, @"got unique filename %@ for file %@", result, name);
