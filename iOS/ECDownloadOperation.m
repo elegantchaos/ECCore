@@ -97,12 +97,36 @@
 
 - (void)start
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
-        [self.connection scheduleInRunLoop:self.runLoop forMode:NSDefaultRunLoopMode];
-        [self.connection start];
-        self.executing = YES;
-    });
+	// Always check for cancellation before launching the task.
+	if ([self isCancelled])
+	{
+		// Must move the operation to the finished state if it is canceled.
+		[self willChangeValueForKey:@"isFinished"];
+		self.finished = YES;
+		[self didChangeValueForKey:@"isFinished"];
+	}
+	else
+	{
+		dispatch_async(dispatch_get_main_queue(), ^{
+			self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
+			[self.connection scheduleInRunLoop:self.runLoop forMode:NSDefaultRunLoopMode];
+			[self.connection start];
+			self.executing = YES;
+		});
+	}
+}
+
+//! Stop executing the task, ensuring that we spit out the relevant KVO notifications
+- (void)finish
+{
+	[self willChangeValueForKey:@"isFinished"];
+	[self willChangeValueForKey:@"isExecuting"];
+	
+	self.executing = NO;
+	self.finished = YES;
+	
+	[self didChangeValueForKey:@"isExecuting"];
+	[self didChangeValueForKey:@"isFinished"];
 }
 
 //! Cancel a download. We cancel the connection, then wait for the relevant callbacks to occur
@@ -167,6 +191,7 @@
 - (void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error
 {
     self.completion(self.response, self.data, error);
+	[self finish];
     self.connection = nil;
     self.response = nil;
 }
@@ -177,6 +202,7 @@
 {
     self.progress(self.response, self.data, 1.0);
     self.completion(self.response, self.data, nil);
+	[self finish];
     self.connection = nil;
     self.response = nil;
 }

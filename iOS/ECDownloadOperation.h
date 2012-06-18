@@ -25,11 +25,11 @@ typedef void (^ProgressHandler)(NSURLResponse* response, NSData* data, double pr
 
 //! Is the operation executing?
 
-@property (assign, nonatomic, getter=isExecuting) BOOL executing;
+@property (assign, atomic, getter=isExecuting) BOOL executing;
 
 //! Has the operation finished?
 
-@property (assign, nonatomic, getter=isFinished) BOOL finished;
+@property (assign, atomic, getter=isFinished) BOOL finished;
 
 //! The run loop for the NSURLConnection to use.
 //! By default we use the main loop, which should be fine for most purposes.
