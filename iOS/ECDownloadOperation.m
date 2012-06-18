@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSMutableData* data;                  //!< The data we've downloaded.
 @property (assign, nonatomic) double length;                        //!< Expected length of the data.
 @property (copy, nonatomic) ProgressHandler progress;               //!< The handler we'll call to report progress.
-@property (strong, nonatomic) NSURLRequest* request;                //!< The request for the download.
+@property (strong, nonatomic) NSURLRequest* request;				//!< The request for the download.
 @property (strong, nonatomic) NSURLResponse* response;              //!< The HTTP response we got back from the server.
 
 @end
@@ -107,11 +107,14 @@
 	}
 	else
 	{
+		[self willChangeValueForKey:@"isExecuting"];
+		self.executing = YES;
+		[self didChangeValueForKey:@"isExecuting"];
+
 		dispatch_async(dispatch_get_main_queue(), ^{
 			self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
-			[self.connection scheduleInRunLoop:self.runLoop forMode:NSDefaultRunLoopMode];
 			[self.connection start];
-			self.executing = YES;
+			
 		});
 	}
 }
@@ -171,7 +174,10 @@
     }
     self.length = length;
     self.data = [NSMutableData data];
-    self.progress(self.response, self.data, 0.0);
+	if (self.progress)
+	{
+		self.progress(self.response, self.data, 0.0);
+	}
     [self checkForCancellation];
 }
 
@@ -180,9 +186,12 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
     [self.data appendData:data];
-    double lengthSoFar = [self.data length];
-    double progress = lengthSoFar / self.length;
-    self.progress(self.response, self.data, progress);
+	if (self.progress)
+	{
+		double lengthSoFar = [self.data length];
+		double progress = lengthSoFar / self.length;
+		self.progress(self.response, self.data, progress);
+	}
     [self checkForCancellation];
 }
 
@@ -200,7 +209,10 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    self.progress(self.response, self.data, 1.0);
+	if (self.progress)
+	{
+		self.progress(self.response, self.data, 1.0);
+	}
     self.completion(self.response, self.data, nil);
 	[self finish];
     self.connection = nil;
