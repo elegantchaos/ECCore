@@ -12,6 +12,7 @@
 - (NSString*)aboutName;
 - (NSString*)aboutCopyright;
 - (NSString*)aboutVersion;
+- (NSString*) aboutShortVersion;
 
 + (BOOL)isIOS5OrLater;
 

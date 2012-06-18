@@ -65,6 +65,20 @@
 }
 
 // --------------------------------------------------------------------------
+//! Return the short version of the application, in a format appropriate for display in an small label.
+// --------------------------------------------------------------------------
+
+- (NSString*) aboutShortVersion;
+{
+	NSBundle* bundle = [NSBundle mainBundle];
+	NSDictionary* info = [bundle infoDictionary];
+	
+	NSString* result = [NSString stringWithFormat: @"%@ (%@%@)", [info objectForKey:@"CFBundleShortVersionString"], EC_CONFIGURATION_STRING_SHORT, [info objectForKey:@"CFBundleVersion"]];
+	
+	return result;
+}
+
+// --------------------------------------------------------------------------
 //! Are we running on iOS 5?
 // --------------------------------------------------------------------------
 
