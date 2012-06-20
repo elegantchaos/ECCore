@@ -16,4 +16,7 @@
 
 + (BOOL)isIOS5OrLater;
 
+- (void)networkOperationStarted;
+- (void)networkOperationEnded;
+
 @end

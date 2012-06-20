@@ -87,4 +87,27 @@
     return [UIAlertView instancesRespondToSelector:@selector(alertViewStyle)];
 }
 
+static NSUInteger gNetworkOperationCount;
+
+- (void)networkOperationStarted
+{
+	@synchronized(self)
+	{
+		++gNetworkOperationCount;
+		self.networkActivityIndicatorVisible = YES;
+	}
+}
+
+- (void)networkOperationEnded
+{
+	@synchronized(self)
+	{
+		if (--gNetworkOperationCount == 0)
+		{
+			self.networkActivityIndicatorVisible = NO;
+		}
+	}
+}
+
+
 @end

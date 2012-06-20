@@ -8,6 +8,7 @@
 // --------------------------------------------------------------------------
 
 #import "ECDownloadOperation.h"
+#import "UIApplication+ECCore.h"
 
 @interface ECDownloadOperation()
 
@@ -112,6 +113,7 @@
 		[self didChangeValueForKey:@"isExecuting"];
 
 		dispatch_async(dispatch_get_main_queue(), ^{
+			[[UIApplication sharedApplication] networkOperationStarted];
 			self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
 			[self.connection start];
 			
@@ -130,6 +132,8 @@
 	
 	[self didChangeValueForKey:@"isExecuting"];
 	[self didChangeValueForKey:@"isFinished"];
+	
+	[[UIApplication sharedApplication] networkOperationEnded];
 }
 
 //! Cancel a download. We cancel the connection, then wait for the relevant callbacks to occur
