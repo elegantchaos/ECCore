@@ -117,7 +117,7 @@ const RelativeEntry kDefaultEntries[] =
 		}
 		else if (dayDiff < 8)
 		{
-			result = [NSString stringWithFormat: @"%u days ago", dayDiff];
+			result = [NSString stringWithFormat: @"%lu days ago", (unsigned long) dayDiff];
 		}
 		else if (dayDiff < 365)
 		{
