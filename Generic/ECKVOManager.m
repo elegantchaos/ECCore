@@ -14,7 +14,7 @@
 
 @interface ECKVOManager()
 
-@property (assign, nonatomic) CFMutableArrayRef observers;
+@property (strong, nonatomic) NSMutableArray* observers;
 
 @end
 
@@ -30,7 +30,7 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 {
 	if ((self = [super init]) != nil)
 	{
-		self.observers = CFArrayCreateMutable(nil, 0, nil);
+		self.observers = [(__bridge NSMutableArray*) CFArrayCreateMutable(nil, 0, nil) autorelease];
 	}
 	
 	return self;
@@ -38,7 +38,7 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 
 - (void)dealloc
 {
-	CFRelease(_observers);
+	[_observers release];
 	
 	[super dealloc];
 }
@@ -47,7 +47,7 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 {
 	@synchronized(self)
 	{
-		CFMutableArrayRef array = self.observers;
+		CFMutableArrayRef array = (__bridge CFMutableArrayRef) self.observers;
 		CFArrayAppendValue(array, observer);
 		ECDebug(ECKVOChannel, @"added observer %@", observer);
 	}
@@ -57,7 +57,7 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 {
 	@synchronized(self)
 	{
-		CFMutableArrayRef array = self.observers;
+		CFMutableArrayRef array = (__bridge CFMutableArrayRef) self.observers;
 		CFRange range = CFRangeMake(0, CFArrayGetCount(array));
 		CFIndex index = CFArrayGetFirstIndexOfValue(array, range, observer);
 		CFArrayRemoveValueAtIndex(array, index);
@@ -69,7 +69,7 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 - (NSString*)description
 {
 	NSMutableString* description = [NSMutableString stringWithString:@"Registered observers:\n"];
-	CFMutableArrayRef array = self.observers;
+	CFMutableArrayRef array = (__bridge CFMutableArrayRef) self.observers;
 	CFIndex count = CFArrayGetCount(array);
 	for (CFIndex n = 0; n < count; ++n)
 	{
@@ -86,12 +86,12 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 
 - (NSUInteger)observerCount
 {
-	return CFArrayGetCount(self.observers);
+	return CFArrayGetCount((__bridge CFMutableArrayRef) self.observers);
 }
 
 - (ECObserver*)observerAtIndex:(NSUInteger)index
 {
-	return CFArrayGetValueAtIndex(self.observers, index);
+	return CFArrayGetValueAtIndex((__bridge CFMutableArrayRef) self.observers, index);
 }
 
 @end
