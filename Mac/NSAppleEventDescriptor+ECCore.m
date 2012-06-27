@@ -20,10 +20,12 @@
 - (NSURL*) urlValue
 {
 	NSURL* url = nil;
-	NSString* string = [self stringValue];
-	if (string)
+	NSAppleEventDescriptor* coercedDescriptor = [self coerceToDescriptorType:typeFileURL];
+	NSString* coercedString = [[NSString alloc] initWithData:[coercedDescriptor data] encoding:NSUTF8StringEncoding];
+	if (coercedString)
 	{
-		url = [NSURL fileURLWithPath: string];
+		url = [NSURL URLWithString:coercedString];
+		[coercedString release];
 	}
 	
 	return url;
