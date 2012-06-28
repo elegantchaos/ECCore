@@ -84,17 +84,15 @@
 //! Return the value of the descriptor as an array of URLs.
 // --------------------------------------------------------------------------
 
-- (NSArray*) urlArrayValue
+- (NSArray*) URLArrayValue
 {
 	NSMutableArray* urls = [[[NSMutableArray alloc] init] autorelease];
 	
 	NSInteger count = [self numberOfItems];
 	for (NSInteger index = 1; index <= count; ++index)
 	{
-		NSAppleEventDescriptor* descriptor = [self descriptorAtIndex: index];
-		NSURL* url = [[NSURL alloc] initWithString: [descriptor stringValue]];
-		[urls addObject: url];
-		[url release];
+		NSAppleEventDescriptor* descriptor = [self descriptorAtIndex:index];
+		[urls addObject: [descriptor URLValue]];
 	}
 	
 	return urls;

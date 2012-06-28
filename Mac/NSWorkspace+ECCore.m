@@ -171,7 +171,7 @@ static NSAppleScript *const kInvalidScript = (NSAppleScript*) -1;
         NSAppleEventDescriptor* result = [finderSupport callHandler:@"finderSelection" withParameters:nil];
         if (result)
         {
-            urls = [result urlArrayValue];
+            urls = [result URLArrayValue];
         }
         else 
         {
