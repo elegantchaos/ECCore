@@ -14,9 +14,9 @@
 
 @interface NSAppleEventDescriptor(ECCore)
 
-- (NSURL*)urlValue;
+- (NSURL*)URLValue;
 - (NSArray*)stringArrayValue;
 - (NSArray*)stringArraySortedValue;
-- (NSArray*)urlArrayValue;
+- (NSArray*)URLArrayValue;
 
 @end

@@ -17,17 +17,46 @@
 //! Return the value of the descriptor as a URL.
 // --------------------------------------------------------------------------
 
-- (NSURL*) urlValue
+- (NSURL*) URLValue
 {
 	NSURL* url = nil;
-	NSAppleEventDescriptor* coercedDescriptor = [self coerceToDescriptorType:typeFileURL];
-	NSString* coercedString = [[NSString alloc] initWithData:[coercedDescriptor data] encoding:NSUTF8StringEncoding];
-	if (coercedString)
+
+	// if we've been given a file type, try to coerce it into a typeFileURL, then extract the URL directly
+	OSType type = self.typeCodeValue;
+	switch (type)
 	{
-		url = [NSURL URLWithString:coercedString];
-		[coercedString release];
+		case typeFileURL:
+		case typeFSRef:
+		case typeAlias:
+		case 'elif':
+		{
+			NSAppleEventDescriptor* coercedDescriptor = [self coerceToDescriptorType:typeFileURL];
+			NSString* coercedString = [[NSString alloc] initWithData:[coercedDescriptor data] encoding:NSUTF8StringEncoding];
+			if (coercedString)
+			{
+				url = [NSURL URLWithString:coercedString];
+				[coercedString release];
+			}
+			break;
+		}
+
+		default:
+			break;
 	}
-	
+
+	// if it wasn't a file, or we couldn't coerce it to be a file url, try treating it as a URL in string form
+	if (!url)
+	{
+		url = [NSURL URLWithString:[self stringValue]];
+	}
+
+	// if we made it into a URL but there didn't appear to be a scheme, try
+	// turning it into a string and treating that as a file path
+	if (!url || [url.scheme length] == 0)
+	{
+		url = [NSURL fileURLWithPath:[self stringValue]];
+	}
+
 	return url;
 }
 

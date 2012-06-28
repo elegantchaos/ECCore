@@ -16,17 +16,31 @@
 
 @implementation NSAppleEventDescriptorTests
 
+static NSString *const TestFilePath = @"/Applications/Preview.app";
+static const char* TestFileURL = "file://localhost/Applications/Preview.app";
+
 // --------------------------------------------------------------------------
 //! Test coercing descriptor into a url.
 // --------------------------------------------------------------------------
 
-- (void) testURLValue
+- (void) testURLValues
 {
-	NSAppleEventDescriptor* desc = [NSAppleEventDescriptor descriptorWithString: @"/Applications/Preview.app"];
-	ECTestAssertNotNil(desc);
+	NSAppleEventDescriptor* path = [NSAppleEventDescriptor descriptorWithString:TestFilePath];
+	ECTestAssertNotNil(path);
 	
-	NSURL* url = [desc urlValue];
-	ECTestAssertStringIsEqual([url path], @"/Applications/Preview.app");
+	NSURL* url = [path URLValue];
+	ECTestAssertStringIsEqual([url path], TestFilePath);
+	
+	NSAppleEventDescriptor* fullURL = [NSAppleEventDescriptor descriptorWithString: @"http://www.elegantchaos.com"];
+	ECTestAssertNotNil(fullURL);
+	
+	url = [fullURL URLValue];
+	ECTestAssertStringIsEqual([url absoluteString], @"http://www.elegantchaos.com");
+	
+	NSAppleEventDescriptor* fileURL = [NSAppleEventDescriptor descriptorWithDescriptorType:typeFileURL bytes:TestFileURL length:strlen(TestFileURL)];
+
+	url = [fileURL URLValue];
+	ECTestAssertStringIsEqual([url path], TestFilePath);
 }
 
 // --------------------------------------------------------------------------
