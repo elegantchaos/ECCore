@@ -73,7 +73,7 @@ static const char* TestFileURL = "file://localhost/Applications/Preview.app";
 	[desc insertDescriptor: [NSAppleEventDescriptor descriptorWithString: @"/Test/2.txt"] atIndex: 2];
 	ECTestAssertIntegerIsEqual([desc numberOfItems], 2);
 	
-	NSArray* array = [desc urlArrayValue];
+	NSArray* array = [desc URLArrayValue];
 	ECTestAssertIntegerIsEqual([array count], 2);
 	ECTestAssertStringIsEqual([[array objectAtIndex: 0] path], @"/Test/1.txt");
 	ECTestAssertStringIsEqual([[array objectAtIndex: 1] path], @"/Test/2.txt");
