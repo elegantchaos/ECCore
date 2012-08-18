@@ -56,7 +56,7 @@
 	 ^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) 
 	 {
 		 ++count;
-		 NSAttributedString* replacement = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"test%ld",(long) count]];
+		 NSAttributedString* replacement = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"tes%ld",(long) count]];
 		 [current replaceCharactersInRange:match.range withAttributedString:replacement];
 		 [replacement release];
 	 }
