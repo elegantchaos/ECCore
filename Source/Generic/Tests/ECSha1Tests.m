@@ -11,8 +11,8 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
+#import <ECCore/ECCore.h>
 
-#import "ECSha1.h"
 
 @interface ECSha1Tests : ECTestCase
 

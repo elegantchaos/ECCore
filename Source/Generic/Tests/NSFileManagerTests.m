@@ -8,8 +8,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
-
-#import "NSFileManager+ECCore.h"
+#import <ECCore/ECCore.h>
 
 @interface NSFileManagerTests : ECTestCase
 

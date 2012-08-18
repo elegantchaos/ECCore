@@ -11,9 +11,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
-
-#import "NSException+ECCore.h"
-#import "NSString+ECCore.h"
+#import <ECCore/ECCore.h>
 
 @interface NSExceptionTests : ECTestCase
 

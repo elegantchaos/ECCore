@@ -8,8 +8,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
-
-#import "NSURL+ECCore.h"
+#import <ECCore/ECCore.h>
 
 @interface NSURLTests : ECTestCase
 

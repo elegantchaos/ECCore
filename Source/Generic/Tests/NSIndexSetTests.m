@@ -8,8 +8,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
-
-#import "NSIndexSet+ECCore.h"
+#import <ECCore/ECCore.h>
 
 @interface NSIndexSetTests : ECTestCase
 

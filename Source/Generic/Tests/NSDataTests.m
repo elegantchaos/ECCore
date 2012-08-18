@@ -10,7 +10,7 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import "NSData+ECCore.h"
+#import <ECCore/ECCore.h>
 
 #import <ECUnitTests/ECUnitTests.h>
 

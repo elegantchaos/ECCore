@@ -11,8 +11,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
-
-#import "ECRandom.h"
+#import <ECCore/ECCore.h>
 
 
 @interface ECRandomTests : ECTestCase

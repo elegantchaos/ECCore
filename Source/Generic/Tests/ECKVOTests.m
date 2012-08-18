@@ -8,9 +8,8 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
+#import <ECCore/ECCore.h>
 
-#import "ECKVO.h"
-#import "ECKVOManager.h"
 
 @interface KVOTestClass : NSObject
 

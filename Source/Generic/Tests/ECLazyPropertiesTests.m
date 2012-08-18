@@ -11,8 +11,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
-
-#import "ECLazyProperties.h"
+#import <ECCore/ECCore.h>
 
 #pragma mark Test Class with Lazy Property
 

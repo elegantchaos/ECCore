@@ -8,8 +8,8 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
+#import <ECCore/ECCore.h>
 
-#import "NSBundle+ECCore.h"
 
 @interface NSBundleTests : ECTestCase
 

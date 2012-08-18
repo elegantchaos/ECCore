@@ -8,8 +8,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
-
-#import "NSMutableAttributedString+ECCore.h"
+#import <ECCore/ECCore.h>
 
 @interface NSMutableAttributedStringTests : ECTestCase
 

@@ -10,9 +10,8 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import "NSString+ECCore.h"
-
 #import <ECUnitTests/ECUnitTests.h>
+#import <ECCore/ECCore.h>
 
 
 @interface NSStringTests : ECTestCase

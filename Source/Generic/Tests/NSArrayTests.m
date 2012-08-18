@@ -8,8 +8,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECUnitTests/ECUnitTests.h>
-
-#import "NSArray+ECCore.h"
+#import <ECCore/ECCore.h>
 
 @interface NSArrayTests : ECTestCase
 

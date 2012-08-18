@@ -7,8 +7,7 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import "CGGeometry+ECCore.h"
-
+#import <ECCore/ECCore.h>
 #import <ECUnitTests/ECUnitTests.h>
 
 
