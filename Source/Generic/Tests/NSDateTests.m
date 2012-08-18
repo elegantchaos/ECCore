@@ -11,7 +11,8 @@
 // --------------------------------------------------------------------------
 
 #import "NSDate+ECCore.h"
-#import "ECTestCase.h"
+
+#import <ECUnitTests/ECTestCase.h>
 
 
 @interface NSDateFormattingTests : ECTestCase

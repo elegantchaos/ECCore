@@ -11,7 +11,8 @@
 // --------------------------------------------------------------------------
 
 #import "NSString+ECCore.h"
-#import "ECTestCase.h"
+
+#import <ECUnitTests/ECTestCase.h>
 
 
 @interface NSStringTests : ECTestCase
@@ -24,7 +25,7 @@
 
 - (void) testSplitWordsIntoInts
 {
-	NSString* string = [NSString stringWithString: @"1 2 3 4 5 -1 -2 -3 -4 -5"];
+	NSString* string = @"1 2 3 4 5 -1 -2 -3 -4 -5";
 	
 	NSData* data = [string splitWordsIntoInts];
 	
@@ -40,7 +41,7 @@
 
 - (void) testSplitWordsIntoFloats
 {
-	NSString* string = [NSString stringWithString: @"1.1 2.2 3.3 4.4 5.5 -1.1 -2.2 -3.3 -4.4 -5.5"];
+	NSString* string = @"1.1 2.2 3.3 4.4 5.5 -1.1 -2.2 -3.3 -4.4 -5.5";
 	
 	NSData* data = [string splitWordsIntoFloats];
 	
@@ -56,7 +57,7 @@
 
 - (void) testSplitWordsIntoDoubles
 {
-	NSString* string = [NSString stringWithString: @"1.1 2.2 3.3 4.4 5.5 -1.1 -2.2 -3.3 -4.4 -5.5"];
+	NSString* string = @"1.1 2.2 3.3 4.4 5.5 -1.1 -2.2 -3.3 -4.4 -5.5";
 	
 	NSData* data = [string splitWordsIntoDoubles];
 	

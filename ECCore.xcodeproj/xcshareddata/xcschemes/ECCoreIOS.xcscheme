@@ -70,6 +70,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22C2DB7014FB9CC8005D2E89"
+               BuildableName = "ECCoreIOSTests.octest"
+               BlueprintName = "ECCoreIOSTests"
+               ReferencedContainer = "container:ECCore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

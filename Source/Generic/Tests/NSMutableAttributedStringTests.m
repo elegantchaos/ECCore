@@ -7,7 +7,8 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import "ECTestCase.h"
+#import <ECUnitTests/ECTestCase.h>
+
 #import "NSMutableAttributedString+ECCore.h"
 
 @interface NSMutableAttributedStringTests : ECTestCase
@@ -55,7 +56,7 @@
 	 ^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) 
 	 {
 		 ++count;
-		 NSAttributedString* replacement = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"tes%d",count]];
+		 NSAttributedString* replacement = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"test%ld",(long) count]];
 		 [current replaceCharactersInRange:match.range withAttributedString:replacement];
 		 [replacement release];
 	 }
@@ -84,7 +85,7 @@
 	 ^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) 
 	 {
 		 ++count;
-		 NSAttributedString* replacement = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"test%d",count]];
+		 NSAttributedString* replacement = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"test%ld", (long)count]];
 		 [current replaceCharactersInRange:match.range withAttributedString:replacement];
 		 [replacement release];
 	 }

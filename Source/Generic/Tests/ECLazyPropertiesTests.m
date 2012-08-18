@@ -10,7 +10,8 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import "ECTestCase.h"
+#import <ECUnitTests/ECTestCase.h>
+
 #import "ECLazyProperties.h"
 
 #pragma mark Test Class with Lazy Property

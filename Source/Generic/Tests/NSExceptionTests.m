@@ -10,7 +10,7 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import "ECTestCase.h"
+#import <ECUnitTests/ECTestCase.h>
 
 #import "NSException+ECCore.h"
 #import "NSString+ECCore.h"

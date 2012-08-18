@@ -7,7 +7,8 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import "ECTestCase.h"
+#import <ECUnitTests/ECTestCase.h>
+
 #import "UIApplication+ECCore.h"
 
 @interface UIApplicationTests : ECTestCase

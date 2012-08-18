@@ -11,7 +11,8 @@
 // --------------------------------------------------------------------------
 
 #import "NSData+ECCore.h"
-#import "ECTestCase.h"
+
+#import <ECUnitTests/ECTestCase.h>
 
 
 @interface NSDataTests : ECTestCase

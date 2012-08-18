@@ -70,6 +70,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2283A3F414F52EC0009142F7"
+               BuildableName = "ECCoreMacTests.octest"
+               BlueprintName = "ECCoreMacTests"
+               ReferencedContainer = "container:ECCore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

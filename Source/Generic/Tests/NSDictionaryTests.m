@@ -11,7 +11,9 @@
 // --------------------------------------------------------------------------
 
 #import "NSDictionary+ECCore.h"
-#import "ECTestCase.h"
+
+#import <ECUnitTests/ECTestCase.h>
+
 
 
 @interface NSDictionary_ECUtilitiesTests : ECTestCase

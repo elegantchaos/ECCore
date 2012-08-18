@@ -8,7 +8,8 @@
 // --------------------------------------------------------------------------
 
 #import "CGGeometry+ECCore.h"
-#import "ECTestCase.h"
+
+#import <ECUnitTests/ECTestCase.h>
 
 
 @interface CGGeometryTests : ECTestCase
