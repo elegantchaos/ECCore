@@ -12,7 +12,7 @@
 
 #import "NSString+ECCore.h"
 
-#import <ECUnitTests/ECTestCase.h>
+#import <ECUnitTests/ECUnitTests.h>
 
 
 @interface NSStringTests : ECTestCase

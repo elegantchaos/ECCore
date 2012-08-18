@@ -9,7 +9,7 @@
 
 #import "CGGeometry+ECCore.h"
 
-#import <ECUnitTests/ECTestCase.h>
+#import <ECUnitTests/ECUnitTests.h>
 
 
 @interface CGGeometryTests : ECTestCase

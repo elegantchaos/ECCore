@@ -12,7 +12,7 @@
 
 #import "NSDictionary+ECCore.h"
 
-#import <ECUnitTests/ECTestCase.h>
+#import <ECUnitTests/ECUnitTests.h>
 
 
 
