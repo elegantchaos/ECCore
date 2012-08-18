@@ -211,6 +211,23 @@
 		22D55C1D14FB8A230052EA01 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F977149246CF00AAC9B0 /* NSURLTests.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2260A3C315DFF7370057C9DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2260A2E815DFD7290057C9DA;
+			remoteInfo = ECCoreMac;
+		};
+		2260A3C515DFF73F0057C9DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2260A2FC15DFD7320057C9DA;
+			remoteInfo = ECCoreIOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -918,6 +935,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2260A3C415DFF7370057C9DA /* PBXTargetDependency */,
 			);
 			name = ECCoreMacTests;
 			productName = libECCoreMacTests;
@@ -936,6 +954,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2260A3C615DFF73F0057C9DA /* PBXTargetDependency */,
 			);
 			name = ECCoreIOSTests;
 			productName = ECCoreIOSTests;
@@ -1075,7 +1094,6 @@
 				2260A33815DFDB4C0057C9DA /* NSIndexSet+ECCore.m in Sources */,
 				2260A33A15DFDB4C0057C9DA /* NSMutableAttributedString+ECCore.m in Sources */,
 				2260A33C15DFDB4C0057C9DA /* NSString+ECCoreGeneric.m in Sources */,
-				2260A33E15DFDB4C0057C9DA /* NSURL+ECCore.m in Sources */,
 				2260A37915DFDB830057C9DA /* ECKeychain.m in Sources */,
 				2260A37B15DFDB830057C9DA /* ECLaunchServices.m in Sources */,
 				2260A37D15DFDB830057C9DA /* ECMachine.m in Sources */,
@@ -1091,6 +1109,7 @@
 				2260A39115DFDB830057C9DA /* NSUserDefaults+ECCore.m in Sources */,
 				2260A39315DFDB830057C9DA /* NSWindow+ECCore.m in Sources */,
 				2260A39515DFDB830057C9DA /* NSWorkspace+ECCore.m in Sources */,
+				2260A33E15DFDB4C0057C9DA /* NSURL+ECCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1191,6 +1210,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2260A3C415DFF7370057C9DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2260A2E815DFD7290057C9DA /* ECCoreMac */;
+			targetProxy = 2260A3C315DFF7370057C9DA /* PBXContainerItemProxy */;
+		};
+		2260A3C615DFF73F0057C9DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2260A2FC15DFD7320057C9DA /* ECCoreIOS */;
+			targetProxy = 2260A3C515DFF73F0057C9DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1208,6 +1240,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2260A31015DFD96D0057C9DA /* MacDebug.xcconfig */;
 			buildSettings = {
+				GCC_PREFIX_HEADER = "Source/Prefix/$(CONFIGURATION).pch";
 			};
 			name = Debug;
 		};
@@ -1215,6 +1248,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2260A31115DFD96D0057C9DA /* MacRelease.xcconfig */;
 			buildSettings = {
+				GCC_PREFIX_HEADER = "Source/Prefix/Blah$(CONFIGURATION).pch";
 			};
 			name = Release;
 		};
@@ -1295,6 +1329,7 @@
 				2260A2F715DFD7290057C9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2260A30715DFD7320057C9DA /* Build configuration list for PBXNativeTarget "ECCoreIOS" */ = {
 			isa = XCConfigurationList;
@@ -1303,6 +1338,7 @@
 				2260A30915DFD7320057C9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2283A40814F52EC0009142F7 /* Build configuration list for PBXNativeTarget "ECCoreMacTests" */ = {
 			isa = XCConfigurationList;

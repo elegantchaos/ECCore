@@ -4,6 +4,8 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
+doodah release
+
 #import <ECConfig/Release.pch>
 
 #import "Shared.pch"

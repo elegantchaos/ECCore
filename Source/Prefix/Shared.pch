@@ -4,6 +4,7 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#define ECCORE 1
+#define EC_CORE 1
 
+#import <ECConfig/ECConfig.h>
 #import <ECLogging/ECLogging.h>
