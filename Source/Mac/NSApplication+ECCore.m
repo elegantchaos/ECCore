@@ -9,8 +9,6 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import <ECLogging/ECLogging.h>
-
 #import "NSApplication+ECCore.h"
 #import "ECLaunchServices.h"
 

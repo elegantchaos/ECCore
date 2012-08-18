@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 Elegant Chaos. All rights reserved.
 //
 
-#import <ECLogging/ECLogging.h>
-
 #import "ECSingleton.h"
 
 @class ECObserver;
