@@ -6,5 +6,8 @@
 
 #define EC_CORE 1
 
-#import <ECConfig/ECConfig.h>
+#ifdef __OBJC__
+
 #import <ECLogging/ECLogging.h>
+
+#endif
