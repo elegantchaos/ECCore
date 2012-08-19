@@ -6,11 +6,14 @@
 
 #import "CGGeometry+ECCore.h"
 
+#import "ECCoercion.h"
 #import "ECKVO.h"
 #import "ECKVOManager.h"
 #import "ECLazyProperties.h"
+#import "ECMacros.h"
 #import "ECRandom.h"
 #import "ECSha1.h"
+#import "ECSingleton.h"
 
 #import "NSArray+ECCore.h"
 #import "NSBundle+ECCore.h"
