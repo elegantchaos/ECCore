@@ -4,6 +4,8 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
+#import <ECLogging/ECLogging.h>
+
 #import "CGGeometry+ECCore.h"
 
 #import "ECCoercion.h"
