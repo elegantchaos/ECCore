@@ -9,9 +9,37 @@
 
 #import "NSMutableAttributedString+ECCore.h"
 #import "NSData+ECCore.h"
+#import "NSString+ECCore.h"
 
 @implementation NSMutableAttributedString(ECCore)
 
+- (void)escapeEntities
+{
+	NSDictionary* entities = [NSString entities];
+	for (NSString* entity in entities)
+	{
+		NSString* character = [entities objectForKey:entity];
+		NSRange range;
+		while ((range = [[self string] rangeOfString:character]).location != NSNotFound)
+		{
+			[self replaceCharactersInRange:range withString:entity];
+		}
+	}
+}
+
+- (void)unescapeEntities
+{
+	NSDictionary* entities = [NSString entities];
+	for (NSString* entity in entities)
+	{
+		NSString* character = [entities objectForKey:entity];
+		NSRange range;
+		while ((range = [[self string] rangeOfString:entity]).location != NSNotFound)
+		{
+			[self replaceCharactersInRange:range withString:character];
+		}
+	}
+}
 
 - (void)matchExpression:(NSRegularExpression*)expression options:(NSRegularExpressionOptions)options reversed:(BOOL)reversed action:(MatchAction)block
 {

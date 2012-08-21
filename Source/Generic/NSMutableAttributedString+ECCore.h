@@ -18,4 +18,8 @@ typedef void(^MatchAction)(NSAttributedString* original, NSMutableAttributedStri
 - (void)replaceExpression:(NSRegularExpression*)expression options:(NSRegularExpressionOptions)options atIndex:(NSUInteger)atIndex withIndex:(NSUInteger)withIndex attributes:(NSDictionary*)attributes;
 - (void)replaceMatch:(NSTextCheckingResult*)match atIndex:(NSUInteger)atIndex withIndex:(NSUInteger)withIndex attributes:(NSDictionary*)attributes;
 
+- (void)escapeEntities;
+- (void)unescapeEntities;
+
+
 @end

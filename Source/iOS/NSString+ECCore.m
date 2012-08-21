@@ -11,7 +11,7 @@
 
 @implementation NSString(ECCore)
 
-- (NSDictionary*)entities
++ (NSDictionary*)entities
 {
 	NSDictionary* entities = [NSDictionary dictionaryWithObjectsAndKeys:
 							  @"&", @"&amp;",
@@ -31,7 +31,7 @@
 
 - (NSString*)stringByEscapingEntities
 {
-	NSDictionary* entities = [self entities];
+	NSDictionary* entities = [[self class] entities];
 	NSString* result = self;
 	for (NSString* entity in entities)
 	{
@@ -48,7 +48,7 @@
 
 - (NSString*)stringByUnescapingEntities
 {
-	NSDictionary* entities = [self entities];
+	NSDictionary* entities = [[self class] entities];
 	NSString* result = self;
 	for (NSString* entity in entities)
 	{
