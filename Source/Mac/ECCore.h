@@ -5,3 +5,19 @@
 // --------------------------------------------------------------------------
 
 #import "ECCoreGeneric.h"
+
+#import "ECKeychain.h"
+#import "ECLaunchServices.h"
+#import "ECMachine.h"
+#import "NSAppleEventDescriptor+ECCore.h"
+#import "NSAppleScript+ECCore.h"
+#import "NSApplication+ECCore.h"
+#import "NSButton+ECCore.h"
+#import "NSColor+ECCore.h"
+#import "NSGeometry+ECCore.h"
+#import "NSMenu+ECCore.h"
+#import "NSString+ECCore.h"
+#import "NSURL+ECCoreMac.h"
+#import "NSUserDefaults+ECCore.h"
+#import "NSWindow+ECCore.h"
+#import "NSWorkspace+ECCore.h"
