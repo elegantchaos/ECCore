@@ -36,7 +36,7 @@
 	for (NSString* entity in entities)
 	{
 		NSString* character = [entities objectForKey:entity];
-		result = [self stringByReplacingOccurrencesOfString:character withString:entity];
+		result = [result stringByReplacingOccurrencesOfString:character withString:entity];
 	}
 
 	return result;
@@ -53,7 +53,7 @@
 	for (NSString* entity in entities)
 	{
 		NSString* character = [entities objectForKey:entity];
-		result = [self stringByReplacingOccurrencesOfString:entity withString:character];
+		result = [result stringByReplacingOccurrencesOfString:entity withString:character];
 	}
 	
 	return result;
