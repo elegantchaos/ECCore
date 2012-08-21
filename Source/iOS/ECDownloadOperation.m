@@ -44,6 +44,11 @@
 //! Utility to create a download task and add it to a queue.
 //! @return The task we created.
 
++ (id)sendAsynchronousRequest:(NSURLRequest*)request queue:(NSOperationQueue*) queue completionHandler:(CompletionHandler)completion
+{
+	return [[self class] sendAsynchronousRequest:request queue:queue completionHandler:completion progressHandler:nil];
+}
+
 + (id)sendAsynchronousRequest:(NSURLRequest*)request queue:(NSOperationQueue*) queue completionHandler:(CompletionHandler)completion progressHandler:(ProgressHandler)progress
 {
     ECDownloadOperation* operation = [[ECDownloadOperation alloc] initWithRequest:request completionHandler:completion progressHandler:progress];

@@ -43,6 +43,7 @@ typedef void (^ProgressHandler)(NSURLResponse* response, NSData* data, double pr
 //! @param progress Block to call periodically with progress.
 
 + (id)sendAsynchronousRequest:(NSURLRequest*)request queue:(NSOperationQueue*) queue completionHandler:(CompletionHandler)completion progressHandler:(ProgressHandler)progress;
++ (id)sendAsynchronousRequest:(NSURLRequest*)request queue:(NSOperationQueue*) queue completionHandler:(CompletionHandler)completion;
 
 //! Create a new operation.
 //! @param request The request we're going to perform.

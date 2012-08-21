@@ -158,6 +158,8 @@
 		2260A3B515DFF1920057C9DA /* ECCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260A2E915DFD7290057C9DA /* ECCore.framework */; };
 		2283A3F614F52EC0009142F7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3CD14F52E93009142F7 /* SenTestingKit.framework */; };
 		2283A3F714F52EC0009142F7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
+		22BE98C315E3CE8C00A9EC73 /* ECDownloadOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 22BE98C115E3CE8C00A9EC73 /* ECDownloadOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22BE98C415E3CE8C00A9EC73 /* ECDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BE98C215E3CE8C00A9EC73 /* ECDownloadOperation.m */; };
 		22C2DB4614FB988A005D2E89 /* ECLaunchServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91D814925F24008EF8E2 /* ECLaunchServicesTests.m */; };
 		22C2DB4714FB988A005D2E89 /* NSAppleEventDescriptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91D914925F24008EF8E2 /* NSAppleEventDescriptorTests.m */; };
 		22C2DB4814FB988A005D2E89 /* NSAppleScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DA14925F24008EF8E2 /* NSAppleScriptTests.m */; };
@@ -356,6 +358,8 @@
 		22BE50B8149662D0007CC214 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
 		22BE51331496BD00007CC214 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		22BE51351496BD25007CC214 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		22BE98C115E3CE8C00A9EC73 /* ECDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECDownloadOperation.h; sourceTree = "<group>"; };
+		22BE98C215E3CE8C00A9EC73 /* ECDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECDownloadOperation.m; sourceTree = "<group>"; };
 		22C1E18F1490BF6D004DA13E /* ECLazyPropertiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ECLazyPropertiesTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		22C1E19D1490CC27004DA13E /* NSExceptionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NSExceptionTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		22C1E2361490FAE0004DA13E /* ECRandomTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECRandomTests.m; sourceTree = "<group>"; };
@@ -746,9 +750,12 @@
 			isa = PBXGroup;
 			children = (
 				2204C5E715E13CB500F71E15 /* ECCore.h */,
+				22BE98C115E3CE8C00A9EC73 /* ECDownloadOperation.h */,
+				22BE98C215E3CE8C00A9EC73 /* ECDownloadOperation.m */,
 				22351D021544487000A24099 /* NSString+ECCore.h */,
 				22351D031544487000A24099 /* NSString+ECCore.m */,
 				2206F9661492236400AAC9B0 /* NSURL+ECCoreIOS.m */,
+				2206F97A14924D6200AAC9B0 /* Tests */,
 				22CA557913DA09FF007E89E2 /* UIApplication+ECCore.h */,
 				22CA557A13DA09FF007E89E2 /* UIApplication+ECCore.m */,
 				22CA557B13DA09FF007E89E2 /* UIColor+ECCore.h */,
@@ -759,7 +766,6 @@
 				22CA557E13DA09FF007E89E2 /* UIImage+ECCore.m */,
 				22177AC61495707400C7BDBE /* UIViewController+ECUtilities.h */,
 				22177AC71495707400C7BDBE /* UIViewController+ECUtilities.m */,
-				2206F97A14924D6200AAC9B0 /* Tests */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -888,6 +894,7 @@
 				2260A37615DFDB7A0057C9DA /* UIViewController+ECUtilities.h in Headers */,
 				2260A3A715DFE7B30057C9DA /* ECCoreGeneric.h in Headers */,
 				2204C5E815E13CB500F71E15 /* ECCore.h in Headers */,
+				22BE98C315E3CE8C00A9EC73 /* ECDownloadOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1152,6 +1159,7 @@
 				2260A37315DFDB7A0057C9DA /* UIFont+ECCore.m in Sources */,
 				2260A37515DFDB7A0057C9DA /* UIImage+ECCore.m in Sources */,
 				2260A37715DFDB7A0057C9DA /* UIViewController+ECUtilities.m in Sources */,
+				22BE98C415E3CE8C00A9EC73 /* ECDownloadOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

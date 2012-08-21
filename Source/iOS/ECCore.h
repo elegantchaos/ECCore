@@ -12,3 +12,4 @@
 #import "UIFont+ECCore.h"
 #import "UIImage+ECCore.h"
 #import "UIViewController+ECUtilities.h"
+#import "ECDownloadOperation.h"
