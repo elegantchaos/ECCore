@@ -19,6 +19,7 @@
 							  @">", @"&gt;",
 							  @"\"", @"&quot;",
 							  @"'", @"&apos;",
+							  @"–", @"&mdash;",
 							  nil];
 
 	return entities;
