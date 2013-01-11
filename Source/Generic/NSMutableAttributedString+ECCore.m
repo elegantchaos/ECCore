@@ -99,11 +99,10 @@
 
 	NSRange whole = [match rangeAtIndex:atIndex];
 	NSRange range = [match rangeAtIndex:withIndex];
-	NSInteger rangeOffset = range.location - whole.location;
-	NSAttributedString* boldText = [self attributedSubstringFromRange:range];
+	NSMutableAttributedString* boldText = [[self attributedSubstringFromRange:range] mutableCopy];
+	[boldText addAttributes:attributesCopy range:NSMakeRange(0, [boldText length])];
 	[self replaceCharactersInRange:whole withAttributedString:boldText];
-	range.location -= rangeOffset;
-	[self addAttributes:attributesCopy range:range];
+	[boldText release];
 }
 
 @end
