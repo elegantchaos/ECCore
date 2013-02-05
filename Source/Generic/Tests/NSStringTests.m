@@ -1,5 +1,4 @@
 // --------------------------------------------------------------------------
-//! @date 12/04/2011
 //
 //! @file:
 //! Unit tests for the NSDictionary+ECUtilitiesTests.h category.
