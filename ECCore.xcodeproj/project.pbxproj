@@ -1258,7 +1258,6 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Source/Prefix/$(PRODUCT_NAME)$(CONFIGURATION).pch";
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -1268,7 +1267,6 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Source/Prefix/$(PRODUCT_NAME)$(CONFIGURATION).pch";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
