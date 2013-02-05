@@ -19,4 +19,6 @@
 - (NSRect)centreOnCurrentScreen;
 - (NSRect)centreOnMainScreen;
 
+- (CGFloat)toolbarHeight;
+
 @end

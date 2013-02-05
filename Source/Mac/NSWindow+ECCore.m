@@ -64,5 +64,17 @@
     return oldFrame;
 }
 
+- (CGFloat)toolbarHeight
+{
+    CGFloat result = 0.0f;
+    NSToolbar* toolbar = [self toolbar];
+    if(toolbar && [toolbar isVisible])
+    {
+        NSRect windowFrame = [NSWindow contentRectForFrameRect:[self frame] styleMask:[self styleMask]];
+        result = (CGFloat) (NSHeight(windowFrame) - NSHeight([(NSView*)[self contentView] frame]));
+    }
+
+    return result;
+}
 
 @end
