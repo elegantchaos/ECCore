@@ -12,7 +12,7 @@
 
 @interface NSFileManagerTests : ECTestCase
 
-@property (nonatomic, assign) NSFileManager* fm;
+@property (assign, nonatomic) NSFileManager* fm;
 
 @end
 

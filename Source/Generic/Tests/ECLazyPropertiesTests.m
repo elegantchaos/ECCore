@@ -20,8 +20,8 @@ static NSUInteger gTest2initCalled = 0;
 
 @interface TestClass : NSObject
 
-@property (nonatomic, retain) NSString* test;
-@property (nonatomic, retain) NSString* test2;
+@property (strong, nonatomic) NSString* test;
+@property (strong, nonatomic) NSString* test2;
 
 - (NSString*)initTest2;
 
