@@ -41,8 +41,8 @@ static NSString *const kFontSizeKey = @"Size";
 - (NSFont*) fontForKey: (NSString*) key
 {
 	NSDictionary* info = [self objectForKey: key];
-	NSString* fontName = [info objectForKey: kFontNameKey];
-	CGFloat fontSize = [[info objectForKey: kFontSizeKey] floatValue];
+	NSString* fontName = info[kFontNameKey];
+	CGFloat fontSize = [info[kFontSizeKey] floatValue];
 	
 	NSFont* result = nil;
 	if (fontName && fontSize)
@@ -59,7 +59,7 @@ static NSString *const kFontSizeKey = @"Size";
 
 - (void) setFont: (NSFont*) font forKey: (NSString*) key
 {
-	NSDictionary* info = [[NSDictionary alloc] initWithObjectsAndKeys: [font fontName], kFontNameKey, [NSNumber numberWithDouble: [font pointSize]], kFontSizeKey, nil];
+	NSDictionary* info = [[NSDictionary alloc] initWithObjectsAndKeys: [font fontName], kFontNameKey, @([font pointSize]), kFontSizeKey, nil];
 	[self setObject: info forKey: key];
 	[info release];
 }

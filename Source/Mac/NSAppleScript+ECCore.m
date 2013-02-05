@@ -113,9 +113,9 @@ ECDefineDebugChannel(NSAppleScriptChannel);
 					}
 					
                     [ECErrorReporter reportError:nil message:@"error %@ occured the %@(%@) call: %@",
-                                     [errorInfo objectForKey:NSAppleScriptErrorNumber],
+                                     errorInfo[NSAppleScriptErrorNumber],
                                      handlerName, paramStr,
-                                     [errorInfo objectForKey:NSAppleScriptErrorBriefMessage]];
+                                     errorInfo[NSAppleScriptErrorBriefMessage]];
 				}
 				
                 /* return whatever result the script returned */

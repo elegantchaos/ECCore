@@ -46,7 +46,7 @@
 
 - (NSDictionary*)dictionaryWithoutKey:(NSString*)key
 {
-    id object = [self objectForKey:key];
+    id object = self[key];
     if (object)
     {
         NSMutableDictionary* copy = [[self mutableCopy] autorelease];
@@ -66,8 +66,8 @@
 
 - (CGPoint)pointForKey:(NSString*)key
 {
-    NSArray* values = [self objectForKey:key];
-    CGPoint result = CGPointMake((CGFloat)[[values objectAtIndex:0] doubleValue], (CGFloat)[[values objectAtIndex:1] doubleValue]);
+    NSArray* values = self[key];
+    CGPoint result = CGPointMake((CGFloat)[values[0] doubleValue], (CGFloat)[values[1] doubleValue]);
 
     return result;
 }
@@ -79,8 +79,8 @@
 
 - (CGSize)sizeForKey:(NSString*)key
 {
-    NSArray* values = [self objectForKey:key];
-    CGSize result = CGSizeMake((CGFloat)[[values objectAtIndex:0] doubleValue], (CGFloat)[[values objectAtIndex:1] doubleValue]);
+    NSArray* values = self[key];
+    CGSize result = CGSizeMake((CGFloat)[values[0] doubleValue], (CGFloat)[values[1] doubleValue]);
     
     return result;
 }
@@ -92,8 +92,8 @@
 
 - (CGRect)rectForKey:(NSString*)key
 {
-    NSArray* values = [self objectForKey:key];
-    CGRect result = CGRectMake((CGFloat)[[values objectAtIndex:0] doubleValue], (CGFloat)[[values objectAtIndex:1] doubleValue], (CGFloat)[[values objectAtIndex:2] doubleValue], (CGFloat)[[values objectAtIndex:3] doubleValue]);
+    NSArray* values = self[key];
+    CGRect result = CGRectMake((CGFloat)[values[0] doubleValue], (CGFloat)[values[1] doubleValue], (CGFloat)[values[2] doubleValue], (CGFloat)[values[3] doubleValue]);
     
     return result;
 }
@@ -110,8 +110,8 @@
 
 - (void)setPoint:(CGPoint)point forKey:(NSString*)key
 {
-    NSArray* values = [NSArray arrayWithObjects:[NSNumber numberWithDouble:point.x], [NSNumber numberWithDouble:point.y], nil];
-    [self setObject:values forKey:key];
+    NSArray* values = @[@(point.x), @(point.y)];
+    self[key] = values;
 }
 
 // --------------------------------------------------------------------------
@@ -121,8 +121,8 @@
 
 - (void)setSize:(CGSize)size forKey:(NSString*)key
 {
-    NSArray* values = [NSArray arrayWithObjects:[NSNumber numberWithDouble:size.width], [NSNumber numberWithDouble:size.height], nil];
-    [self setObject:values forKey:key];
+    NSArray* values = @[@(size.width), @(size.height)];
+    self[key] = values;
 }
 
 // --------------------------------------------------------------------------
@@ -132,8 +132,8 @@
 
 - (void)setRect:(CGRect)rect forKey:(NSString*)key
 {
-    NSArray* values = [NSArray arrayWithObjects:[NSNumber numberWithDouble:rect.origin.x], [NSNumber numberWithDouble:rect.origin.y], [NSNumber numberWithDouble:rect.size.width], [NSNumber numberWithDouble:rect.size.height], nil];
-    [self setObject:values forKey:key];
+    NSArray* values = @[@(rect.origin.x), @(rect.origin.y), @(rect.size.width), @(rect.size.height)];
+    self[key] = values;
 }
 
 // --------------------------------------------------------------------------
@@ -144,8 +144,8 @@
 {
     for (NSString* key in dictionary)
     {
-        id existingItem = [self objectForKey:key];
-        id newItem = [dictionary objectForKey:key];
+        id existingItem = self[key];
+        id newItem = dictionary[key];
         if (existingItem && newItem)
         {
             if ([existingItem isMemberOfClass:[NSDictionary class]] && [newItem isMemberOfClass:[NSDictionary class]])
@@ -158,7 +158,7 @@
         
         if (newItem)
         {
-            [self setObject:newItem forKey:key];
+            self[key] = newItem;
         }
     }
 

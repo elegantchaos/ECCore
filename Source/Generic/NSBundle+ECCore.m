@@ -19,7 +19,7 @@
 - (NSString*) bundleName
 {
     NSDictionary* info = [self infoDictionary];
-    NSString* result = [info objectForKey: @"CFBundleName"];
+    NSString* result = info[@"CFBundleName"];
     
     return result;
 }
@@ -31,7 +31,7 @@
 - (NSString*) bundleVersion
 {
     NSDictionary* info = [self infoDictionary];
-    NSString* result = [info objectForKey: @"CFBundleShortVersionString"];
+    NSString* result = info[@"CFBundleShortVersionString"];
     
     return result;
 }
@@ -43,7 +43,7 @@
 - (NSString*) bundleBuild
 {
     NSDictionary* info = [self infoDictionary];
-    NSString* result = [info objectForKey: @"CFBundleVersion"];
+    NSString* result = info[@"CFBundleVersion"];
     
     return result;
 }
@@ -70,7 +70,7 @@
 - (NSString*) bundleCopyright
 {
     NSDictionary* info = [self infoDictionary];
-    NSString* result = [info objectForKey: @"NSHumanReadableCopyright"];
+    NSString* result = info[@"NSHumanReadableCopyright"];
     
     return result;
 }

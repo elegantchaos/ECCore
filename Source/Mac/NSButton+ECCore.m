@@ -24,7 +24,7 @@
     NSColor* textColour;
     if (attributes)
 	{
-        textColour = [attributes objectForKey:NSForegroundColorAttributeName];
+        textColour = attributes[NSForegroundColorAttributeName];
     }
 	else
 	{

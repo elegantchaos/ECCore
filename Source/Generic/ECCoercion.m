@@ -35,7 +35,7 @@
 {
     if (![arrayOrObject isKindOfClass:[NSArray class]])
     {
-        arrayOrObject = [NSArray arrayWithObject:arrayOrObject];
+        arrayOrObject = @[arrayOrObject];
     }
     
     return arrayOrObject;

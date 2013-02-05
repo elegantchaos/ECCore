@@ -105,7 +105,7 @@ ECDefineDebugChannel(NSApplicationChannel);
 		NSInteger result = [alert runModal];
 		if (result == NSAlertFirstButtonReturn) 
 		{
-			[NSTask launchedTaskWithLaunchPath:@"/bin/sh" arguments:[NSArray arrayWithObjects:@"-c", [NSString stringWithFormat:@"sleep 1 ; /usr/bin/open '%@'", [[NSBundle mainBundle] bundlePath]], nil]];
+			[NSTask launchedTaskWithLaunchPath:@"/bin/sh" arguments:@[@"-c", [NSString stringWithFormat:@"sleep 1 ; /usr/bin/open '%@'", [[NSBundle mainBundle] bundlePath]]]];
 			[NSApp terminate:self];
 		}
 	}
@@ -209,7 +209,7 @@ ECDefineDebugChannel(NSApplicationChannel);
 - (NSString*) licenseFileType
 {
     NSDictionary* info = [[NSBundle mainBundle] infoDictionary];
-    NSString* licenseFileType = [info objectForKey:@"ECLicenseFileType"];
+    NSString* licenseFileType = info[@"ECLicenseFileType"];
     
     return licenseFileType;
 }

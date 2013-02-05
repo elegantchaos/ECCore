@@ -34,7 +34,7 @@
                 NSArray *matches = [regex matchesInString:symbol options:0 range:NSMakeRange(0, [symbol length])];
                 if ([matches count] > 0)
                 {
-                    NSTextCheckingResult* match = [matches objectAtIndex:0];
+                    NSTextCheckingResult* match = matches[0];
                     NSString* routine = [symbol substringWithRange:[match rangeAtIndex:1]];
                     [string appendFormat: @"%@\n", routine];
                 }

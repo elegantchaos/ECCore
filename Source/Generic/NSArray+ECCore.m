@@ -20,7 +20,7 @@
     
     if ([self count])
     {
-        result = [self objectAtIndex:0];
+        result = self[0];
     }
     else
     {
@@ -76,7 +76,7 @@
 
 - (void)moveObjectFromIndex:(NSUInteger)from toIndex:(NSUInteger)to
 {
-    id object = [self objectAtIndex:from];
+    id object = self[from];
     [self removeObjectAtIndex:from];
     [self insertObject:object atIndex:to];
 }

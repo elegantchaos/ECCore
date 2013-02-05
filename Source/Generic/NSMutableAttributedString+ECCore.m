@@ -16,7 +16,7 @@
 	NSDictionary* entities = [NSString entities];
 	for (NSString* entity in entities)
 	{
-		NSString* character = [entities objectForKey:entity];
+		NSString* character = entities[entity];
 		NSRange range;
 		while ((range = [[self string] rangeOfString:character]).location != NSNotFound)
 		{
@@ -30,7 +30,7 @@
 	NSDictionary* entities = [NSString entities];
 	for (NSString* entity in entities)
 	{
-		NSString* character = [entities objectForKey:entity];
+		NSString* character = entities[entity];
 		NSRange range;
 		while ((range = [[self string] rangeOfString:entity]).location != NSNotFound)
 		{
@@ -50,7 +50,7 @@
     {
         while (count--)
         {
-            block(original, self, [matches objectAtIndex:count]);
+            block(original, self, matches[count]);
         }
     }
     else
@@ -58,7 +58,7 @@
 		NSUInteger n = 0;
         for (NSTextCheckingResult* match in matches)
         {
-            block(original, self, [matches objectAtIndex:n++]);
+            block(original, self, matches[n++]);
         }
     }
     
@@ -81,7 +81,7 @@
     NSMutableDictionary* attributesCopy = [NSMutableDictionary dictionaryWithDictionary:attributes];
     for (NSString* key in attributes)
     {
-        id value = [attributes objectForKey:key];
+        id value = attributes[key];
         if ([value isKindOfClass:[NSString class]])
         {
             NSString* string = value;
@@ -90,7 +90,7 @@
                 NSUInteger matchNo = [[string substringFromIndex:1] intValue];
                 NSRange matchRange = [match rangeAtIndex:matchNo];
                 NSString* matchValue = [[self string] substringWithRange:matchRange];
-                [attributesCopy setObject:matchValue forKey:key];
+                attributesCopy[key] = matchValue;
             }
         }
     }
