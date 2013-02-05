@@ -1,5 +1,4 @@
 // --------------------------------------------------------------------------
-//! @author Sam Deane
 //! @date 02/04/2011
 //
 //! @file Additional methods for the NSWindow class.

@@ -1,5 +1,4 @@
 // --------------------------------------------------------------------------
-//! @author Sam Deane
 //! @date 14/07/2010
 //
 //! Elegant Chaos extensions to NSAppleEventDescriptor.

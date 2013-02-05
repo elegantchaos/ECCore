@@ -1,5 +1,4 @@
 // --------------------------------------------------------------------------
-//! @author Sam Deane
 //! @date 24/03/2011
 //
 //! Elegant Chaos extensions to NSAppleScript.

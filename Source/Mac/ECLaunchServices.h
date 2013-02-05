@@ -1,5 +1,4 @@
 // --------------------------------------------------------------------------
-//! @author Sam Deane
 //! @date 08/09/2010
 //
 //! @file Additional utilities for working with Launch Services.

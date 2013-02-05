@@ -1,5 +1,4 @@
 // --------------------------------------------------------------------------
-//! @author Sam Deane
 //! @date 14/09/2011
 //
 //! Elegant Chaos extensions to NSColor.
