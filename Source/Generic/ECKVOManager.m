@@ -1,10 +1,8 @@
-//
-//  ECKVOManager.m
-//  ECCore
-//
-//  Created by Sam Deane on 26/04/2012.
-//  Copyright (c) 2012 Elegant Chaos. All rights reserved.
-//
+// --------------------------------------------------------------------------
+//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  This source code is distributed under the terms of Elegant Chaos's
+//  liberal license: http://www.elegantchaos.com/license/liberal
+// --------------------------------------------------------------------------
 
 #import "ECKVOManager.h"
 #import "ECKVO.h"
