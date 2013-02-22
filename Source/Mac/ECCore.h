@@ -16,7 +16,6 @@
 #import "NSColor+ECCore.h"
 #import "NSGeometry+ECCore.h"
 #import "NSMenu+ECCore.h"
-#import "NSString+ECCore.h"
 #import "NSURL+ECCoreMac.h"
 #import "NSUserDefaults+ECCore.h"
 #import "NSWindow+ECCore.h"
