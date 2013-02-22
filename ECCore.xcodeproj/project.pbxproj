@@ -1045,7 +1045,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${ECCONFIG_SCRIPTS_PATH}/package-pseudo-framework.sh\"";
+			shellScript = "\"${ECLOGGING_SCRIPTS_PATH}/package-pseudo-framework.sh\"";
 		};
 		2283A3F314F52EC0009142F7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
