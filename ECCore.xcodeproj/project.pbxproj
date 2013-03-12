@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2204C5E815E13CB500F71E15 /* ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204C5E715E13CB500F71E15 /* ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2204C5EA15E13CC000F71E15 /* ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204C5E915E13CC000F71E15 /* ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2230501516EF571C00A9F1F3 /* finder support.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 2230500616EF571C00A9F1F3 /* finder support.scpt */; };
 		22351D061544487000A24099 /* NSString+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22351D031544487000A24099 /* NSString+ECCore.m */; };
 		223D56221549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
 		223D56231549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
@@ -262,6 +263,7 @@
 		22198ABA14585B48006BE993 /* NSButton+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSButton+ECCore.h"; sourceTree = "<group>"; };
 		22198ABB14585B48006BE993 /* NSButton+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSButton+ECCore.m"; sourceTree = "<group>"; };
 		2229674F1354EDC5005F42E7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		2230500616EF571C00A9F1F3 /* finder support.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "finder support.scpt"; sourceTree = "<group>"; };
 		22351D021544487000A24099 /* NSString+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ECCore.h"; sourceTree = "<group>"; };
 		22351D031544487000A24099 /* NSString+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECCore.m"; sourceTree = "<group>"; };
 		22351D071544489A00A24099 /* NSString+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ECCore.h"; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 		089C1665FE841158C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2230500016EF571C00A9F1F3 /* Mac */,
 				2260A3AC15DFEF4F0057C9DA /* Info.plist */,
 				225409811354F25800DC8205 /* ios */,
 				223CBAFB1205C7680008A641 /* tests */,
@@ -585,6 +588,14 @@
 				2260A39615DFDC600057C9DA /* Shared.xcconfig */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2230500016EF571C00A9F1F3 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				2230500616EF571C00A9F1F3 /* finder support.scpt */,
+			);
+			path = Mac;
 			sourceTree = "<group>";
 		};
 		223CBAE11205C5930008A641 /* iOS */ = {
@@ -1015,6 +1026,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2230501516EF571C00A9F1F3 /* finder support.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
