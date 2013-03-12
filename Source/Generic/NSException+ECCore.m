@@ -15,11 +15,13 @@
 
 - (NSString*)stringFromCallstack
 {
+	Class nsregex = NSClassFromString(@"NSRegularExpression"); // Not present on 10.6.
+
     NSString* stack = nil;
-    if ([self respondsToSelector: @selector(callStackSymbols)]) 
+    if ((nsregex != nil) && [self respondsToSelector: @selector(callStackSymbols)])
     {
         NSError* error = nil;
-        NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@".*0x[0-9a-fA-F]+ (.*) \\+.*" options:NSRegularExpressionCaseInsensitive error:&error];
+        id regex = [nsregex regularExpressionWithPattern:@".*0x[0-9a-fA-F]+ (.*) \\+.*" options:NSRegularExpressionCaseInsensitive error:&error];
         
         // loop through the stack trying to extract the routine name from each line that was returned
         // we use a regular expression to strip out extraneous information in an attempt to keep the
