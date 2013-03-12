@@ -55,9 +55,12 @@ static NSAppleScript *const kInvalidScript = (NSAppleScript*) -1;
 //! Select an item pointed to by a URL.
 // --------------------------------------------------------------------------
 
-- (BOOL)selectURL:(NSURL*)fullPath inFileViewerRootedAtURL:(NSURL*)rootFullPath
+- (BOOL)selectURL:(NSURL*)url inFileViewerRootedAtURL:(NSURL*)rootURL
 {
-	return [self selectFile:[fullPath path] inFileViewerRootedAtPath:[rootFullPath path]];
+	NSString* rootPath = rootURL ? [rootURL path] : @"";
+	BOOL result = [self selectFile:[url path] inFileViewerRootedAtPath:rootPath];
+
+	return result;
 }
 
 // --------------------------------------------------------------------------
