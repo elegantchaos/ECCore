@@ -6,7 +6,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECCore/ECCore.h>
-#import <ECUnitTests/ECUnitTests.h>
+#import <ECLogging/ECUnitTests.h>
 
 
 @interface CGGeometryTests : ECTestCase

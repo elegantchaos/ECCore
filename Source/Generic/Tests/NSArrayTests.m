@@ -5,7 +5,7 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import <ECUnitTests/ECUnitTests.h>
+#import <ECLogging/ECUnitTests.h>
 #import <ECCore/ECCore.h>
 
 @interface NSArrayTests : ECTestCase
@@ -17,10 +17,10 @@
 - (void)testFirstObjectOrNil
 {
 	ECTestAssertTrue([[NSArray array] firstObjectOrNil] == nil);
-	ECTestAssertTrue([[NSArray arrayWithObject:@"test"] firstObjectOrNil] == @"test");
+	ECTestAssertStringIsEqual([[NSArray arrayWithObject:@"test"] firstObjectOrNil], @"test");
 	
 	NSArray* array = [NSArray arrayWithObjects:@"test1", @"test2", nil];
-	ECTestAssertTrue([array firstObjectOrNil] == @"test1");
+	ECTestAssertStringIsEqual([array firstObjectOrNil], @"test1");
 }
 
 - (void)testRandomize
@@ -31,7 +31,7 @@
 	
 	[array addObject:@"test"];
 	[array randomize];
-	ECTestAssertTrue([array objectAtIndex:0] == @"test");
+	ECTestAssertStringIsEqual([array objectAtIndex:0], @"test");
 }
 
 @end
