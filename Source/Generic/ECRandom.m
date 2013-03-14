@@ -10,6 +10,7 @@
 #import <ECLogging/ECAssertion.h>
 
 #import <mach-o/dyld.h>
+#import <dlfcn.h>
 
 @implementation ECRandom
 
@@ -29,8 +30,7 @@ u_int32_t our_uniform_func(u_int32_t upper_bound)
 {
 	if (!gUniformFunc)
 	{
-		NSSymbol symbol = NSLookupAndBindSymbol("arc4random_uniform");
-		gUniformFunc = NSAddressOfSymbol(symbol);
+		gUniformFunc = dlsym(RTLD_DEFAULT, "arc4random_uniform");
 		if (!gUniformFunc)
 			gUniformFunc = our_uniform_func;
 	}
