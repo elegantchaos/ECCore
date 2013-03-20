@@ -88,7 +88,7 @@
 	for (NSUInteger n = 0; n < count; ++n)
 	{
 		UniChar c = [self characterAtIndex: n];
-		BOOL isLower = islower(c);
+		BOOL isLower = islower(c) == 0;
 		if (wasLower && !isLower)
 		{
 			[result addObject:[NSString stringWithString:word]];
@@ -115,7 +115,7 @@
 	for (NSUInteger n = 0; n < count; ++n)
 	{
 		UniChar c = [self characterAtIndex: n];
-		BOOL isLower = islower(c);
+		BOOL isLower = islower(c) == 0;
 		if (wasLower && !isLower)
 		{
 			[result appendString: @" "];

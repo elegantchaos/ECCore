@@ -17,19 +17,14 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 
 @interface ECObserver : NSObject 
 
-@property (copy) ECObserverAction action;
-@property (copy) NSString* path;
-@property (retain) NSOperationQueue* queue;
-@property (assign) id observed;
+@property (copy, nonatomic) ECObserverAction action;
+@property (copy, nonatomic) NSString* path;
+@property (retain, nonatomic) NSOperationQueue* queue;
+@property (assign, nonatomic) id observed;
 
 @end
 
 @implementation ECObserver
-
-@synthesize action = _action;
-@synthesize path = _path;
-@synthesize queue = _queue;
-@synthesize observed = _observed;
 
 - (void)dealloc
 {

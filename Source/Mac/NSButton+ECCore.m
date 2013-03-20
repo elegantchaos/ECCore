@@ -19,7 +19,7 @@
 {
     NSAttributedString* title = [self attributedTitle];
     NSUInteger length = [title length];
-    NSRange range = NSMakeRange(0, MIN(length, 1));
+    NSRange range = NSMakeRange(0UL, MIN(length, 1UL));
     NSDictionary* attributes = [title fontAttributesInRange:range];
     NSColor* textColour;
     if (attributes)

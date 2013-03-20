@@ -39,7 +39,7 @@
 	}
 }
 
-- (void)matchExpression:(NSRegularExpression*)expression options:(NSRegularExpressionOptions)options reversed:(BOOL)reversed action:(MatchAction)block
+- (void)matchExpression:(NSRegularExpression*)expression options:(NSMatchingOptions)options reversed:(BOOL)reversed action:(MatchAction)block
 {
     NSAttributedString* original = [self copy];
     
@@ -65,7 +65,7 @@
     [original release];
 }
 
-- (void)replaceExpression:(NSRegularExpression*)expression options:(NSRegularExpressionOptions)options atIndex:(NSUInteger)atIndex withIndex:(NSUInteger)withIndex attributes:(NSDictionary *)attributes
+- (void)replaceExpression:(NSRegularExpression*)expression options:(NSMatchingOptions)options atIndex:(NSUInteger)atIndex withIndex:(NSUInteger)withIndex attributes:(NSDictionary *)attributes
 {
 	[self matchExpression:expression options:options reversed:YES action:
      ^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match)
