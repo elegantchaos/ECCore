@@ -51,8 +51,8 @@
 	{
 		NSDate* modified = [attrs objectForKey: NSFileModificationDate];
 		NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-		[formatter setDateStyle:kCFDateFormatterShortStyle];
-		[formatter setTimeStyle:kCFDateFormatterShortStyle];
+		[formatter setDateStyle:NSDateFormatterShortStyle];
+		[formatter setTimeStyle:NSDateFormatterShortStyle];
 		date = [formatter stringFromDate: modified];
 		[formatter release];
 	}
