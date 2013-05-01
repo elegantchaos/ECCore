@@ -12,7 +12,7 @@
 typedef struct
 {
     NSTimeInterval  interval;
-    NSString *const format;
+    __unsafe_unretained NSString *const format;
 } RelativeEntry;
 
 
