@@ -1342,7 +1342,7 @@
 				1DEB91B308733DA50010E9CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2260A2F515DFD7290057C9DA /* Build configuration list for PBXNativeTarget "ECCoreMac" */ = {
 			isa = XCConfigurationList;
@@ -1351,7 +1351,7 @@
 				2260A2F715DFD7290057C9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2260A30715DFD7320057C9DA /* Build configuration list for PBXNativeTarget "ECCoreIOS" */ = {
 			isa = XCConfigurationList;
@@ -1360,7 +1360,7 @@
 				2260A30915DFD7320057C9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2283A40814F52EC0009142F7 /* Build configuration list for PBXNativeTarget "ECCoreMacTests" */ = {
 			isa = XCConfigurationList;
@@ -1369,7 +1369,7 @@
 				2283A40A14F52EC0009142F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		22C2DB8614FB9CC8005D2E89 /* Build configuration list for PBXNativeTarget "ECCoreIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1378,7 +1378,7 @@
 				22C2DB8814FB9CC8005D2E89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
