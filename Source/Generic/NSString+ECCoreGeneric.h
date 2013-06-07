@@ -32,4 +32,13 @@
 
 - (NSString*)truncateToLength:(NSUInteger)length;
 
+- (NSString*)uppercaseUnderscoreStringFromMixedCase;
+- (NSString*)lowercaseUnderscoreStringFromMixedCase;
+- (NSString*)mixedcaseStringFromMixedCaseWithInitialCapital;
+- (NSString*)mixedcaseStringInitialCapitalFromMixedCase;
+- (NSString*)mixedcaseStringInitialCapitalFromWords;
+- (NSString*)mixedcaseStringFromWords;
+- (NSString*)lowercaseUnderscoreStringFromWords;
+- (NSString*)uppercaseUnderscoreStringFromWords;
+
 @end

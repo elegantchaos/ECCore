@@ -266,4 +266,68 @@
 	return range.location != NSNotFound;
 }
 
+- (NSString*)uppercaseUnderscoreStringFromMixedCase
+{
+    NSArray* words = [self componentsSeparatedByMixedCaps];
+    NSString* result = [NSString stringWithUppercaseFromWords:words separator:@"_"];
+
+    return result;
+}
+
+- (NSString*)lowercaseUnderscoreStringFromMixedCase
+{
+    NSArray* words = [self componentsSeparatedByMixedCaps];
+    NSString* result = [NSString stringWithLowercaseFromWords:words separator:@"_"];
+
+    return result;
+}
+
+- (NSString*)mixedcaseStringFromMixedCaseWithInitialCapital
+{
+    NSArray* words = [self componentsSeparatedByMixedCaps];
+    NSString* result = [NSString stringWithMixedCapsFromWords:words initialCap:NO];
+
+    return result;
+}
+
+- (NSString*)mixedcaseStringInitialCapitalFromMixedCase
+{
+    NSArray* words = [self componentsSeparatedByMixedCaps];
+    NSString* result = [NSString stringWithMixedCapsFromWords:words initialCap:YES];
+
+    return result;
+}
+
+- (NSString*)mixedcaseStringInitialCapitalFromWords
+{
+    NSArray* words = [self componentsSeparatedByString:@" "];
+    NSString* result = [NSString stringWithMixedCapsFromWords:words initialCap:YES];
+
+    return result;
+}
+
+- (NSString*)mixedcaseStringFromWords
+{
+    NSArray* words = [self componentsSeparatedByString:@" "];
+    NSString* result = [NSString stringWithMixedCapsFromWords:words initialCap:NO];
+
+    return result;
+}
+
+- (NSString*)lowercaseUnderscoreStringFromWords
+{
+    NSArray* words = [self componentsSeparatedByString:@" "];
+    NSString* result = [NSString stringWithLowercaseFromWords:words separator:@"_"];
+
+    return result;
+}
+
+- (NSString*)uppercaseUnderscoreStringFromWords
+{
+    NSArray* words = [self componentsSeparatedByString:@" "];
+    NSString* result = [NSString stringWithUppercaseFromWords:words separator:@"_"];
+
+    return result;
+}
+
 @end
