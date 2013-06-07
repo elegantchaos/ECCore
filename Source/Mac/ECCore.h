@@ -6,7 +6,6 @@
 
 #import "ECCoreGeneric.h"
 
-#import "ECKeychain.h"
 #import "ECLaunchServices.h"
 #import "ECMachine.h"
 #import "NSAppleEventDescriptor+ECCore.h"
