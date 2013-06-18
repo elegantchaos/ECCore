@@ -10,6 +10,7 @@
 		2204C5E815E13CB500F71E15 /* ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204C5E715E13CB500F71E15 /* ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2204C5EA15E13CC000F71E15 /* ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204C5E915E13CC000F71E15 /* ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		220A16051771077E00173510 /* ECUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260A3A315DFE6860057C9DA /* ECUnitTests.framework */; };
+		220A1606177107AD00173510 /* ECUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260A3A315DFE6860057C9DA /* ECUnitTests.framework */; };
 		2230501516EF571C00A9F1F3 /* finder support.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 2230500616EF571C00A9F1F3 /* finder support.scpt */; };
 		22351D061544487000A24099 /* NSString+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22351D031544487000A24099 /* NSString+ECCore.m */; };
 		223D56221549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
@@ -511,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2260A3A015DFE6860057C9DA /* ECCore.framework in Frameworks */,
+				220A1606177107AD00173510 /* ECUnitTests.framework in Frameworks */,
 				2260A3A215DFE6860057C9DA /* ECLogging.framework in Frameworks */,
 				22C2DB5714FB98D7005D2E89 /* Security.framework in Frameworks */,
 				22C2DB5614FB98CB005D2E89 /* IOKit.framework in Frameworks */,
@@ -1476,6 +1478,10 @@
 			baseConfigurationReference = 2260A31215DFD96D0057C9DA /* MacUnitTestDebug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Caches/DerivedData/ECCore-hiysxjmtcntpjqfceiihpzpvphke/Build/Products/Debug\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1488,6 +1494,10 @@
 			baseConfigurationReference = 2260A31315DFD96D0057C9DA /* MacUnitTestRelease.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Caches/DerivedData/ECCore-hiysxjmtcntpjqfceiihpzpvphke/Build/Products/Debug\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
