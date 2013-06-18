@@ -25,11 +25,13 @@
 	ECTestAssertNotNil(expression);
 	
 	NSUInteger __block count = 0;
+
+	NSMatchingOptions matchingOptions = 0;
 	
-	[test matchExpression:expression options:options reversed:NO action:^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) { ++count; } ];
+	[test matchExpression:expression options:matchingOptions reversed:NO action:^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) { ++count; } ];
 	ECTestAssertZero(count);
 
-	[test matchExpression:nil options:options reversed:NO action:^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) { ++count; } ];
+	[test matchExpression:nil options:matchingOptions reversed:NO action:^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) { ++count; } ];
 	ECTestAssertZero(count);
 
 	[test release];
@@ -47,9 +49,10 @@
 	ECTestAssertNotNil(expression);
 	
 	NSUInteger __block count = 0;
-	
+	NSMatchingOptions matchingOptions = 0;
+
 	// because we're going forward, we need to replace the string with one of the same length, otherwise the ranges will be messed up
-	[test matchExpression:expression options:options reversed:NO action:
+	[test matchExpression:expression options:matchingOptions reversed:NO action:
 	 ^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) 
 	 {
 		 ++count;
@@ -76,9 +79,10 @@
 	ECTestAssertNotNil(expression);
 	
 	NSUInteger __block count = 0;
+	NSMatchingOptions matchingOptions = 0;
 
 	// as we're going backward, we can safely replace items with longer or shorter strings
-	[test matchExpression:expression options:options reversed:YES action:
+	[test matchExpression:expression options:matchingOptions reversed:YES action:
 	 ^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) 
 	 {
 		 ++count;

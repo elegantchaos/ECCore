@@ -47,7 +47,7 @@
 	const float* floats = [data bytes];
 	for (int n = 0; n < 10; ++n)
 	{
-		float expected = 1.1 * ((n < 5) ? n + 1 : 4 - n);
+		float expected = 1.1f * ((n < 5) ? n + 1 : 4 - n);
 		ECTestAssertRealIsEqual(floats[n], expected);
 	}
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2204C5E815E13CB500F71E15 /* ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204C5E715E13CB500F71E15 /* ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2204C5EA15E13CC000F71E15 /* ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204C5E915E13CC000F71E15 /* ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		220A16051771077E00173510 /* ECUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260A3A315DFE6860057C9DA /* ECUnitTests.framework */; };
 		2230501516EF571C00A9F1F3 /* finder support.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 2230500616EF571C00A9F1F3 /* finder support.scpt */; };
 		22351D061544487000A24099 /* NSString+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22351D031544487000A24099 /* NSString+ECCore.m */; };
 		223D56221549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
@@ -534,6 +535,7 @@
 				2260A3AA15DFEE0C0057C9DA /* ECLogging.framework in Frameworks */,
 				22C2DBD914FB9F8A005D2E89 /* CoreGraphics.framework in Frameworks */,
 				22C2DBD714FB9F7D005D2E89 /* QuartzCore.framework in Frameworks */,
+				220A16051771077E00173510 /* ECUnitTests.framework in Frameworks */,
 				22C2DB7214FB9CC8005D2E89 /* SenTestingKit.framework in Frameworks */,
 				22C2DB7414FB9CC8005D2E89 /* UIKit.framework in Frameworks */,
 				22C2DB7514FB9CC8005D2E89 /* Foundation.framework in Frameworks */,
@@ -1511,6 +1513,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2260A30E15DFD96D0057C9DA /* IOSUnitTestDebug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Caches/DerivedData/ECCore-hiysxjmtcntpjqfceiihpzpvphke/Build/Products/Debug\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1522,6 +1528,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2260A30F15DFD96D0057C9DA /* IOSUnitTestRelease.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"/Caches/DerivedData/ECCore-hiysxjmtcntpjqfceiihpzpvphke/Build/Products/Debug\"",
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
