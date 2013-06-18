@@ -10,7 +10,7 @@
 
 #import <ECCore/ECCore.h>
 
-#import <ECLogging/ECUnitTests.h>
+#import <ECUnitTests/ECUnitTests.h>
 
 
 @interface NSDataTests : ECTestCase

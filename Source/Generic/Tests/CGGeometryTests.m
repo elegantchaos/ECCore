@@ -6,7 +6,7 @@
 // --------------------------------------------------------------------------
 
 #import <ECCore/ECCore.h>
-#import <ECLogging/ECUnitTests.h>
+#import <ECUnitTests/ECUnitTests.h>
 
 
 @interface CGGeometryTests : ECTestCase
@@ -15,7 +15,7 @@
 
 @implementation CGGeometryTests
 
-static CGRect kTestRect = { (CGFloat) 0.0, (CGFloat) 0.0, (CGFloat) 100.0, (CGFloat) 100.0 };
+static CGRect kTestRect = { { (CGFloat) 0.0, (CGFloat) 0.0 }, { (CGFloat) 100.0, (CGFloat) 100.0 } };
 static CGPoint kTestPoint = { (CGFloat) 100.0, (CGFloat) 100.0 };
 static CGPoint kTestMiddle = { (CGFloat) 50.0, (CGFloat) 50.0 };
 
