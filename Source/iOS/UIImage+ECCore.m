@@ -130,7 +130,7 @@
 	CGColorSpaceRef colorSpace = CGImageGetColorSpace(imageRef);
 	
 	// always use a supported bitmap format, regardless of the format of the input image
-	CGBitmapInfo bitmapInfo = kCGImageAlphaPremultipliedLast;
+	CGBitmapInfo bitmapInfo = (CGBitmapInfo)kCGImageAlphaPremultipliedLast;
 	
     // Build a context that's the same dimensions as the new size
     CGContextRef bitmap = CGBitmapContextCreate(NULL,
@@ -221,7 +221,7 @@
 												  8,      // bits per component
 												  0,
 												  colorSpace,
-												  kCGImageAlphaNone);
+												  (CGBitmapInfo)kCGImageAlphaNone);
 	
 	CGColorSpaceRelease(colorSpace);
 	
