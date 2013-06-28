@@ -8,7 +8,6 @@
 #import "ECLazyProperties.h"
 
 #import <objc/runtime.h>
-#import </usr/include/objc/objc-class.h>
 
 @implementation NSObject(ECLazyProperties)
 
