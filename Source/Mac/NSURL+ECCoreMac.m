@@ -7,8 +7,6 @@
 
 #import "NSURL+ECCoreMac.h"
 
-#import "ECMacros.h"
-
 #import <CoreFoundation/CoreFoundation.h>
 
 @implementation NSURL(ECCoreMac)

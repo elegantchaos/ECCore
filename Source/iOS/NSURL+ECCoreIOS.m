@@ -6,7 +6,6 @@
 // --------------------------------------------------------------------------
 
 #import "NSURL+ECCore.h"
-#import "ECMacros.h"
 
 @implementation NSURL(ECCorePlatform)
 

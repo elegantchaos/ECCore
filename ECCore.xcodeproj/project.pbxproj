@@ -23,7 +23,6 @@
 		2260A31815DFDB4C0057C9DA /* ECCoercion.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2D1F14ED9B500043ABFA /* ECCoercion.m */; };
 		2260A31915DFDB4C0057C9DA /* ECLazyProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E99E9F148E51800034E167 /* ECLazyProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A31A15DFDB4C0057C9DA /* ECLazyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E99EA0148E51800034E167 /* ECLazyProperties.m */; };
-		2260A31B15DFDB4C0057C9DA /* ECMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2213C7949E00E13577 /* ECMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A31C15DFDB4C0057C9DA /* ECProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2313C7949E00E13577 /* ECProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A31D15DFDB4C0057C9DA /* ECRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 228BCFE9144DF3CE00D22ED5 /* ECRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A31E15DFDB4C0057C9DA /* ECKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 22DA3A7C154957D6006C8A5E /* ECKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,7 +65,6 @@
 		2260A34415DFDB720057C9DA /* ECCoercion.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA2D1F14ED9B500043ABFA /* ECCoercion.m */; };
 		2260A34515DFDB720057C9DA /* ECLazyProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E99E9F148E51800034E167 /* ECLazyProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A34615DFDB720057C9DA /* ECLazyProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E99EA0148E51800034E167 /* ECLazyProperties.m */; };
-		2260A34715DFDB720057C9DA /* ECMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2213C7949E00E13577 /* ECMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A34815DFDB720057C9DA /* ECProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2313C7949E00E13577 /* ECProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A34915DFDB720057C9DA /* ECRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 228BCFE9144DF3CE00D22ED5 /* ECRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A34A15DFDB720057C9DA /* ECKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 22DA3A7C154957D6006C8A5E /* ECKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -159,7 +157,6 @@
 		2296288017621FA5008D887F /* ECClang.h in Headers */ = {isa = PBXBuildFile; fileRef = 22672DBF132321AA00CD8BC7 /* ECClang.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2296288117621FA5008D887F /* ECCoercion.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EA2D1E14ED9B500043ABFA /* ECCoercion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2296288217621FA5008D887F /* ECLazyProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E99E9F148E51800034E167 /* ECLazyProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2296288317621FA5008D887F /* ECMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2213C7949E00E13577 /* ECMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2296288417621FA5008D887F /* ECProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 2248BC2313C7949E00E13577 /* ECProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2296288517621FA5008D887F /* ECRandom.h in Headers */ = {isa = PBXBuildFile; fileRef = 228BCFE9144DF3CE00D22ED5 /* ECRandom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2296288617621FA5008D887F /* ECKVO.h in Headers */ = {isa = PBXBuildFile; fileRef = 22DA3A7C154957D6006C8A5E /* ECKVO.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -342,7 +339,6 @@
 		223D561315495C4600CD569D /* ECKVOManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECKVOManager.h; sourceTree = "<group>"; };
 		223D561415495C4600CD569D /* ECKVOManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECKVOManager.m; sourceTree = "<group>"; };
 		223D56211549629600CD569D /* ECKVOTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECKVOTests.m; sourceTree = "<group>"; };
-		2248BC2213C7949E00E13577 /* ECMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMacros.h; sourceTree = "<group>"; };
 		2248BC2313C7949E00E13577 /* ECProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECProperties.h; sourceTree = "<group>"; };
 		225260E61455C01100061EDD /* NSIndexSet+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+ECCore.h"; sourceTree = "<group>"; };
 		225260E71455C01100061EDD /* NSIndexSet+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+ECCore.m"; sourceTree = "<group>"; };
@@ -769,7 +765,6 @@
 				22EA2D1F14ED9B500043ABFA /* ECCoercion.m */,
 				22E99E9F148E51800034E167 /* ECLazyProperties.h */,
 				22E99EA0148E51800034E167 /* ECLazyProperties.m */,
-				2248BC2213C7949E00E13577 /* ECMacros.h */,
 				2248BC2313C7949E00E13577 /* ECProperties.h */,
 				228BCFE9144DF3CE00D22ED5 /* ECRandom.h */,
 				22DA3A7C154957D6006C8A5E /* ECKVO.h */,
@@ -905,7 +900,6 @@
 				2260A31615DFDB4C0057C9DA /* ECClang.h in Headers */,
 				2260A31715DFDB4C0057C9DA /* ECCoercion.h in Headers */,
 				2260A31915DFDB4C0057C9DA /* ECLazyProperties.h in Headers */,
-				2260A31B15DFDB4C0057C9DA /* ECMacros.h in Headers */,
 				2260A31C15DFDB4C0057C9DA /* ECProperties.h in Headers */,
 				2260A31D15DFDB4C0057C9DA /* ECRandom.h in Headers */,
 				2260A31E15DFDB4C0057C9DA /* ECKVO.h in Headers */,
@@ -951,7 +945,6 @@
 				2260A34215DFDB720057C9DA /* ECClang.h in Headers */,
 				2260A34315DFDB720057C9DA /* ECCoercion.h in Headers */,
 				2260A34515DFDB720057C9DA /* ECLazyProperties.h in Headers */,
-				2260A34715DFDB720057C9DA /* ECMacros.h in Headers */,
 				2260A34815DFDB720057C9DA /* ECProperties.h in Headers */,
 				2260A34915DFDB720057C9DA /* ECRandom.h in Headers */,
 				2260A34A15DFDB720057C9DA /* ECKVO.h in Headers */,
@@ -991,7 +984,6 @@
 				2296288017621FA5008D887F /* ECClang.h in Headers */,
 				2296288117621FA5008D887F /* ECCoercion.h in Headers */,
 				2296288217621FA5008D887F /* ECLazyProperties.h in Headers */,
-				2296288317621FA5008D887F /* ECMacros.h in Headers */,
 				2296288417621FA5008D887F /* ECProperties.h in Headers */,
 				2296288517621FA5008D887F /* ECRandom.h in Headers */,
 				2296288617621FA5008D887F /* ECKVO.h in Headers */,
