@@ -45,14 +45,6 @@
 //! aliases fully resolved.
 // --------------------------------------------------------------------------
 
-#ifdef EC_DEBUG
-#define ECDebugOnly(x) x
-#define ECReleaseOnly(x)
-#else
-#define ECDebugOnly(x)
-#define ECReleaseOnly(x) x
-#endif
-
 - (NSURL*)URLByResolvingLinksAndAliases
 {
     NSURL* result = [self URLByResolvingSymlinksInPath];
