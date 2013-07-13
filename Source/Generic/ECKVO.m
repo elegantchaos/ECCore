@@ -19,8 +19,8 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 
 @property (copy, nonatomic) ECObserverAction action;
 @property (copy, nonatomic) NSString* path;
-@property (retain, nonatomic) NSOperationQueue* queue;
-@property (assign, nonatomic) id observed;
+@property (strong, nonatomic) NSOperationQueue* queue;
+	@property (assign, nonatomic) id observed; // weak
 
 @end
 
@@ -35,7 +35,7 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
     [_path release];
     [_queue release];
     [_action release];
-    
+
     [super dealloc];
 }
 
