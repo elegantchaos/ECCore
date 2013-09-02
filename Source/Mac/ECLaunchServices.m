@@ -25,7 +25,7 @@
     if (loginItems) 
 	{
         UInt32 seed = 0U;
-        NSArray *currentLoginItems = [NSMakeCollectable(LSSharedFileListCopySnapshot(loginItems, &seed)) autorelease];
+        NSArray *currentLoginItems = NSMakeCollectable(LSSharedFileListCopySnapshot(loginItems, &seed));
         for (id itemObject in currentLoginItems) 
 		{
             LSSharedFileListItemRef item = (LSSharedFileListItemRef)itemObject;

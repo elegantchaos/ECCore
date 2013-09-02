@@ -91,12 +91,9 @@ CFDataRef copyMacAddress(void)
 
 + (NSData*) machineAddress
 {
-	NSData* guidData = (NSData*) copyMacAddress();
-	
-	if ([NSGarbageCollector defaultCollector])
-		[[NSGarbageCollector defaultCollector] enableCollectorForPointer:guidData];
-	
-    return [guidData autorelease];
+	NSData* guidData = (__bridge_transfer NSData*) copyMacAddress();
+
+	return guidData;
 }
 
 // --------------------------------------------------------------------------

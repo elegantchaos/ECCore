@@ -26,18 +26,12 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 
 @implementation ECObserver
 
+#if EC_DEBUG
 - (void)dealloc
 {
-	#if EC_DEBUG
-		[[ECKVOManager sharedInstance] removeObserver:self];
-	#endif
-	
-    [_path release];
-    [_queue release];
-    [_action release];
-
-    [super dealloc];
+	[[ECKVOManager sharedInstance] removeObserver:self];
 }
+#endif
 
 - (void)observeValueForKeyPath:(NSString *)path ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
 {
@@ -59,8 +53,6 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 			 self.action(copiedChange);
 		 }
 		 ];
-		
-		[copiedChange release];
 	}
 }
 
@@ -117,8 +109,6 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 			[[ECKVOManager sharedInstance] addObserver:observer];
 		#endif
 	}
-    
-	[observer release];
 	
     return observer;
 }

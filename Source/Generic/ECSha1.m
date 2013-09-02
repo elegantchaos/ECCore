@@ -28,9 +28,8 @@
 	}
 	
 	NSString *output = [outputHolder copy];
-	[outputHolder release];
-	
-	return [output autorelease];
+
+	return output;
 }
 
 @end

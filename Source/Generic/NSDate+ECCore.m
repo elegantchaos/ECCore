@@ -127,8 +127,6 @@ const RelativeEntry kDefaultEntries[] =
 			[formatter setDateFormat: @"yyyy"];
 			result = [formatter stringFromDate:self];
 		}
-
-		[formatter release];
 	}
 	
 	return result;

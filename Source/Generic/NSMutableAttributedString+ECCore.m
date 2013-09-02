@@ -61,8 +61,6 @@
             block(original, self, matches[n++]);
         }
     }
-    
-    [original release];
 }
 
 - (void)replaceExpression:(NSRegularExpression*)expression options:(NSMatchingOptions)options atIndex:(NSUInteger)atIndex withIndex:(NSUInteger)withIndex attributes:(NSDictionary *)attributes
@@ -100,7 +98,6 @@
 	NSMutableAttributedString* boldText = [[self attributedSubstringFromRange:range] mutableCopy];
 	[boldText addAttributes:attributesCopy range:NSMakeRange(0, [boldText length])];
 	[self replaceCharactersInRange:whole withAttributedString:boldText];
-	[boldText release];
 }
 
 @end

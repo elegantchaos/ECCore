@@ -48,7 +48,7 @@
 		*buffer++ = [index intValue];
 	}
 	
-	return [data autorelease];
+	return data;
 }
 
 - (NSData*) splitWordsIntoFloats
@@ -62,7 +62,7 @@
 		*buffer++ = [index floatValue];
 	}
 
-	return [data autorelease];
+	return data;
 }
 
 - (NSData*) splitWordsIntoDoubles
@@ -76,7 +76,7 @@
 		*buffer++ = [index doubleValue];
 	}
 	
-	return [data autorelease];
+	return data;
 }
 
 
@@ -96,7 +96,7 @@
 		}
 	}
 	
-	return [result autorelease];
+	return result;
 }
 
 + (NSString*)stringWithUppercaseFromWords:(NSArray*)words separator:(NSString*)separator
@@ -111,7 +111,7 @@
 	NSUInteger separatorLength = [separator length];
 	[result deleteCharactersInRange:NSMakeRange([result length] - separatorLength, separatorLength)];
 	
-	return [result autorelease];
+	return result;
 }
 
 + (NSString*)stringWithLowercaseFromWords:(NSArray*)words separator:(NSString*)separator
@@ -126,18 +126,15 @@
 	NSUInteger separatorLength = [separator length];
 	[result deleteCharactersInRange:NSMakeRange([result length] - separatorLength, separatorLength)];
 	
-	return [result autorelease];
+	return result;
 }
 
 + (NSString*)stringWithNewUUID
 {
-    // Create a new UUID
     CFUUIDRef uuidObj = CFUUIDCreate(nil);
-    
-    // Get the string representation of the UUID
-    NSString *newUUID = (NSString*)CFUUIDCreateString(nil, uuidObj);
+    NSString *newUUID = (__bridge_transfer NSString*)CFUUIDCreateString(nil, uuidObj);
     CFRelease(uuidObj);
-    return [newUUID autorelease];
+    return newUUID;
 }
 
 + (NSString*)stringByFormattingCount:(NSUInteger)count singularFormat:(NSString*)singularFormat pluralFormat:(NSString*)pluralFormat

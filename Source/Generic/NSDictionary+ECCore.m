@@ -49,7 +49,7 @@
     id object = self[key];
     if (object)
     {
-        NSMutableDictionary* copy = [[self mutableCopy] autorelease];
+        NSMutableDictionary* copy = [self mutableCopy];
         [copy removeObjectForKey:key];
         return copy;
     }
