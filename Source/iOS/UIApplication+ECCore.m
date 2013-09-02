@@ -54,7 +54,6 @@
 		[formatter setDateStyle:NSDateFormatterShortStyle];
 		[formatter setTimeStyle:NSDateFormatterShortStyle];
 		date = [formatter stringFromDate: modified];
-		[formatter release];
 	}
 
 	NSString* result = [NSString stringWithFormat: @"Version %@ (%@%@, %@)", [info objectForKey:@"CFBundleShortVersionString"], EC_CONFIGURATION_STRING_SHORT, [info objectForKey:@"CFBundleVersion"], date];

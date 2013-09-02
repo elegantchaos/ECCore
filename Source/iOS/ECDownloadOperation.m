@@ -23,19 +23,6 @@
 
 @implementation ECDownloadOperation
 
-#pragma mark - Synthesized Properties
-
-@synthesize completion = _completion;
-@synthesize connection = _connection;
-@synthesize data = _data;
-@synthesize executing = _executing;
-@synthesize finished = _finished;
-@synthesize length = _length;
-@synthesize progress = _progress;
-@synthesize response = _response;
-@synthesize request = _request;
-@synthesize runLoop = _runLoop;
-
 #pragma mark - Object Lifecycle
 
 //! Utility to create a download task and add it to a queue.
@@ -52,7 +39,7 @@
     
     [queue addOperation:operation];
     
-    return [operation autorelease];
+    return operation;
 }
 
 //! Create a download task for the given request.
@@ -72,19 +59,6 @@
 }
 
 //! Clean up.
-
-- (void)dealloc 
-{
-    [_completion release];
-    [_connection release];
-    [_data release];
-    [_progress release];
-    [_request release];
-    [_response release];
-    [_runLoop release];
-    
-    [super dealloc];
-}
 
 #pragma mark - NSOperation 
 
