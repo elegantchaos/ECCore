@@ -17,8 +17,6 @@
 
 @implementation KVOTestClass
 
-@synthesize name = _name;
-
 @end
 
 @interface ECKVOTests : ECTestCase
