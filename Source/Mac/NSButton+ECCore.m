@@ -46,7 +46,6 @@
     [title addAttribute:NSForegroundColorAttributeName value:textColour range:range];
     [title fixAttributesInRange:range];
     [self setAttributedTitle:title];
-    [title release];
 }
 
 @end

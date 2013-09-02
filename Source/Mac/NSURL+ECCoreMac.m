@@ -31,9 +31,8 @@
 
 + (NSURL*)URLWithFSRef:(FSRef*)ref
 {
-    CFURLRef cfresult = CFURLCreateFromFSRef(kCFAllocatorDefault, ref);
-    NSURL* result = (NSURL*) cfresult;
-    return [result autorelease];
+    NSURL* result = (__bridge_transfer NSURL*) CFURLCreateFromFSRef(kCFAllocatorDefault, ref);
+    return result;
 }
 
 @end

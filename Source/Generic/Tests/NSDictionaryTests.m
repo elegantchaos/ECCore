@@ -32,8 +32,6 @@
 	NSNumber* doubleNumber = [[NSNumber alloc] initWithDouble: 123.456];
 	NSNumber* boolNumber = [[NSNumber alloc] initWithBool: YES];
 	mDictionary = [[NSDictionary alloc] initWithObjectsAndKeys: doubleNumber, @"double", boolNumber, @"bool", nil];
-	[doubleNumber release];
-	[boolNumber release];
 }
 
 // --------------------------------------------------------------------------
@@ -42,7 +40,6 @@
 
 - (void) tearDown
 {
-	[mDictionary release];
 	mDictionary = nil;
 }
 

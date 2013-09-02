@@ -21,7 +21,7 @@ ECDefineDebugChannel(NSURLChannel);
 + (NSURL*) URLWithResourceNamed: (NSString*) name ofType: (NSString*) type
 {
 	NSURL* url = [[NSURL alloc] initWithResourceNamed: name ofType: type];
-	return [url autorelease];
+	return url;
 }
 
 // --------------------------------------------------------------------------
@@ -38,7 +38,6 @@ ECDefineDebugChannel(NSURLChannel);
 	}
 	else
 	{
-		[self release];
 		self = nil;
 	}
 	

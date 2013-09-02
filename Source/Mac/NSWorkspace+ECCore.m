@@ -18,28 +18,22 @@
 
 @implementation NSWorkspace(ECCorePrivate)
 
-static NSAppleScript *const kInvalidScript = (NSAppleScript*) -1;
-
 // --------------------------------------------------------------------------
 //! Return our finder support script.
 //! We only ever try to compile the applescript once.
-//! If it's missing or doesn't compile, we'll return kInvalidScript.
+//! If it's missing or doesn't compile, we'll return nil.
 // --------------------------------------------------------------------------
 
 - (NSAppleScript*)finderSupportScript
 {
-    static NSAppleScript* script = nil;
-    if (!script)
-    {
-        NSBundle* bundle = [NSBundle bundleForClass:[ECRandom class]];
-        script = [[NSAppleScript scriptNamed:@"finder support" fromBundle:bundle] retain];
-        if (script == nil)
-        {
-            script = kInvalidScript;
-        }
-    }
-    
-    return script;
+	static NSAppleScript* sScript = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		NSBundle* bundle = [NSBundle bundleForClass:[ECRandom class]];
+		sScript = [NSAppleScript scriptNamed:@"finder support" fromBundle:bundle];
+	});
+
+    return sScript;
 }
 
 @end
@@ -93,12 +87,8 @@ static NSAppleScript *const kInvalidScript = (NSAppleScript*) -1;
 - (BOOL)selectURLOnDesktop:(NSURL*)fullPath
 {
     NSAppleScript* finderSupport = [self finderSupportScript];
-    NSAppleEventDescriptor* result = nil;
-    if (finderSupport != kInvalidScript)
-    {
-        result = [finderSupport callHandler:@"selectFile" withParameters:[fullPath path], nil];
-    }
-    
+    NSAppleEventDescriptor* result = [finderSupport callHandler:@"selectFile" withParameters:[fullPath path], nil];
+
     return result != nil;
 }
 
@@ -130,7 +120,7 @@ static NSAppleScript *const kInvalidScript = (NSAppleScript*) -1;
 {
     NSAppleScript* finderSupport = [self finderSupportScript];
     NSURL* url = nil;
-    if (finderSupport != kInvalidScript)
+    if (finderSupport)
     {
         NSDictionary* error = nil;
         NSAppleEventDescriptor* result = [finderSupport callHandler:@"finderFrontWindow" withParameters:nil];
@@ -165,7 +155,7 @@ static NSAppleScript *const kInvalidScript = (NSAppleScript*) -1;
 {
     NSAppleScript* finderSupport = [self finderSupportScript];
 	NSArray* urls = nil;
-    if (finderSupport != kInvalidScript)
+    if (finderSupport)
     {
         NSDictionary* error = nil;
         NSAppleEventDescriptor* result = [finderSupport callHandler:@"finderSelection" withParameters:nil];
@@ -193,7 +183,7 @@ static NSAppleScript *const kInvalidScript = (NSAppleScript*) -1;
 																			 kLSSharedFileListItemLast, 
 																			 NULL, 
 																			 NULL,
-																			 (CFURLRef)itemURL, 
+																			 (__bridge CFURLRef)itemURL,
 																			 NULL, 
 																			 NULL);             
 		if (loginItemRef) {

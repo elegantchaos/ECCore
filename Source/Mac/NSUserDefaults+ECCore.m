@@ -61,7 +61,6 @@ static NSString *const kFontSizeKey = @"Size";
 {
 	NSDictionary* info = [[NSDictionary alloc] initWithObjectsAndKeys: [font fontName], kFontNameKey, @([font pointSize]), kFontSizeKey, nil];
 	[self setObject: info forKey: key];
-	[info release];
 }
 
 @end

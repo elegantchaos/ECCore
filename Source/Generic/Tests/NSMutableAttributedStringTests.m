@@ -33,9 +33,6 @@
 
 	[test matchExpression:nil options:matchingOptions reversed:NO action:^(NSAttributedString* original, NSMutableAttributedString* current, NSTextCheckingResult* match) { ++count; } ];
 	ECTestAssertZero(count);
-
-	[test release];
-	
 }
 
 - (void)testMatchForwards
@@ -58,14 +55,12 @@
 		 ++count;
 		 NSAttributedString* replacement = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"tes%ld",(long) count]];
 		 [current replaceCharactersInRange:match.range withAttributedString:replacement];
-		 [replacement release];
 	 }
 	 ];
 
 	NSString* string = [test string];
 	ECTestAssertIntegerIsEqual(count, 3);
 	ECTestAssertStringIsEqual(string, @"tes1 tes2 tes3");
-	[test release];
 }
 
 - (void)testMatchReversed
@@ -88,14 +83,12 @@
 		 ++count;
 		 NSAttributedString* replacement = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"test%ld", (long)count]];
 		 [current replaceCharactersInRange:match.range withAttributedString:replacement];
-		 [replacement release];
 	 }
 	 ];
 	
 	NSString* string = [test string];
 	ECTestAssertIntegerIsEqual(count, 3);
 	ECTestAssertStringIsEqual(string, @"test3 test2 test1");
-	[test release];
 }
 
 @end

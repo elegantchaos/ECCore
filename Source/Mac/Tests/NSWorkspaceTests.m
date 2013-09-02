@@ -38,9 +38,6 @@
 
 - (void) tearDown
 {
-	[mURL release];
-	[mPath release];
-	
 	mWorkspace = nil;
 	mPath = nil;
 	mURL = nil;

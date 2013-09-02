@@ -49,7 +49,7 @@ ECDefineDebugChannel(NSAppleScriptChannel);
         }
     }
         
-    return [script autorelease];
+    return script;
 }
 
 /* callScript is the main workhorse routine we use for calling handlers

@@ -33,7 +33,6 @@
 			if (coercedString)
 			{
 				url = [NSURL URLWithString:coercedString];
-				[coercedString release];
 			}
 			break;
 		}
@@ -64,7 +63,7 @@
 
 - (NSArray*) stringArrayValue
 {
-	NSMutableArray* strings = [[[NSMutableArray alloc] init] autorelease];
+	NSMutableArray* strings = [[NSMutableArray alloc] init];
 	
 	NSInteger count = [self numberOfItems];
 	for (NSInteger index = 1; index <= count; ++index)
@@ -72,7 +71,6 @@
 		NSAppleEventDescriptor* descriptor = [self descriptorAtIndex: index];
 		NSString* string = [[descriptor stringValue] copy];
 		[strings addObject: string];
-		[string release];
 	}
 	
 	return strings;
@@ -84,7 +82,7 @@
 
 - (NSArray*) URLArrayValue
 {
-	NSMutableArray* urls = [[[NSMutableArray alloc] init] autorelease];
+	NSMutableArray* urls = [[NSMutableArray alloc] init];
 	
 	NSInteger count = [self numberOfItems];
 	for (NSInteger index = 1; index <= count; ++index)

@@ -42,7 +42,6 @@
 	ECTestAssertTrue(blockRan);
 	
 	[test removeObserver:observer];
-	[test release];
 }
 
 - (void)testAutoRemove
@@ -60,8 +59,6 @@
 		test.name = @"jim";
 		
 		ECTestAssertTrue(blockRan);
-		
-		[test release];
 	}
 	
 	NSUInteger registeredObservers = [[ECKVOManager sharedInstance] observerCount];

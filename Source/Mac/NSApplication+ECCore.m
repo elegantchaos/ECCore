@@ -94,7 +94,7 @@ ECDefineDebugChannel(NSApplicationChannel);
 	else if (!flag && (currentPolicy == NSApplicationActivationPolicyRegular))
 	{
 		ECDebug(NSApplicationChannel, @"disabling dock icon");
-		NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+		NSAlert *alert = [[NSAlert alloc] init];
 		[alert addButtonWithTitle:@"Relaunch Now"];
 		[alert addButtonWithTitle:@"Later"];
 		NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
