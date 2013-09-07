@@ -153,6 +153,8 @@ ECDefineDebugChannel(NSApplicationChannel);
 - (NSString*) applicationName
 {
     NSString* result = [[NSBundle mainBundle] bundleName];
+	if (!result)
+		result = @"Unknown Application";
 
     return result;
 }
@@ -164,6 +166,8 @@ ECDefineDebugChannel(NSApplicationChannel);
 - (NSString*) applicationVersion
 {
     NSString* result = [[NSBundle mainBundle] bundleVersion];
+	if (!result)
+		result = @"Unknown Version";
     
     return result;
 }
@@ -175,7 +179,7 @@ ECDefineDebugChannel(NSApplicationChannel);
 - (NSString*) applicationBuild
 {
     NSString* result = [[NSBundle mainBundle] bundleBuild];
-    
+
     return result;
 }
 
@@ -187,7 +191,9 @@ ECDefineDebugChannel(NSApplicationChannel);
 - (NSString*) applicationFullVersion
 {
     NSString* result = [[NSBundle mainBundle] bundleFullVersion];
-    
+    if (!result)
+		result = @"Unknown Version";
+
     return result;
 }
 
