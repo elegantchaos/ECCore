@@ -12,7 +12,6 @@
 #import "ECKVO.h"
 #import "ECKVOManager.h"
 #import "ECLazyProperties.h"
-#import "ECMacros.h"
 #import "ECRandom.h"
 #import "ECSha1.h"
 #import "ECSingleton.h"

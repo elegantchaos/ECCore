@@ -6,8 +6,7 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import <Foundation/Foundation.h>
-
+#import <ECLogging/NSString+ECLogging.h>
 
 @interface NSString(ECCoreGeneric)
 
@@ -18,9 +17,6 @@
 - (NSData*)splitWordsIntoInts;
 - (NSData*)splitWordsIntoFloats;
 - (NSData*)splitWordsIntoDoubles;
-- (NSArray*)componentsSeparatedByMixedCaps;
-
-- (NSString*)stringBySplittingMixedCaps;
 
 + (NSString*)stringByFormattingCount:(NSUInteger)count singularFormat:(NSString*)singularFormat pluralFormat:(NSString*)pluralFormat;
 + (NSString*)stringWithMixedCapsFromWords:(NSArray*)words initialCap:(BOOL)initialCap;

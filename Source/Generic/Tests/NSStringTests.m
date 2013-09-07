@@ -39,7 +39,7 @@
 - (void) testSplitWordsIntoFloats
 {
 	NSString* string = @"1.1 2.2 3.3 4.4 5.5 -1.1 -2.2 -3.3 -4.4 -5.5";
-	
+	NSArray* expected = @[@1.1, @2.2, @3.3, @4.4, @5.5, @-1.1, @-2.2, @-3.3, @-4.4, @-5.5];
 	NSData* data = [string splitWordsIntoFloats];
 	
 	ECTestAssertTrue([data length] == sizeof(float) * 10);
@@ -47,8 +47,8 @@
 	const float* floats = [data bytes];
 	for (int n = 0; n < 10; ++n)
 	{
-		float expected = 1.1f * ((n < 5) ? n + 1 : 4 - n);
-		ECTestAssertRealIsEqual(floats[n], expected);
+		float expectedValue = [expected[n] floatValue];
+		ECTestAssertRealIsEqual(floats[n], expectedValue);
 	}
 }
 

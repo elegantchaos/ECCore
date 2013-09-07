@@ -148,7 +148,7 @@
         id newItem = dictionary[key];
         if (existingItem && newItem)
         {
-            if ([existingItem isMemberOfClass:[NSDictionary class]] && [newItem isMemberOfClass:[NSDictionary class]])
+            if ([existingItem isKindOfClass:[NSDictionary class]] && [newItem isKindOfClass:[NSDictionary class]])
             {
                 NSMutableDictionary* merged = [NSMutableDictionary dictionaryWithDictionary:existingItem];
                 [merged addEntriesFromDictionary:newItem];

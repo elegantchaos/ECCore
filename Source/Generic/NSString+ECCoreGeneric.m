@@ -79,53 +79,6 @@
 	return [data autorelease];
 }
 
-- (NSArray*)componentsSeparatedByMixedCaps
-{
-	NSMutableArray* result = [NSMutableArray array];
-	NSUInteger count = [self length];
-	NSMutableString* word = [[NSMutableString alloc] init];
-	BOOL wasLower = NO;
-	for (NSUInteger n = 0; n < count; ++n)
-	{
-		UniChar c = [self characterAtIndex: n];
-		BOOL isLower = islower(c) == 0;
-		if (wasLower && !isLower)
-		{
-			[result addObject:[NSString stringWithString:word]];
-			[word deleteCharactersInRange:NSMakeRange(0, [word length])];
-		}
-		[word appendString:[NSString stringWithCharacters: &c length:1]];
-		wasLower = isLower;
-	}
-	if ([word length])
-	{
-		[result addObject:word];
-	}
-	[word release];
-	
-	return result;
-}
-
-
-- (NSString*) stringBySplittingMixedCaps
-{
-	NSUInteger count = [self length];
-	NSMutableString* result = [[NSMutableString alloc] init];
-	BOOL wasLower = NO;
-	for (NSUInteger n = 0; n < count; ++n)
-	{
-		UniChar c = [self characterAtIndex: n];
-		BOOL isLower = islower(c) == 0;
-		if (wasLower && !isLower)
-		{
-			[result appendString: @" "];
-		}
-		[result appendString: [NSString stringWithCharacters: &c length:1]];
-		wasLower = isLower;
-	}
-	
-	return [result autorelease];
-}
 
 + (NSString*)stringWithMixedCapsFromWords:(NSArray*)words initialCap:(BOOL)initialCap
 {
