@@ -27,3 +27,35 @@
 #import "NSMutableAttributedString+ECCore.h"
 #import "NSString+ECCore.h"
 #import "NSURL+ECCore.h"
+
+#if EC_PLATFORM_IOS
+
+#import "UIFont+ECCore.h"
+#import "UIApplication+ECCore.h"
+#import "UIColor+ECCore.h"
+#import "UIFont+ECCore.h"
+#import "UIImage+ECCore.h"
+#import "UIViewController+ECUtilities.h"
+#import "ECDownloadOperation.h"
+
+#elif EC_PLATFORM_MAC
+
+#import "ECLaunchServices.h"
+#import "ECMachine.h"
+#import "NSAppleEventDescriptor+ECCore.h"
+#import "NSAppleScript+ECCore.h"
+#import "NSApplication+ECCore.h"
+#import "NSButton+ECCore.h"
+#import "NSColor+ECCore.h"
+#import "NSGeometry+ECCore.h"
+#import "NSMenu+ECCore.h"
+#import "NSURL+ECCoreMac.h"
+#import "NSUserDefaults+ECCore.h"
+#import "NSWindow+ECCore.h"
+#import "NSWorkspace+ECCore.h"
+
+#else
+
+#warning Unknown platform
+
+#endif
