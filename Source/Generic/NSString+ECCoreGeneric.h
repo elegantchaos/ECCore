@@ -28,6 +28,7 @@
 
 - (NSString*)truncateToLength:(NSUInteger)length;
 
+- (NSString*)stringWithInitialCapital;
 - (NSString*)uppercaseUnderscoreStringFromMixedCase;
 - (NSString*)lowercaseUnderscoreStringFromMixedCase;
 - (NSString*)mixedcaseStringFromMixedCaseWithInitialCapital;

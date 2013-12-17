@@ -216,6 +216,16 @@
 	return range.location != NSNotFound;
 }
 
+- (NSString*)stringWithInitialCapital
+{
+	NSString* result;
+	if ([self length] < 2)
+		result = [self uppercaseString];
+	else
+		result = [[[self substringToIndex:1] uppercaseString] stringByAppendingString:[self substringFromIndex:1]];
+	return result;
+}
+
 - (NSString*)uppercaseUnderscoreStringFromMixedCase
 {
     NSArray* words = [self componentsSeparatedByMixedCaps];
