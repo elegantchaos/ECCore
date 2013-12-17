@@ -104,16 +104,17 @@
 
 - (void)testMixedCaps
 {
-	NSArray* array = [@"aTestString" componentsSeparatedByMixedCaps];
-	ECTestAssertLength(array, 3);
+	NSArray* array = [@"aTestStringID" componentsSeparatedByMixedCaps];
+	ECTestAssertLength(array, 4);
 	ECTestAssertStringIsEqual([array objectAtIndex:0], @"a");
 	ECTestAssertStringIsEqual([array objectAtIndex:1], @"Test");
 	ECTestAssertStringIsEqual([array objectAtIndex:2], @"String");
+	ECTestAssertStringIsEqual([array objectAtIndex:3], @"ID");
 	
 	array = [@"" componentsSeparatedByMixedCaps];
 	ECTestAssertIsEmpty(array);
 	
-	ECTestAssertStringIsEqual([@"aTestString" stringBySplittingMixedCaps], @"a Test String");
+	ECTestAssertStringIsEqual([@"aTestStringID" stringBySplittingMixedCaps], @"a Test String ID");
 	ECTestAssertStringIsEqual([@"" stringBySplittingMixedCaps], @"");
 	
 	NSArray* words = [NSArray arrayWithObjects:@"a", @"TEST", @"string", nil];
