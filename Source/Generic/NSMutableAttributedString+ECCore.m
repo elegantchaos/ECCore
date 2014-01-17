@@ -55,10 +55,9 @@
     }
     else
     {
-		NSUInteger n = 0;
         for (NSTextCheckingResult* match in matches)
         {
-            block(original, self, matches[n++]);
+            block(original, self, match);
         }
     }
 }
