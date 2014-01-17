@@ -7,6 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
+#define ECLazyGetter(property, initialisation) \
+	- (id)property { if (!_##property) _##property = (initialisation); return _##property; }
+
+//#define ECLazyGetter(property, initialisation) - (typeof(_##property))property { if (!_##property) _property = (initialisation); return _##property; }
+
+
 @interface NSObject(ECLazyProperties)
 
 + (void)initializeLazyProperties;
