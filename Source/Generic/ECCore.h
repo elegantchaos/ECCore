@@ -51,6 +51,7 @@
 #import "NSMenu+ECCore.h"
 #import "NSURL+ECCoreMac.h"
 #import "NSUserDefaults+ECCore.h"
+#import "NSView+ECCore.h"
 #import "NSWindow+ECCore.h"
 #import "NSWorkspace+ECCore.h"
 
