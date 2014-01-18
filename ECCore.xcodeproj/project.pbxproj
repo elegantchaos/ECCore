@@ -15,6 +15,10 @@
 		222D9D4C18896A37005B9E40 /* NSView+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 222D9D4818896A37005B9E40 /* NSView+ECCore.m */; };
 		2230501516EF571C00A9F1F3 /* finder support.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 2230500616EF571C00A9F1F3 /* finder support.scpt */; };
 		22351D061544487000A24099 /* NSString+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22351D031544487000A24099 /* NSString+ECCore.m */; };
+		2236714E188ABB7400436162 /* NSOutlineView+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2236714C188ABB7400436162 /* NSOutlineView+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2236714F188ABB7400436162 /* NSOutlineView+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2236714C188ABB7400436162 /* NSOutlineView+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22367150188ABB7400436162 /* NSOutlineView+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2236714D188ABB7400436162 /* NSOutlineView+ECCore.m */; };
+		22367151188ABB7400436162 /* NSOutlineView+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2236714D188ABB7400436162 /* NSOutlineView+ECCore.m */; };
 		223D56221549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
 		223D56231549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
 		2260A2EA15DFD7290057C9DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
@@ -336,6 +340,8 @@
 		22351D031544487000A24099 /* NSString+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECCore.m"; sourceTree = "<group>"; };
 		22351D071544489A00A24099 /* NSString+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ECCore.h"; sourceTree = "<group>"; };
 		22351D081544489A00A24099 /* NSString+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECCore.m"; sourceTree = "<group>"; };
+		2236714C188ABB7400436162 /* NSOutlineView+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOutlineView+ECCore.h"; sourceTree = "<group>"; };
+		2236714D188ABB7400436162 /* NSOutlineView+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOutlineView+ECCore.m"; sourceTree = "<group>"; };
 		223CB8A71437334D003F6D01 /* ECLaunchServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLaunchServices.h; sourceTree = "<group>"; };
 		223CB8A81437334D003F6D01 /* ECLaunchServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLaunchServices.m; sourceTree = "<group>"; };
 		223CBAE61205C6380008A641 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -887,6 +893,8 @@
 				226021A6141F86F30044644C /* NSUserDefaults+ECCore.m */,
 				226021A7141F86F30044644C /* NSWindow+ECCore.h */,
 				222D9D4718896A37005B9E40 /* NSView+ECCore.h */,
+				2236714C188ABB7400436162 /* NSOutlineView+ECCore.h */,
+				2236714D188ABB7400436162 /* NSOutlineView+ECCore.m */,
 				222D9D4818896A37005B9E40 /* NSView+ECCore.m */,
 				226021A8141F86F30044644C /* NSWindow+ECCore.m */,
 				22AE91F21492628A008EF8E2 /* NSWorkspace+ECCore.h */,
@@ -912,6 +920,7 @@
 				2260A31D15DFDB4C0057C9DA /* ECRandom.h in Headers */,
 				2260A31E15DFDB4C0057C9DA /* ECKVO.h in Headers */,
 				2260A32015DFDB4C0057C9DA /* ECKVOManager.h in Headers */,
+				2236714E188ABB7400436162 /* NSOutlineView+ECCore.h in Headers */,
 				2260A32315DFDB4C0057C9DA /* ECRuntime.h in Headers */,
 				2260A32515DFDB4C0057C9DA /* ECSha1.h in Headers */,
 				2260A32715DFDB4C0057C9DA /* ECSingleton.h in Headers */,
@@ -994,6 +1003,7 @@
 				2296288417621FA5008D887F /* ECProperties.h in Headers */,
 				2296288517621FA5008D887F /* ECRandom.h in Headers */,
 				2296288617621FA5008D887F /* ECKVO.h in Headers */,
+				2236714F188ABB7400436162 /* NSOutlineView+ECCore.h in Headers */,
 				2296288717621FA5008D887F /* ECKVOManager.h in Headers */,
 				2296288817621FA5008D887F /* ECRuntime.h in Headers */,
 				2296288917621FA5008D887F /* ECSha1.h in Headers */,
@@ -1262,6 +1272,7 @@
 				2260A38115DFDB830057C9DA /* NSAppleScript+ECCore.m in Sources */,
 				2260A38315DFDB830057C9DA /* NSApplication+ECCore.m in Sources */,
 				2260A38515DFDB830057C9DA /* NSButton+ECCore.m in Sources */,
+				22367150188ABB7400436162 /* NSOutlineView+ECCore.m in Sources */,
 				2260A38715DFDB830057C9DA /* NSColor+ECCore.m in Sources */,
 				2260A38915DFDB830057C9DA /* NSGeometry+ECCore.m in Sources */,
 				2260A38B15DFDB830057C9DA /* NSMenu+ECCore.m in Sources */,
@@ -1373,6 +1384,7 @@
 				229628BD176220CC008D887F /* NSAppleEventDescriptor+ECCore.m in Sources */,
 				229628BE176220CC008D887F /* NSAppleScript+ECCore.m in Sources */,
 				229628BF176220CC008D887F /* NSApplication+ECCore.m in Sources */,
+				22367151188ABB7400436162 /* NSOutlineView+ECCore.m in Sources */,
 				229628C0176220CC008D887F /* NSButton+ECCore.m in Sources */,
 				229628C1176220CC008D887F /* NSColor+ECCore.m in Sources */,
 				229628C2176220CC008D887F /* NSGeometry+ECCore.m in Sources */,
