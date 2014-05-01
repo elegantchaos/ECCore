@@ -155,7 +155,6 @@
 		2260A3A715DFE7B30057C9DA /* ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2260A3A515DFE7B20057C9DA /* ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A3AA15DFEE0C0057C9DA /* ECLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260A39815DFE2DD0057C9DA /* ECLogging.framework */; };
 		2260A3B515DFF1920057C9DA /* ECCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260A2E915DFD7290057C9DA /* ECCore.framework */; };
-		2283A3F614F52EC0009142F7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3CD14F52E93009142F7 /* SenTestingKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2283A3F714F52EC0009142F7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
 		2296287217621E33008D887F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
 		2296287E17621FA5008D887F /* ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2260A3A515DFE7B20057C9DA /* ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -245,7 +244,6 @@
 		22C2DB5614FB98CB005D2E89 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB5514FB98CB005D2E89 /* IOKit.framework */; };
 		22C2DB5714FB98D7005D2E89 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB5114FB98AA005D2E89 /* Security.framework */; };
 		22C2DB5E14FB9ADC005D2E89 /* Test.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22C2DB5D14FB9ADC005D2E89 /* Test.bundle */; };
-		22C2DB7214FB9CC8005D2E89 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3CD14F52E93009142F7 /* SenTestingKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		22C2DB7414FB9CC8005D2E89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB7314FB9CC8005D2E89 /* UIKit.framework */; };
 		22C2DB7514FB9CC8005D2E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C2DB6414FB9CC8005D2E89 /* Foundation.framework */; };
 		22C2DBC414FB9F2F005D2E89 /* CGGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E24014910560004DA13E /* CGGeometryTests.m */; };
@@ -407,7 +405,6 @@
 		2283A3BE14F52E93009142F7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2283A3BF14F52E93009142F7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2283A3C014F52E93009142F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2283A3CD14F52E93009142F7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2283A3F514F52EC0009142F7 /* ECCoreMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECCoreMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		228A510614991FB3002907A6 /* ECRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECRuntime.h; sourceTree = "<group>"; };
 		228A510714991FB3002907A6 /* ECRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECRuntime.m; sourceTree = "<group>"; };
@@ -518,7 +515,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C8B761182CE57A003EA301 /* XCTest.framework in Frameworks */,
-				2283A3F614F52EC0009142F7 /* SenTestingKit.framework in Frameworks */,
 				2260A3A015DFE6860057C9DA /* ECCore.framework in Frameworks */,
 				220A1606177107AD00173510 /* ECUnitTests.framework in Frameworks */,
 				2260A3A215DFE6860057C9DA /* ECLogging.framework in Frameworks */,
@@ -541,7 +537,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22C8B762182CE58B003EA301 /* XCTest.framework in Frameworks */,
-				22C2DB7214FB9CC8005D2E89 /* SenTestingKit.framework in Frameworks */,
 				2260A3B515DFF1920057C9DA /* ECCore.framework in Frameworks */,
 				2260A3AA15DFEE0C0057C9DA /* ECLogging.framework in Frameworks */,
 				22C2DBD914FB9F8A005D2E89 /* CoreGraphics.framework in Frameworks */,
@@ -602,7 +597,6 @@
 				1058C7B0FEA5585E11CA2CBB /* MacOS */,
 				1058C7B2FEA5585E11CA2CBB /* Testing */,
 				2283A3BB14F52E93009142F7 /* Cocoa.framework */,
-				2283A3CD14F52E93009142F7 /* SenTestingKit.framework */,
 				22C2DB6414FB9CC8005D2E89 /* Foundation.framework */,
 				22C2DB7314FB9CC8005D2E89 /* UIKit.framework */,
 				2260A2FE15DFD7320057C9DA /* CoreFoundation.framework */,
