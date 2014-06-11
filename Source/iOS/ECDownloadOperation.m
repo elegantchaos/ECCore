@@ -18,6 +18,8 @@
 @property (copy, nonatomic) ProgressHandler progress;               //!< The handler we'll call to report progress.
 @property (strong, nonatomic) NSURLRequest* request;				//!< The request for the download.
 @property (strong, nonatomic) NSURLResponse* response;              //!< The HTTP response we got back from the server.
+@property (assign, nonatomic, getter=isExecuting) BOOL executingFlag;
+@property (assign, nonatomic, getter=isFinished) BOOL finishedFlag;
 
 @end
 
@@ -79,13 +81,13 @@
 	{
 		// Must move the operation to the finished state if it is canceled.
 		[self willChangeValueForKey:@"isFinished"];
-		self.finished = YES;
+		self.finishedFlag = YES;
 		[self didChangeValueForKey:@"isFinished"];
 	}
 	else
 	{
 		[self willChangeValueForKey:@"isExecuting"];
-		self.executing = YES;
+		self.executingFlag = YES;
 		[self didChangeValueForKey:@"isExecuting"];
 
 		dispatch_async(dispatch_get_main_queue(), ^{
@@ -103,8 +105,8 @@
 	[self willChangeValueForKey:@"isFinished"];
 	[self willChangeValueForKey:@"isExecuting"];
 	
-	self.executing = NO;
-	self.finished = YES;
+	self.executingFlag = NO;
+	self.finishedFlag = YES;
 	
 	[self didChangeValueForKey:@"isExecuting"];
 	[self didChangeValueForKey:@"isFinished"];
