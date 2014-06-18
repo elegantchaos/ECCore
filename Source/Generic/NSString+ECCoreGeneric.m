@@ -11,6 +11,23 @@
 
 @implementation NSString(ECCoreGeneric)
 
+
++ (NSDictionary*)entities
+{
+	// used for normal strings on iOS, and attributed strings on both platforms
+	
+	NSDictionary* entities = [NSDictionary dictionaryWithObjectsAndKeys:
+							  @"&", @"&amp;",
+							  @"<", @"&lt;",
+							  @">", @"&gt;",
+							  @"\"", @"&quot;",
+							  @"'", @"&apos;",
+							  @"–", @"&mdash;",
+							  nil];
+	
+	return entities;
+}
+
 + (NSString*)stringWithOrdinal:(NSInteger)ordinal
 {
     NSString* suffix;

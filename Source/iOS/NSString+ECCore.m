@@ -9,20 +9,6 @@
 
 @implementation NSString(ECCore)
 
-+ (NSDictionary*)entities
-{
-	NSDictionary* entities = [NSDictionary dictionaryWithObjectsAndKeys:
-							  @"&", @"&amp;",
-							  @"<", @"&lt;",
-							  @">", @"&gt;",
-							  @"\"", @"&quot;",
-							  @"'", @"&apos;",
-							  @"–", @"&mdash;",
-							  nil];
-
-	return entities;
-}
-
 // --------------------------------------------------------------------------
 //! Escape any standard XML entities
 // --------------------------------------------------------------------------
