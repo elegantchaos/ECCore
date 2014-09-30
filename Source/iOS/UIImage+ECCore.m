@@ -33,8 +33,8 @@
 {
     UIImage *resizedImage = [self imageByResizingWithContentMode:UIViewContentModeScaleAspectFill bounds:CGSizeMake(thumbnailSize, thumbnailSize) interpolationQuality:quality];
     
-    CGRect cropRect = CGRectMake(round((resizedImage.size.width - thumbnailSize) / 2),
-                                 round((resizedImage.size.height - thumbnailSize) / 2),
+    CGRect cropRect = CGRectMake((CGFloat)round((resizedImage.size.width - thumbnailSize) / 2),
+                                 (CGFloat)round((resizedImage.size.height - thumbnailSize) / 2),
                                  (CGFloat) thumbnailSize,
                                  (CGFloat) thumbnailSize);
 
