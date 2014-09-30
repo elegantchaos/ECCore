@@ -45,7 +45,6 @@
 #import "NSAppleEventDescriptor+ECCore.h"
 #import "NSGeometry+ECCore.h"
 #import "NSURL+ECCoreMac.h"
-#import "NSUserDefaults+ECCore.h"
 
 #else
 
