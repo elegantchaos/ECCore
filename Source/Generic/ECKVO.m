@@ -20,18 +20,16 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 @property (copy, nonatomic) ECObserverAction action;
 @property (copy, nonatomic) NSString* path;
 @property (strong, nonatomic) NSOperationQueue* queue;
-@property (assign, nonatomic) id observed; // weak
+@property (weak, nonatomic) id observed;
 
 @end
 
 @implementation ECObserver
 
-#if EC_DEBUG
 - (void)dealloc
 {
-	[[ECKVOManager sharedInstance] removeObserver:self];
+	[(NSObject*)self.observed removeObserver:self];
 }
-#endif
 
 - (void)observeValueForKeyPath:(NSString *)path ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
 {

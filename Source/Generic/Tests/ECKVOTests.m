@@ -55,6 +55,7 @@
 		}];
 		
 		test.name = @"jim";
+//		[test removeObserver:observer];
 		
 		ECTestAssertTrue(blockRan);
 	}
