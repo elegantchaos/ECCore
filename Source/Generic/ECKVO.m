@@ -20,7 +20,7 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 @property (copy, nonatomic) ECObserverAction action;
 @property (copy, nonatomic) NSString* path;
 @property (strong, nonatomic) NSOperationQueue* queue;
-	@property (assign, nonatomic) id observed; // weak
+@property (assign, nonatomic) id observed; // weak
 
 @end
 

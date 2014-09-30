@@ -7,9 +7,6 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import <Cocoa/Cocoa.h>
-
-
 @interface NSAppleScript(ECCore)
 
 + (NSAppleScript*) scriptNamed:(NSString*)name;
