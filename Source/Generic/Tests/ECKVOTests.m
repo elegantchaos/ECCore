@@ -42,6 +42,8 @@
 	[test removeObserver:observer];
 }
 
+#if NO // NB auto-removal is a bit dodgy - I'm not entire sure how it was ever expected to work, but I'm fairly certain that it's unsafe.
+
 - (void)testAutoRemove
 {
 	@autoreleasepool 
@@ -55,7 +57,6 @@
 		}];
 		
 		test.name = @"jim";
-//		[test removeObserver:observer];
 		
 		ECTestAssertTrue(blockRan);
 	}
@@ -63,5 +64,6 @@
 	NSUInteger registeredObservers = [[ECKVOManager sharedInstance] observerCount];
 	ECTestAssertIntegerIsEqual(registeredObservers, 0);
 }
+#endif
 
 @end
