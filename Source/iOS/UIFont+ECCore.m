@@ -66,8 +66,7 @@ NSString *const ECFontSizeKey = @"size";
 - (NSDictionary*)asDictionary
 {
 	NSDictionary* result = [NSDictionary dictionaryWithObjectsAndKeys:
-							self.fontName, ECFontNameKey,
-							[NSNumber numberWithFloat:self.pointSize], ECFontSizeKey,
+							self.fontName, ECFontNameKey, @(self.pointSize), ECFontSizeKey,
 							nil];
 	
 	return result;

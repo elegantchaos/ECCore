@@ -33,8 +33,8 @@
 {
     UIImage *resizedImage = [self imageByResizingWithContentMode:UIViewContentModeScaleAspectFill bounds:CGSizeMake(thumbnailSize, thumbnailSize) interpolationQuality:quality];
     
-    CGRect cropRect = CGRectMake(roundf((resizedImage.size.width - thumbnailSize) / 2),
-                                 roundf((resizedImage.size.height - thumbnailSize) / 2),
+    CGRect cropRect = CGRectMake(round((resizedImage.size.width - thumbnailSize) / 2),
+                                 round((resizedImage.size.height - thumbnailSize) / 2),
                                  (CGFloat) thumbnailSize,
                                  (CGFloat) thumbnailSize);
 
@@ -106,7 +106,7 @@
             break;
             
         default:
-            [NSException raise:NSInvalidArgumentException format:@"Unsupported content mode: %d", contentMode];
+            [NSException raise:NSInvalidArgumentException format:@"Unsupported content mode: %ld", (long)contentMode];
     }
     
     CGSize newSize = CGSizeMake(self.size.width * ratio, self.size.height * ratio);
