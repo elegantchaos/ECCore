@@ -7,9 +7,6 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import <Cocoa/Cocoa.h>
-
-
 @interface NSAppleEventDescriptor(ECCore)
 
 - (NSURL*)URLValue;

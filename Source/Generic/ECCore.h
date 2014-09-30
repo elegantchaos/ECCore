@@ -43,18 +43,9 @@
 #import "ECLaunchServices.h"
 #import "ECMachine.h"
 #import "NSAppleEventDescriptor+ECCore.h"
-#import "NSAppleScript+ECCore.h"
-#import "NSApplication+ECCore.h"
-#import "NSButton+ECCore.h"
-#import "NSColor+ECCore.h"
 #import "NSGeometry+ECCore.h"
-#import "NSMenu+ECCore.h"
-#import "NSOutlineView+ECCore.h"
 #import "NSURL+ECCoreMac.h"
 #import "NSUserDefaults+ECCore.h"
-#import "NSView+ECCore.h"
-#import "NSWindow+ECCore.h"
-#import "NSWorkspace+ECCore.h"
 
 #else
 
