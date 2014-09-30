@@ -26,10 +26,12 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 
 @implementation ECObserver
 
+#if EC_DEBUG
 - (void)dealloc
 {
-	[(NSObject*)self.observed removeObserver:self];
+	[[ECKVOManager sharedInstance] removeObserver:self];
 }
+#endif
 
 - (void)observeValueForKeyPath:(NSString *)path ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
 {
