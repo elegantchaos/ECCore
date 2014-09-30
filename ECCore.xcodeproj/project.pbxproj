@@ -21,7 +21,6 @@
 		22367151188ABB7400436162 /* NSOutlineView+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2236714D188ABB7400436162 /* NSOutlineView+ECCore.m */; };
 		223D56221549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
 		223D56231549629600CD569D /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
-		2260A2EA15DFD7290057C9DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3BB14F52E93009142F7 /* Cocoa.framework */; };
 		2260A31415DFDB4C0057C9DA /* CGGeometry+ECCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA555F13DA09FF007E89E2 /* CGGeometry+ECCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2260A31515DFDB4C0057C9DA /* CGGeometry+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA556013DA09FF007E89E2 /* CGGeometry+ECCore.m */; };
 		2260A31615DFDB4C0057C9DA /* ECClang.h in Headers */ = {isa = PBXBuildFile; fileRef = 22672DBF132321AA00CD8BC7 /* ECClang.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -228,6 +227,7 @@
 		229628C6176220CC008D887F /* NSUserDefaults+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 226021A6141F86F30044644C /* NSUserDefaults+ECCore.m */; };
 		229628C7176220CC008D887F /* NSWindow+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 226021A8141F86F30044644C /* NSWindow+ECCore.m */; };
 		229628C8176220CC008D887F /* NSWorkspace+ECCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91F31492628A008EF8E2 /* NSWorkspace+ECCore.m */; };
+		22BBA19B19DB0FDC0016B169 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3C014F52E93009142F7 /* Foundation.framework */; };
 		22BE98C315E3CE8C00A9EC73 /* ECDownloadOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 22BE98C115E3CE8C00A9EC73 /* ECDownloadOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22BE98C415E3CE8C00A9EC73 /* ECDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BE98C215E3CE8C00A9EC73 /* ECDownloadOperation.m */; };
 		22C2DB4614FB988A005D2E89 /* ECLaunchServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91D814925F24008EF8E2 /* ECLaunchServicesTests.m */; };
@@ -497,9 +497,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BBA19B19DB0FDC0016B169 /* Foundation.framework in Frameworks */,
 				2260A39E15DFE2F00057C9DA /* IOKit.framework in Frameworks */,
 				2260A39B15DFE2DD0057C9DA /* ECLogging.framework in Frameworks */,
-				2260A2EA15DFD7290057C9DA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

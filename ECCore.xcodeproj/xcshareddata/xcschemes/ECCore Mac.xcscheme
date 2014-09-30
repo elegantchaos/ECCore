@@ -67,6 +67,15 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2260A2E815DFD7290057C9DA"
+            BuildableName = "ECCore.framework"
+            BlueprintName = "ECCoreMac"
+            ReferencedContainer = "container:ECCore.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -80,10 +89,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2251B9FE15DBCC3E00F2FE40"
-            BuildableName = "ECLogging.framework"
-            BlueprintName = "ECLoggingMac"
-            ReferencedContainer = "container:../ECLogging/ECLogging.xcodeproj">
+            BlueprintIdentifier = "2260A2E815DFD7290057C9DA"
+            BuildableName = "ECCore.framework"
+            BlueprintName = "ECCoreMac"
+            ReferencedContainer = "container:ECCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -95,6 +104,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2260A2E815DFD7290057C9DA"
+            BuildableName = "ECCore.framework"
+            BlueprintName = "ECCoreMac"
+            ReferencedContainer = "container:ECCore.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
