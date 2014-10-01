@@ -35,8 +35,8 @@
     
     CGRect cropRect = CGRectMake((CGFloat)round((resizedImage.size.width - thumbnailSize) / 2),
                                  (CGFloat)round((resizedImage.size.height - thumbnailSize) / 2),
-                                 (CGFloat) thumbnailSize,
-                                 (CGFloat) thumbnailSize);
+                                 (CGFloat)thumbnailSize,
+                                 (CGFloat)thumbnailSize);
 
     return [resizedImage imageByCroppingToRect:cropRect];
 }
