@@ -7,8 +7,6 @@
 
 #import "ECRandom.h"
 
-#import <ECLogging/ECAssertion.h>
-
 #import <mach-o/dyld.h>
 #import <dlfcn.h>
 
