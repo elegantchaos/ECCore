@@ -8,11 +8,14 @@
 
 #import "CGGeometry+ECCore.h"
 
+#import "ECClang.h"
 #import "ECCoercion.h"
 #import "ECKVO.h"
 #import "ECKVOManager.h"
 #import "ECLazyProperties.h"
+#import "ECProperties.h"
 #import "ECRandom.h"
+#import "ECRuntime.h"
 #import "ECSha1.h"
 #import "ECSingleton.h"
 
@@ -28,7 +31,7 @@
 #import "NSString+ECCore.h"
 #import "NSURL+ECCore.h"
 
-#if EC_PLATFORM_IOS
+#if TARGET_OS_IPHONE
 
 #import "UIFont+ECCore.h"
 #import "UIApplication+ECCore.h"
@@ -38,10 +41,11 @@
 #import "UIViewController+ECUtilities.h"
 #import "ECDownloadOperation.h"
 
-#elif EC_PLATFORM_MAC
+#elif TARGET_OS_MAC
 
 #import "ECLaunchServices.h"
 #import "ECMachine.h"
+#import "NSAppleScript+ECCore.h"
 #import "NSAppleEventDescriptor+ECCore.h"
 #import "NSGeometry+ECCore.h"
 #import "NSURL+ECCoreMac.h"
