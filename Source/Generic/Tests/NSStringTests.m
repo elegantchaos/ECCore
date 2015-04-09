@@ -3,7 +3,7 @@
 //! @file:
 //! Unit tests for the NSDictionary+ECUtilitiesTests.h category.
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright (c) 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -39,7 +39,7 @@
 - (void) testSplitWordsIntoFloats
 {
 	NSString* string = @"1.1 2.2 3.3 4.4 5.5 -1.1 -2.2 -3.3 -4.4 -5.5";
-	
+	NSArray* expected = @[@1.1, @2.2, @3.3, @4.4, @5.5, @-1.1, @-2.2, @-3.3, @-4.4, @-5.5];
 	NSData* data = [string splitWordsIntoFloats];
 	
 	ECTestAssertTrue([data length] == sizeof(float) * 10);
@@ -47,8 +47,8 @@
 	const float* floats = [data bytes];
 	for (int n = 0; n < 10; ++n)
 	{
-		float expected = 1.1f * ((n < 5) ? n + 1 : 4 - n);
-		ECTestAssertRealIsEqual(floats[n], expected);
+		float expectedValue = [expected[n] floatValue];
+		ECTestAssertRealIsEqual(floats[n], expectedValue);
 	}
 }
 
@@ -104,16 +104,17 @@
 
 - (void)testMixedCaps
 {
-	NSArray* array = [@"aTestString" componentsSeparatedByMixedCaps];
-	ECTestAssertLength(array, 3);
+	NSArray* array = [@"aTestStringID" componentsSeparatedByMixedCaps];
+	ECTestAssertLength(array, 4);
 	ECTestAssertStringIsEqual([array objectAtIndex:0], @"a");
 	ECTestAssertStringIsEqual([array objectAtIndex:1], @"Test");
 	ECTestAssertStringIsEqual([array objectAtIndex:2], @"String");
+	ECTestAssertStringIsEqual([array objectAtIndex:3], @"ID");
 	
 	array = [@"" componentsSeparatedByMixedCaps];
 	ECTestAssertIsEmpty(array);
 	
-	ECTestAssertStringIsEqual([@"aTestString" stringBySplittingMixedCaps], @"a Test String");
+	ECTestAssertStringIsEqual([@"aTestStringID" stringBySplittingMixedCaps], @"a Test String ID");
 	ECTestAssertStringIsEqual([@"" stringBySplittingMixedCaps], @"");
 	
 	NSArray* words = [NSArray arrayWithObjects:@"a", @"TEST", @"string", nil];

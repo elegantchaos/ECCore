@@ -3,8 +3,8 @@
 //! @file:
 //! Unit tests for the NSDate+ECUtilitiesTests.h category.
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
-//  This source code is distributed under the terms of Elegant Chaos's 
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
+//  This source code is distributed under the terms of Elegant Chaos's
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
@@ -21,14 +21,12 @@ static NSUInteger gTest2initCalled = 0;
 @property (strong, nonatomic) NSString* test;
 @property (strong, nonatomic) NSString* test2;
 
-- (NSString*)initTest2;
-
 @end
 
 @implementation TestClass
 
-@lazy_synthesize(test, @"test value"); 
-@lazy_synthesize_method(test2, initTest2); 
+@lazy_synthesize(test, @"test value");
+@lazy_synthesize_method(test2, lazyInitTest2);
 
 + (void)initialize
 {
@@ -38,7 +36,7 @@ static NSUInteger gTest2initCalled = 0;
 	}
 }
 
-- (NSString*)initTest2
+- (NSString*)lazyInitTest2
 {
 	gTest2initCalled++;
 	return @"test2 value";
@@ -55,39 +53,33 @@ static NSUInteger gTest2initCalled = 0;
 
 - (void) testInitWithSimpleValue
 {
-    TestClass* test1 = [[TestClass alloc] init];
-    TestClass* test2 = [[TestClass alloc] init];
-    
-    ECTestAssertStringIsEqual(test1.test, @"test value");
-    test1.test = @"something else";
-    ECTestAssertStringIsEqual(test1.test, @"something else");
-    
-    ECTestAssertStringIsEqual(test2.test, @"test value");
-    test2.test = @"doodah";
-    ECTestAssertStringIsEqual(test2.test, @"doodah");
-	
-    [test1 release];
-    [test2 release];
+	TestClass* test1 = [[TestClass alloc] init];
+	TestClass* test2 = [[TestClass alloc] init];
+
+	ECTestAssertStringIsEqual(test1.test, @"test value");
+	test1.test = @"something else";
+	ECTestAssertStringIsEqual(test1.test, @"something else");
+
+	ECTestAssertStringIsEqual(test2.test, @"test value");
+	test2.test = @"doodah";
+	ECTestAssertStringIsEqual(test2.test, @"doodah");
 }
 
 - (void) testInitWithMethod
 {
 	gTest2initCalled = 0;
-	
-    TestClass* test1 = [[TestClass alloc] init];
-    TestClass* test2 = [[TestClass alloc] init];
-    
-    ECTestAssertStringIsEqual(test1.test2, @"test2 value");
-    test1.test2 = @"something else";
-    ECTestAssertStringIsEqual(test1.test2, @"something else");
-    
-    ECTestAssertStringIsEqual(test2.test2, @"test2 value");
-    test2.test2 = @"doodah";
-    ECTestAssertStringIsEqual(test2.test2, @"doodah");
-	
-    [test1 release];
-    [test2 release];
-	
+
+	TestClass* test1 = [[TestClass alloc] init];
+	TestClass* test2 = [[TestClass alloc] init];
+
+	ECTestAssertStringIsEqual(test1.test2, @"test2 value");
+	test1.test2 = @"something else";
+	ECTestAssertStringIsEqual(test1.test2, @"something else");
+
+	ECTestAssertStringIsEqual(test2.test2, @"test2 value");
+	test2.test2 = @"doodah";
+	ECTestAssertStringIsEqual(test2.test2, @"doodah");
+
 	ECTestAssertIntegerIsEqual(gTest2initCalled, 2);
 }
 

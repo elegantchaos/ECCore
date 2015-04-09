@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -27,7 +27,7 @@
         // we use a regular expression to strip out extraneous information in an attempt to keep the
         // result as compact as possible
         NSArray* symbols = [self callStackSymbols];
-        NSMutableString* string = [[[NSMutableString alloc] init] autorelease];
+        NSMutableString* string = [[NSMutableString alloc] init];
         NSInteger numberToSkip = 2; // skip the top couple of routines which are always __exceptionPreprocess and objc_exception_throw
         for (NSString* symbol in symbols) 
         {
@@ -56,7 +56,7 @@
 - (NSString*)stringFromCompactCallstack
 {
     NSArray* addresses = [self callStackReturnAddresses];
-    NSMutableString* stack = [[[NSMutableString alloc] init] autorelease];
+    NSMutableString* stack = [[NSMutableString alloc] init];
     for (NSNumber* address in addresses) {
         [stack appendFormat:@"%lx\n", (long) [address integerValue]];
     }

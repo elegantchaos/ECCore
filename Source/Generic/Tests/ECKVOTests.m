@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -16,8 +16,6 @@
 @end
 
 @implementation KVOTestClass
-
-@synthesize name = _name;
 
 @end
 
@@ -42,8 +40,9 @@
 	ECTestAssertTrue(blockRan);
 	
 	[test removeObserver:observer];
-	[test release];
 }
+
+#if NO // NB auto-removal is a bit dodgy - I'm not entire sure how it was ever expected to work, but I'm fairly certain that it's unsafe.
 
 - (void)testAutoRemove
 {
@@ -60,12 +59,11 @@
 		test.name = @"jim";
 		
 		ECTestAssertTrue(blockRan);
-		
-		[test release];
 	}
 	
 	NSUInteger registeredObservers = [[ECKVOManager sharedInstance] observerCount];
 	ECTestAssertIntegerIsEqual(registeredObservers, 0);
 }
+#endif
 
 @end

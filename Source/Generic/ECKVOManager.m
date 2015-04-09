@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -21,31 +21,21 @@ ECDefineDebugChannel(ECKVOChannel);
 
 EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 
-@synthesize observers = _observers;
-
 - (id)init
 {
 	if ((self = [super init]) != nil)
 	{
-		self.observers = [(__bridge NSMutableArray*) CFArrayCreateMutable(nil, 0, nil) autorelease];
+		self.observers = (__bridge_transfer NSMutableArray*) CFArrayCreateMutable(nil, 0, nil);
 	}
 	
 	return self;
-}
-
-- (void)dealloc
-{
-	[_observers release];
-	
-	[super dealloc];
 }
 
 - (void)addObserver:(ECObserver*)observer
 {
 	@synchronized(self)
 	{
-		CFMutableArrayRef array = (__bridge CFMutableArrayRef) self.observers;
-		CFArrayAppendValue(array, observer);
+		[self.observers addObject:observer];
 		ECDebug(ECKVOChannel, @"added observer %@", observer);
 	}
 }
@@ -54,10 +44,7 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 {
 	@synchronized(self)
 	{
-		CFMutableArrayRef array = (__bridge CFMutableArrayRef) self.observers;
-		CFRange range = CFRangeMake(0, CFArrayGetCount(array));
-		CFIndex index = CFArrayGetFirstIndexOfValue(array, range, observer);
-		CFArrayRemoveValueAtIndex(array, index);
+		[self.observers removeObject:observer];
 
 		ECDebug(ECKVOChannel, @"removed observer %@", observer);
 	}
@@ -66,11 +53,9 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 - (NSString*)description
 {
 	NSMutableString* description = [NSMutableString stringWithString:@"Registered observers:\n"];
-	CFMutableArrayRef array = (__bridge CFMutableArrayRef) self.observers;
-	CFIndex count = CFArrayGetCount(array);
-	for (CFIndex n = 0; n < count; ++n)
+	for (id item in self.observers)
 	{
-		[description appendFormat:@"\t%@\n", CFArrayGetValueAtIndex(array, n)];
+		[description appendFormat:@"\t%@\n", item];
 	}
 	
 	return description;
@@ -83,12 +68,12 @@ EC_SYNTHESIZE_SINGLETON(ECKVOManager);
 
 - (NSUInteger)observerCount
 {
-	return CFArrayGetCount((__bridge CFMutableArrayRef) self.observers);
+	return [self.observers count];
 }
 
 - (ECObserver*)observerAtIndex:(NSUInteger)index
 {
-	return CFArrayGetValueAtIndex((__bridge CFMutableArrayRef) self.observers, index);
+	return [self.observers objectAtIndex:index];
 }
 
 @end

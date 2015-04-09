@@ -1,6 +1,5 @@
 // --------------------------------------------------------------------------
-//
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright (c) 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -55,14 +54,11 @@
     }
     else
     {
-		NSUInteger n = 0;
         for (NSTextCheckingResult* match in matches)
         {
-            block(original, self, matches[n++]);
+            block(original, self, match);
         }
     }
-    
-    [original release];
 }
 
 - (void)replaceExpression:(NSRegularExpression*)expression options:(NSMatchingOptions)options atIndex:(NSUInteger)atIndex withIndex:(NSUInteger)withIndex attributes:(NSDictionary *)attributes
@@ -100,7 +96,6 @@
 	NSMutableAttributedString* boldText = [[self attributedSubstringFromRange:range] mutableCopy];
 	[boldText addAttributes:attributesCopy range:NSMakeRange(0, [boldText length])];
 	[self replaceCharactersInRange:whole withAttributedString:boldText];
-	[boldText release];
 }
 
 @end

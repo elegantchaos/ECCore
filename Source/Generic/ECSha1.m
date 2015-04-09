@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -28,9 +28,8 @@
 	}
 	
 	NSString *output = [outputHolder copy];
-	[outputHolder release];
-	
-	return [output autorelease];
+
+	return output;
 }
 
 @end
@@ -63,10 +62,26 @@
 	{
 		result = [data sha1Digest];
 	}
-	else // couldn't get contents, so return sha1 of the url itself
+	else
 	{
-		// TODO - handle directories properly 
-		result = [[self absoluteString] sha1Digest];
+		// assume it's a directory - combine the shas of all items
+		NSError* error;
+		NSFileManager* fm = [NSFileManager defaultManager];
+		NSArray* items = [fm contentsOfDirectoryAtURL:self includingPropertiesForKeys:nil options:0 error:&error];
+		if (items)
+		{
+			NSMutableString* combinedSha = [NSMutableString new];
+			for (NSURL* item in items)
+			{
+				[combinedSha appendString:[item sha1Digest]];
+			}
+			result = [combinedSha sha1Digest];
+		}
+		else
+		{
+			// fallback - use the sha of the url itself (not optimal)
+			result = [[self absoluteString] sha1Digest];
+		}
 	}
 	
 	return result;

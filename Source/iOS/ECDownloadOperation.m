@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -18,23 +18,12 @@
 @property (copy, nonatomic) ProgressHandler progress;               //!< The handler we'll call to report progress.
 @property (strong, nonatomic) NSURLRequest* request;				//!< The request for the download.
 @property (strong, nonatomic) NSURLResponse* response;              //!< The HTTP response we got back from the server.
+@property (assign, nonatomic, getter=isExecuting) BOOL executingFlag;
+@property (assign, nonatomic, getter=isFinished) BOOL finishedFlag;
 
 @end
 
 @implementation ECDownloadOperation
-
-#pragma mark - Synthesized Properties
-
-@synthesize completion = _completion;
-@synthesize connection = _connection;
-@synthesize data = _data;
-@synthesize executing = _executing;
-@synthesize finished = _finished;
-@synthesize length = _length;
-@synthesize progress = _progress;
-@synthesize response = _response;
-@synthesize request = _request;
-@synthesize runLoop = _runLoop;
 
 #pragma mark - Object Lifecycle
 
@@ -52,7 +41,7 @@
     
     [queue addOperation:operation];
     
-    return [operation autorelease];
+    return operation;
 }
 
 //! Create a download task for the given request.
@@ -73,19 +62,6 @@
 
 //! Clean up.
 
-- (void)dealloc 
-{
-    [_completion release];
-    [_connection release];
-    [_data release];
-    [_progress release];
-    [_request release];
-    [_response release];
-    [_runLoop release];
-    
-    [super dealloc];
-}
-
 #pragma mark - NSOperation 
 
 //! Is this a concurrent operation?
@@ -105,13 +81,13 @@
 	{
 		// Must move the operation to the finished state if it is canceled.
 		[self willChangeValueForKey:@"isFinished"];
-		self.finished = YES;
+		self.finishedFlag = YES;
 		[self didChangeValueForKey:@"isFinished"];
 	}
 	else
 	{
 		[self willChangeValueForKey:@"isExecuting"];
-		self.executing = YES;
+		self.executingFlag = YES;
 		[self didChangeValueForKey:@"isExecuting"];
 
 		dispatch_async(dispatch_get_main_queue(), ^{
@@ -129,8 +105,8 @@
 	[self willChangeValueForKey:@"isFinished"];
 	[self willChangeValueForKey:@"isExecuting"];
 	
-	self.executing = NO;
-	self.finished = YES;
+	self.executingFlag = NO;
+	self.finishedFlag = YES;
 	
 	[self didChangeValueForKey:@"isExecuting"];
 	[self didChangeValueForKey:@"isFinished"];

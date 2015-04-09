@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -10,7 +10,6 @@
 static const NSTimeInterval kMinute = 60;
 static const NSTimeInterval kHour = 60 * 60;
 static const NSTimeInterval kMaxHours = 60 * 60 * 8;
-static const NSTimeInterval kDay = 60 * 60 * 24;
 
 
 const RelativeEntry kDefaultEntries[] =
@@ -127,8 +126,6 @@ const RelativeEntry kDefaultEntries[] =
 			[formatter setDateFormat: @"yyyy"];
 			result = [formatter stringFromDate:self];
 		}
-
-		[formatter release];
 	}
 	
 	return result;

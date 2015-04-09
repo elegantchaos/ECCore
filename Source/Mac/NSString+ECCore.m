@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -17,9 +17,9 @@
 
 - (NSString*)stringByEscapingEntities
 {
-	NSString* result = (NSString*)CFXMLCreateStringByEscapingEntities(NULL, (CFStringRef)self, NULL);
+	NSString* result = (__bridge_transfer NSString*)CFXMLCreateStringByEscapingEntities(NULL, (__bridge CFStringRef)self, NULL);
 	
-	return [result autorelease];
+	return result;
 }
 
 // --------------------------------------------------------------------------
@@ -28,9 +28,9 @@
 
 - (NSString*)stringByUnescapingEntities
 {
-	NSString* result = (NSString*)CFXMLCreateStringByUnescapingEntities(NULL, (CFStringRef)self, NULL);
+	NSString* result = (__bridge_transfer NSString*)CFXMLCreateStringByUnescapingEntities(NULL, (__bridge CFStringRef)self, NULL);
 	
-	return [result autorelease];
+	return result;
 }
 
 @end

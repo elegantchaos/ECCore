@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -54,7 +54,6 @@
 		[formatter setDateStyle:NSDateFormatterShortStyle];
 		[formatter setTimeStyle:NSDateFormatterShortStyle];
 		date = [formatter stringFromDate: modified];
-		[formatter release];
 	}
 
 	NSString* result = [NSString stringWithFormat: @"Version %@ (%@%@, %@)", [info objectForKey:@"CFBundleShortVersionString"], EC_CONFIGURATION_STRING_SHORT, [info objectForKey:@"CFBundleVersion"], date];

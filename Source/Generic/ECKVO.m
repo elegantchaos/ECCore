@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -19,25 +19,19 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 
 @property (copy, nonatomic) ECObserverAction action;
 @property (copy, nonatomic) NSString* path;
-@property (retain, nonatomic) NSOperationQueue* queue;
-@property (assign, nonatomic) id observed;
+@property (strong, nonatomic) NSOperationQueue* queue;
+@property (weak, nonatomic) id observed;
 
 @end
 
 @implementation ECObserver
 
+#if EC_DEBUG
 - (void)dealloc
 {
-	#if EC_DEBUG
-		[[ECKVOManager sharedInstance] removeObserver:self];
-	#endif
-	
-    [_path release];
-    [_queue release];
-    [_action release];
-    
-    [super dealloc];
+	[[ECKVOManager sharedInstance] removeObserver:self];
 }
+#endif
 
 - (void)observeValueForKeyPath:(NSString *)path ofObject:(id)object change:(NSDictionary *)change context:(void *)context 
 {
@@ -59,8 +53,6 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 			 self.action(copiedChange);
 		 }
 		 ];
-		
-		[copiedChange release];
 	}
 }
 
@@ -117,8 +109,6 @@ void* ECObserversAssociatedObjectsKey = &ECObserversAssociatedObjectsKey;
 			[[ECKVOManager sharedInstance] addObserver:observer];
 		#endif
 	}
-    
-	[observer release];
 	
     return observer;
 }

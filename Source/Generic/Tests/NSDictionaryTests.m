@@ -3,7 +3,7 @@
 //! @file:
 //! Unit tests for the NSDictionary+ECUtilitiesTests.h category.
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -32,8 +32,6 @@
 	NSNumber* doubleNumber = [[NSNumber alloc] initWithDouble: 123.456];
 	NSNumber* boolNumber = [[NSNumber alloc] initWithBool: YES];
 	mDictionary = [[NSDictionary alloc] initWithObjectsAndKeys: doubleNumber, @"double", boolNumber, @"bool", nil];
-	[doubleNumber release];
-	[boolNumber release];
 }
 
 // --------------------------------------------------------------------------
@@ -42,7 +40,6 @@
 
 - (void) tearDown
 {
-	[mDictionary release];
 	mDictionary = nil;
 }
 

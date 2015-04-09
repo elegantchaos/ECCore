@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -15,8 +15,6 @@
 @end
 
 @implementation NSFileManagerTests
-
-@synthesize fm;
 
 - (void)setUp
 {
@@ -39,7 +37,7 @@
 	// NB not sure if this will always be true, so this unit test may need changing at some point
 	NSString* path = [[self.fm URLForApplication] path];
 	ECTestAssertIntegerIsGreater([path length], 0);
-	ECTestAssertTrue([fm fileExistsAtPath:path]);
+	ECTestAssertTrue([self.fm fileExistsAtPath:path]);
 	
 	// NB not sure if this test will pass for non-English language systems
 	path = [[self.fm URLForUserDesktop] path];

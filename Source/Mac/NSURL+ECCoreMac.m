@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright (c) 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -31,9 +31,8 @@
 
 + (NSURL*)URLWithFSRef:(FSRef*)ref
 {
-    CFURLRef cfresult = CFURLCreateFromFSRef(kCFAllocatorDefault, ref);
-    NSURL* result = (NSURL*) cfresult;
-    return [result autorelease];
+    NSURL* result = (__bridge_transfer NSURL*) CFURLCreateFromFSRef(kCFAllocatorDefault, ref);
+    return result;
 }
 
 @end

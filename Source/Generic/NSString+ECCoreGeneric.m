@@ -1,7 +1,7 @@
 // --------------------------------------------------------------------------
 //
 //  Created by Sam Deane on 11/08/2010.
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -10,6 +10,23 @@
 #import "NSData+ECCore.h"
 
 @implementation NSString(ECCoreGeneric)
+
+
++ (NSDictionary*)entities
+{
+	// used for normal strings on iOS, and attributed strings on both platforms
+	
+	NSDictionary* entities = [NSDictionary dictionaryWithObjectsAndKeys:
+							  @"&", @"&amp;",
+							  @"<", @"&lt;",
+							  @">", @"&gt;",
+							  @"\"", @"&quot;",
+							  @"'", @"&apos;",
+							  @"–", @"&mdash;",
+							  nil];
+	
+	return entities;
+}
 
 + (NSString*)stringWithOrdinal:(NSInteger)ordinal
 {
@@ -48,7 +65,7 @@
 		*buffer++ = [index intValue];
 	}
 	
-	return [data autorelease];
+	return data;
 }
 
 - (NSData*) splitWordsIntoFloats
@@ -62,7 +79,7 @@
 		*buffer++ = [index floatValue];
 	}
 
-	return [data autorelease];
+	return data;
 }
 
 - (NSData*) splitWordsIntoDoubles
@@ -76,7 +93,7 @@
 		*buffer++ = [index doubleValue];
 	}
 	
-	return [data autorelease];
+	return data;
 }
 
 
@@ -96,7 +113,7 @@
 		}
 	}
 	
-	return [result autorelease];
+	return result;
 }
 
 + (NSString*)stringWithUppercaseFromWords:(NSArray*)words separator:(NSString*)separator
@@ -111,7 +128,7 @@
 	NSUInteger separatorLength = [separator length];
 	[result deleteCharactersInRange:NSMakeRange([result length] - separatorLength, separatorLength)];
 	
-	return [result autorelease];
+	return result;
 }
 
 + (NSString*)stringWithLowercaseFromWords:(NSArray*)words separator:(NSString*)separator
@@ -126,18 +143,15 @@
 	NSUInteger separatorLength = [separator length];
 	[result deleteCharactersInRange:NSMakeRange([result length] - separatorLength, separatorLength)];
 	
-	return [result autorelease];
+	return result;
 }
 
 + (NSString*)stringWithNewUUID
 {
-    // Create a new UUID
     CFUUIDRef uuidObj = CFUUIDCreate(nil);
-    
-    // Get the string representation of the UUID
-    NSString *newUUID = (NSString*)CFUUIDCreateString(nil, uuidObj);
+    NSString *newUUID = (__bridge_transfer NSString*)CFUUIDCreateString(nil, uuidObj);
     CFRelease(uuidObj);
-    return [newUUID autorelease];
+    return newUUID;
 }
 
 + (NSString*)stringByFormattingCount:(NSUInteger)count singularFormat:(NSString*)singularFormat pluralFormat:(NSString*)pluralFormat
@@ -217,6 +231,16 @@
 	NSRange range = [self rangeOfString:string];
 	
 	return range.location != NSNotFound;
+}
+
+- (NSString*)stringWithInitialCapital
+{
+	NSString* result;
+	if ([self length] < 2)
+		result = [self uppercaseString];
+	else
+		result = [[[self substringToIndex:1] uppercaseString] stringByAppendingString:[self substringFromIndex:1]];
+	return result;
 }
 
 - (NSString*)uppercaseUnderscoreStringFromMixedCase

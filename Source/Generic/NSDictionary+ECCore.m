@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------
 //
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright (c) 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -49,7 +49,7 @@
     id object = self[key];
     if (object)
     {
-        NSMutableDictionary* copy = [[self mutableCopy] autorelease];
+        NSMutableDictionary* copy = [self mutableCopy];
         [copy removeObjectForKey:key];
         return copy;
     }
@@ -148,7 +148,7 @@
         id newItem = dictionary[key];
         if (existingItem && newItem)
         {
-            if ([existingItem isMemberOfClass:[NSDictionary class]] && [newItem isMemberOfClass:[NSDictionary class]])
+            if ([existingItem isKindOfClass:[NSDictionary class]] && [newItem isKindOfClass:[NSDictionary class]])
             {
                 NSMutableDictionary* merged = [NSMutableDictionary dictionaryWithDictionary:existingItem];
                 [merged addEntriesFromDictionary:newItem];

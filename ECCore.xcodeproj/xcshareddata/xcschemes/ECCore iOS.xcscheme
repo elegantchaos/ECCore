@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0630"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "NO"
@@ -34,6 +34,20 @@
                ReferencedContainer = "container:ECCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "22FF8E3616F1E418008FC10D"
+               BuildableName = "ECUnitTests.framework"
+               BlueprintName = "ECUnitTestsIOS"
+               ReferencedContainer = "container:../ECLogging/ECLogging.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -47,7 +61,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "22C2DB7014FB9CC8005D2E89"
-               BuildableName = "ECCoreIOSTests.octest"
+               BuildableName = "ECCoreIOSTests.xctest"
                BlueprintName = "ECCoreIOSTests"
                ReferencedContainer = "container:ECCore.xcodeproj">
             </BuildableReference>
@@ -63,6 +77,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2251BA1115DBCC4A00F2FE40"
+            BuildableName = "ECLogging.framework"
+            BlueprintName = "ECLoggingIOS"
+            ReferencedContainer = "container:../ECLogging/ECLogging.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

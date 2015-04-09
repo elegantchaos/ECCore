@@ -1,7 +1,7 @@
 // --------------------------------------------------------------------------
 //
 //  Created by Sam Deane on 14/06/2012.
-//  Copyright 2013 Sam Deane, Elegant Chaos. All rights reserved.
+//  Copyright 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
@@ -22,13 +22,6 @@ typedef void (^ProgressHandler)(NSURLResponse* response, NSData* data, double pr
 
 @interface ECDownloadOperation : NSOperation<NSURLConnectionDelegate>
 
-//! Is the operation executing?
-
-@property (assign, atomic, getter=isExecuting) BOOL executing;
-
-//! Has the operation finished?
-
-@property (assign, atomic, getter=isFinished) BOOL finished;
 
 //! The run loop for the NSURLConnection to use.
 //! By default we use the main loop, which should be fine for most purposes.
