@@ -292,7 +292,7 @@
 		22351D031544487000A24099 /* NSString+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECCore.m"; sourceTree = "<group>"; };
 		22351D071544489A00A24099 /* NSString+ECCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ECCore.h"; sourceTree = "<group>"; };
 		22351D081544489A00A24099 /* NSString+ECCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ECCore.m"; sourceTree = "<group>"; };
-		22381E171A6C40C9000AD60A /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		22381E171A6C40C9000AD60A /* ECCore.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = ECCore.modulemap; sourceTree = "<group>"; };
 		223CB8A71437334D003F6D01 /* ECLaunchServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLaunchServices.h; sourceTree = "<group>"; };
 		223CB8A81437334D003F6D01 /* ECLaunchServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECLaunchServices.m; sourceTree = "<group>"; };
 		223CBAE61205C6380008A641 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -545,7 +545,7 @@
 			children = (
 				2230500016EF571C00A9F1F3 /* Mac */,
 				2260A3AC15DFEF4F0057C9DA /* Info.plist */,
-				22381E171A6C40C9000AD60A /* module.modulemap */,
+				22381E171A6C40C9000AD60A /* ECCore.modulemap */,
 				225409811354F25800DC8205 /* ios */,
 				223CBAFB1205C7680008A641 /* tests */,
 			);
