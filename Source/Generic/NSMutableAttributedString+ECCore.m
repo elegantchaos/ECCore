@@ -6,7 +6,7 @@
 
 #import "NSMutableAttributedString+ECCore.h"
 #import "NSData+ECCore.h"
-#import "NSString+ECCore.h"
+#import "NSString+ECCoreGeneric.h"
 
 @implementation NSMutableAttributedString(ECCore)
 

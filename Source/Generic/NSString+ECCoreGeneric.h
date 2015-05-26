@@ -6,8 +6,6 @@
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
 
-#import <ECLogging/NSString+ECLogging.h>
-
 @interface NSString(ECCoreGeneric)
 
 + (NSDictionary*)entities;

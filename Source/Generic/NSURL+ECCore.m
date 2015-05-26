@@ -6,7 +6,7 @@
 // --------------------------------------------------------------------------
 
 #import "NSURL+ECCore.h"
-#import "NSString+ECCore.h"
+#import "NSString+ECCoreGeneric.h"
 #import "NSData+ECCore.h"
 
 
