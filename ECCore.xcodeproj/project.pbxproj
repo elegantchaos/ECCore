@@ -244,23 +244,6 @@
 		22D55C1D14FB8A230052EA01 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F977149246CF00AAC9B0 /* NSURLTests.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2260A3C315DFF7370057C9DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2260A2E815DFD7290057C9DA;
-			remoteInfo = ECCoreMac;
-		};
-		2260A3C515DFF73F0057C9DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2260A2FC15DFD7320057C9DA;
-			remoteInfo = ECCoreIOS;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -974,7 +957,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2260A3C415DFF7370057C9DA /* PBXTargetDependency */,
 			);
 			name = ECCoreMacTests;
 			productName = libECCoreMacTests;
@@ -1010,7 +992,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2260A3C615DFF73F0057C9DA /* PBXTargetDependency */,
 			);
 			name = ECCoreIOSTests;
 			productName = ECCoreIOSTests;
@@ -1288,19 +1269,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2260A3C415DFF7370057C9DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2260A2E815DFD7290057C9DA /* ECCoreMac */;
-			targetProxy = 2260A3C315DFF7370057C9DA /* PBXContainerItemProxy */;
-		};
-		2260A3C615DFF73F0057C9DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2260A2FC15DFD7320057C9DA /* ECCoreIOS */;
-			targetProxy = 2260A3C515DFF73F0057C9DA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB91B208733DA50010E9CD /* Debug */ = {
