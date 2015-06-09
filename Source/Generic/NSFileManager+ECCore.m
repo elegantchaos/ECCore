@@ -41,7 +41,7 @@
 //! Create a directory.
 // --------------------------------------------------------------------------
 
-- (BOOL)ecCreateDirectoryAtURL:(NSURL *)url withIntermediateDirectories:(BOOL)createIntermediates attributes:(NSDictionary *)attributes error:(NSError **)error
+- (BOOL)ecCreateDirectoryAtURL:(NSURL *)url withIntermediateDirectories:(BOOL)createIntermediates attributes:(NSDictionary *)attributes error:(NSError *__autoreleasing*)error
 {
 	BOOL result = [self createDirectoryAtPath: [url path] withIntermediateDirectories: createIntermediates attributes: attributes error: error];
     if (!result && error)
