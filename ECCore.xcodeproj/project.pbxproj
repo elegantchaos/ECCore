@@ -242,6 +242,31 @@
 		22D55C1B14FB8A230052EA01 /* NSMutableAttributedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200188214917A9F002F1D1D /* NSMutableAttributedStringTests.m */; };
 		22D55C1C14FB8A230052EA01 /* NSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557713DA09FF007E89E2 /* NSStringTests.m */; };
 		22D55C1D14FB8A230052EA01 /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F977149246CF00AAC9B0 /* NSURLTests.m */; };
+		22FEF6EB1B2787F000F585ED /* CGGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E24014910560004DA13E /* CGGeometryTests.m */; };
+		22FEF6EC1B2787F000F585ED /* ECLazyPropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E18F1490BF6D004DA13E /* ECLazyPropertiesTests.m */; };
+		22FEF6ED1B2787F000F585ED /* ECRandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E2361490FAE0004DA13E /* ECRandomTests.m */; };
+		22FEF6EE1B2787F000F585ED /* ECSha1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F9741492403200AAC9B0 /* ECSha1Tests.m */; };
+		22FEF6EF1B2787F000F585ED /* NSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22177DBC14913A6800358975 /* NSArrayTests.m */; };
+		22FEF6F01B2787F000F585ED /* NSBundleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200188D1491869F002F1D1D /* NSBundleTests.m */; };
+		22FEF6F11B2787F000F585ED /* NSDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22001888149183C2002F1D1D /* NSDataTests.m */; };
+		22FEF6F21B2787F000F585ED /* NSDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557313DA09FF007E89E2 /* NSDateTests.m */; };
+		22FEF6F31B2787F000F585ED /* NSDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557513DA09FF007E89E2 /* NSDictionaryTests.m */; };
+		22FEF6F41B2787F000F585ED /* NSExceptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1E19D1490CC27004DA13E /* NSExceptionTests.m */; };
+		22FEF6F51B2787F000F585ED /* NSFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F96214921CDC00AAC9B0 /* NSFileManagerTests.m */; };
+		22FEF6F61B2787F000F585ED /* NSIndexSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F969149235DC00AAC9B0 /* NSIndexSetTests.m */; };
+		22FEF6F71B2787F000F585ED /* NSMutableAttributedStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2200188214917A9F002F1D1D /* NSMutableAttributedStringTests.m */; };
+		22FEF6F81B2787F000F585ED /* NSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA557713DA09FF007E89E2 /* NSStringTests.m */; };
+		22FEF6F91B2787F000F585ED /* NSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2206F977149246CF00AAC9B0 /* NSURLTests.m */; };
+		22FEF6FA1B2787F000F585ED /* ECLaunchServicesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91D814925F24008EF8E2 /* ECLaunchServicesTests.m */; };
+		22FEF6FB1B2787F000F585ED /* NSAppleEventDescriptorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91D914925F24008EF8E2 /* NSAppleEventDescriptorTests.m */; };
+		22FEF6FC1B2787F000F585ED /* NSAppleScriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DA14925F24008EF8E2 /* NSAppleScriptTests.m */; };
+		22FEF6FD1B2787F000F585ED /* NSGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91DE14925F24008EF8E2 /* NSGeometryTests.m */; };
+		22FEF6FE1B2787F000F585ED /* NSUserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AE91E014925F24008EF8E2 /* NSUserDefaultsTests.m */; };
+		22FEF6FF1B2787F000F585ED /* ECKVOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D56211549629600CD569D /* ECKVOTests.m */; };
+		22FEF7031B2787F000F585ED /* ECUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2260A3A315DFE6860057C9DA /* ECUnitTests.framework */; };
+		22FEF7091B2787F000F585ED /* Test.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22C2DB5D14FB9ADC005D2E89 /* Test.bundle */; };
+		22FEF7121B27880F00F585ED /* libECCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2296287117621E33008D887F /* libECCore.a */; };
+		22FEF7141B27881400F585ED /* libECLogging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FEF7131B27881400F585ED /* libECLogging.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -407,6 +432,9 @@
 		22EA2D2514ED9BFD0043ABFA /* ECSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSingleton.m; sourceTree = "<group>"; };
 		22EC40A61358A0D1005C1F1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		22FAC46C132149E900103630 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		22FEF70E1B2787F000F585ED /* ECCoreMacTestsStatic.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECCoreMacTestsStatic.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22FEF7101B27880100F585ED /* libECLogging.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libECLogging.a; path = ../ECLogging/build/Debug/libECLogging.a; sourceTree = "<group>"; };
+		22FEF7131B27881400F585ED /* libECLogging.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libECLogging.a; path = ../ECLogging/build/Debug/libECLogging.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,6 +492,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22FEF7001B2787F000F585ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22FEF7141B27881400F585ED /* libECLogging.a in Frameworks */,
+				22FEF7121B27880F00F585ED /* libECCore.a in Frameworks */,
+				22FEF7031B2787F000F585ED /* ECUnitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -475,6 +513,7 @@
 				2260A2E915DFD7290057C9DA /* ECCore.framework */,
 				2260A2FD15DFD7320057C9DA /* ECCore.framework */,
 				2296287117621E33008D887F /* libECCore.a */,
+				22FEF70E1B2787F000F585ED /* ECCoreMacTestsStatic.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -495,6 +534,8 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22FEF7131B27881400F585ED /* libECLogging.a */,
+				22FEF7101B27880100F585ED /* libECLogging.a */,
 				22C8B760182CE57A003EA301 /* XCTest.framework */,
 				2260A3A315DFE6860057C9DA /* ECUnitTests.framework */,
 				2260A39D15DFE2F00057C9DA /* IOKit.framework */,
@@ -998,6 +1039,24 @@
 			productReference = 22C2DB7114FB9CC8005D2E89 /* ECCoreIOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		22FEF6E91B2787F000F585ED /* ECCoreMacTestsStatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22FEF70B1B2787F000F585ED /* Build configuration list for PBXNativeTarget "ECCoreMacTestsStatic" */;
+			buildPhases = (
+				22FEF6EA1B2787F000F585ED /* Sources */,
+				22FEF7001B2787F000F585ED /* Frameworks */,
+				22FEF7081B2787F000F585ED /* Resources */,
+				22FEF70A1B2787F000F585ED /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ECCoreMacTestsStatic;
+			productName = libECCoreMacTests;
+			productReference = 22FEF70E1B2787F000F585ED /* ECCoreMacTestsStatic.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1025,9 +1084,10 @@
 			projectRoot = "";
 			targets = (
 				2260A2E815DFD7290057C9DA /* ECCoreMac */,
-				2296287017621E33008D887F /* ECCoreMacStatic */,
-				2260A2FC15DFD7320057C9DA /* ECCoreIOS */,
 				2283A3F414F52EC0009142F7 /* ECCoreMacTests */,
+				2296287017621E33008D887F /* ECCoreMacStatic */,
+				22FEF6E91B2787F000F585ED /* ECCoreMacTestsStatic */,
+				2260A2FC15DFD7320057C9DA /* ECCoreIOS */,
 				22C2DB7014FB9CC8005D2E89 /* ECCoreIOSTests */,
 			);
 		};
@@ -1065,6 +1125,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22FEF7081B2787F000F585ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22FEF7091B2787F000F585ED /* Test.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1095,6 +1163,19 @@
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 		22C2DB6F14FB9CC8005D2E89 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		22FEF70A1B2787F000F585ED /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1268,6 +1349,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22FEF6EA1B2787F000F585ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22FEF6EB1B2787F000F585ED /* CGGeometryTests.m in Sources */,
+				22FEF6EC1B2787F000F585ED /* ECLazyPropertiesTests.m in Sources */,
+				22FEF6ED1B2787F000F585ED /* ECRandomTests.m in Sources */,
+				22FEF6EE1B2787F000F585ED /* ECSha1Tests.m in Sources */,
+				22FEF6EF1B2787F000F585ED /* NSArrayTests.m in Sources */,
+				22FEF6F01B2787F000F585ED /* NSBundleTests.m in Sources */,
+				22FEF6F11B2787F000F585ED /* NSDataTests.m in Sources */,
+				22FEF6F21B2787F000F585ED /* NSDateTests.m in Sources */,
+				22FEF6F31B2787F000F585ED /* NSDictionaryTests.m in Sources */,
+				22FEF6F41B2787F000F585ED /* NSExceptionTests.m in Sources */,
+				22FEF6F51B2787F000F585ED /* NSFileManagerTests.m in Sources */,
+				22FEF6F61B2787F000F585ED /* NSIndexSetTests.m in Sources */,
+				22FEF6F71B2787F000F585ED /* NSMutableAttributedStringTests.m in Sources */,
+				22FEF6F81B2787F000F585ED /* NSStringTests.m in Sources */,
+				22FEF6F91B2787F000F585ED /* NSURLTests.m in Sources */,
+				22FEF6FA1B2787F000F585ED /* ECLaunchServicesTests.m in Sources */,
+				22FEF6FB1B2787F000F585ED /* NSAppleEventDescriptorTests.m in Sources */,
+				22FEF6FC1B2787F000F585ED /* NSAppleScriptTests.m in Sources */,
+				22FEF6FD1B2787F000F585ED /* NSGeometryTests.m in Sources */,
+				22FEF6FE1B2787F000F585ED /* NSUserDefaultsTests.m in Sources */,
+				22FEF6FF1B2787F000F585ED /* ECKVOTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -1367,6 +1476,24 @@
 			};
 			name = Release;
 		};
+		22FEF70C1B2787F000F585ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2260A31215DFD96D0057C9DA /* MacUnitTestDebug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "ECCoreMacTests copy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		22FEF70D1B2787F000F585ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2260A31315DFD96D0057C9DA /* MacUnitTestRelease.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "ECCoreMacTests copy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1420,6 +1547,15 @@
 			buildConfigurations = (
 				22C2DB8714FB9CC8005D2E89 /* Debug */,
 				22C2DB8814FB9CC8005D2E89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		22FEF70B1B2787F000F585ED /* Build configuration list for PBXNativeTarget "ECCoreMacTestsStatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22FEF70C1B2787F000F585ED /* Debug */,
+				22FEF70D1B2787F000F585ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
