@@ -14,7 +14,7 @@
 //! Return the name of the application, in a format appropriate for display in an about box.
 // --------------------------------------------------------------------------
 
-- (NSString*) aboutName;
+- (NSString*) aboutName
 {
 	NSBundle* bundle = [NSBundle mainBundle];
 	NSDictionary* info = [bundle infoDictionary];
@@ -27,7 +27,7 @@
 //! Return the copyright string of the application, in a format appropriate for display in an about box.
 // --------------------------------------------------------------------------
 
-- (NSString*) aboutCopyright;
+- (NSString*) aboutCopyright
 {
 	NSBundle* bundle = [NSBundle mainBundle];
 	NSDictionary* info = [bundle infoDictionary];
@@ -40,7 +40,7 @@
 //! Return the version of the application, in a format appropriate for display in an about box.
 // --------------------------------------------------------------------------
 
-- (NSString*) aboutVersion;
+- (NSString*) aboutVersion
 {
 	NSString* date = nil;
 	NSFileManager* fm = [NSFileManager defaultManager];
@@ -65,7 +65,7 @@
 //! Return the short version of the application, in a format appropriate for display in an small label.
 // --------------------------------------------------------------------------
 
-- (NSString*) aboutShortVersion;
+- (NSString*) aboutShortVersion
 {
 	NSBundle* bundle = [NSBundle mainBundle];
 	NSDictionary* info = [bundle infoDictionary];
