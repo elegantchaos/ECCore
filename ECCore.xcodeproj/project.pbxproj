@@ -1023,7 +1023,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Elegant Chaos";
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "ECCore" */;
@@ -1306,6 +1306,8 @@
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -1319,8 +1321,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2260A31015DFD96D0057C9DA /* MacDebug.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PREFIX_HEADER = "Source/Prefix/$(PRODUCT_NAME)$(CONFIGURATION).pch";
 			};
 			name = Debug;
 		};
@@ -1328,8 +1328,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2260A31115DFD96D0057C9DA /* MacRelease.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PREFIX_HEADER = "Source/Prefix/$(PRODUCT_NAME)$(CONFIGURATION).pch";
 			};
 			name = Release;
 		};
@@ -1351,12 +1349,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2260A31215DFD96D0057C9DA /* MacUnitTestDebug.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				OTHER_LDFLAGS = "-ObjC";
 			};
 			name = Debug;
 		};
@@ -1364,12 +1356,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2260A31315DFD96D0057C9DA /* MacUnitTestRelease.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				OTHER_LDFLAGS = "-ObjC";
 			};
 			name = Release;
 		};
@@ -1396,6 +1382,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elegantchaos.frameworks.eccore;
 			};
 			name = Debug;
 		};
@@ -1408,6 +1395,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elegantchaos.frameworks.eccore;
 			};
 			name = Release;
 		};
