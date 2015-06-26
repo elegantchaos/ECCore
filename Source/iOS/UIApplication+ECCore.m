@@ -84,7 +84,7 @@
     return [UIAlertView instancesRespondToSelector:@selector(alertViewStyle)];
 }
 
-+ (BOOL)isIS8OrLater
++ (BOOL)isIOS8OrLater
 {
 	return [NSString instancesRespondToSelector:@selector(localizedCaseInsensitiveContainsString:)];
 }
