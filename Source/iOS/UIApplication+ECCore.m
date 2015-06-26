@@ -84,6 +84,11 @@
     return [UIAlertView instancesRespondToSelector:@selector(alertViewStyle)];
 }
 
++ (BOOL)isIOS6OrLater
+{
+	return NSClassFromString(@"UIActivityViewController") != nil;
+}
+
 + (BOOL)isIOS8OrLater
 {
 	return [NSString instancesRespondToSelector:@selector(localizedCaseInsensitiveContainsString:)];
