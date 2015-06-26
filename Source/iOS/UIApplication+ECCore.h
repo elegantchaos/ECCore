@@ -13,6 +13,7 @@
 - (NSString*) aboutShortVersion;
 
 + (BOOL)isIOS5OrLater;
++ (BOOL)isIS8OrLater;
 
 - (void)networkOperationStarted;
 - (void)networkOperationEnded;

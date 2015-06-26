@@ -84,6 +84,11 @@
     return [UIAlertView instancesRespondToSelector:@selector(alertViewStyle)];
 }
 
++ (BOOL)isIS8OrLater
+{
+	return [NSString instancesRespondToSelector:@selector(localizedCaseInsensitiveContainsString:)];
+}
+
 static NSUInteger gNetworkOperationCount;
 
 - (void)networkOperationStarted
