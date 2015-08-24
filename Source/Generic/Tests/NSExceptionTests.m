@@ -17,18 +17,21 @@
 
 @implementation NSExceptionTests
 
-
+- (void)anotherLevel
+{
+	@throw [NSException exceptionWithName:@"name" reason:@"reason" userInfo:nil];
+}
 - (void) testCallstack
 {
 	@try 
 	{
-		@throw [NSException exceptionWithName:@"name" reason:@"reason" userInfo:nil];
+		[self anotherLevel];
 	}
 	@catch (NSException *exception) 
 	{
 		NSString* stack = [exception stringFromCallstack];
 		ECTestLog(@"%@", stack);
-		ECTestAssertStringBeginsWith(stack, @"-[NSExceptionTests testCallstack]");
+		ECTestAssertStringBeginsWith(stack, @"-[NSExceptionTests anotherLevel]");
 		ECTestAssertStringContains(stack, @"-[NSInvocation invoke]");
 	}
 }

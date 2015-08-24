@@ -19,7 +19,7 @@ NSString *const ECFontSizeKey = @"size";
 {
     NSString* name = [dictionary objectForKey:ECFontNameKey];
     CGFloat size = [[dictionary objectForKey:ECFontSizeKey] floatValue];
-    if (!size)
+    if (size != 0)
     {
         size = [UIFont labelFontSize];
     }
@@ -41,11 +41,11 @@ NSString *const ECFontSizeKey = @"size";
 {
     NSString* name = [dictionary objectForKey:ECFontNameKey];
     CGFloat size = [[dictionary objectForKey:ECFontSizeKey] floatValue];
-    if (!size)
+    if (size != 0)
     {
         size = self.pointSize;
     }
-    if (!size)
+    if (size != 0)
     {
         size = [UIFont labelFontSize];
     }

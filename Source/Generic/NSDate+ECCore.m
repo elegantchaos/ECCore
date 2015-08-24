@@ -80,7 +80,7 @@ const RelativeEntry kDefaultEntries[] =
 //! caller can use some other kind of description.
 // --------------------------------------------------------------------------
 
-- (NSString*) formattedRelative;
+- (NSString*) formattedRelative
 {
 	NSTimeInterval interval = -[self timeIntervalSinceNow];
 	return [NSDate formattedRelativeToInterval:interval entries:kDefaultEntries];
@@ -92,7 +92,7 @@ const RelativeEntry kDefaultEntries[] =
 //! If it gets even larger we use the actual month, or the actual year.
 // --------------------------------------------------------------------------
 
-- (NSString*) formattedRelativeWithDayTo: (NSDate*) date;
+- (NSString*) formattedRelativeWithDayTo: (NSDate*) date
 {
 	NSString* result = [self formattedRelativeTo: date];
 	if (result == nil)
@@ -137,7 +137,7 @@ const RelativeEntry kDefaultEntries[] =
 //! If it gets even larger we use the actual month, or the actual year.
 // --------------------------------------------------------------------------
 
-- (NSString*) formattedRelativeWithDay;
+- (NSString*) formattedRelativeWithDay
 {
 	return [self formattedRelativeWithDayTo: nil];
 }

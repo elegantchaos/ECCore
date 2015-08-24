@@ -28,10 +28,13 @@
         // result as compact as possible
         NSArray* symbols = [self callStackSymbols];
         NSMutableString* string = [[NSMutableString alloc] init];
-        NSInteger numberToSkip = 2; // skip the top couple of routines which are always __exceptionPreprocess and objc_exception_throw
+        BOOL skip = YES; // skip the top couple of routines which are always __exceptionPreprocess and objc_exception_throw
         for (NSString* symbol in symbols) 
         {
-            if (--numberToSkip < 0) 
+			if (skip)
+				skip = [symbol containsString:@"__exceptionPreprocess"] || [symbol containsString:@"objc_exception_throw"];
+			
+            if (!skip)
             {
                 NSArray *matches = [regex matchesInString:symbol options:0 range:NSMakeRange(0, [symbol length])];
                 if ([matches count] > 0)

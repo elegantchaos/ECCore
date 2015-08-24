@@ -7,6 +7,6 @@
 /// Standard xcconfig files.
 /// The use of a relative path here relies on ECLogging being in a known location. See <ImportNote> in the documentation for more details.
 
-#include "../ECLogging/Source/Configuration/ECMacRelease.xcconfig"
-#include "../ECLogging/Source/Configuration/ECStaticLibrary.xcconfig"
+#include "../../../ECLogging/Source/Configuration/ECMacRelease.xcconfig"
+#include "../../../ECLogging/Source/Configuration/ECStaticLibrary.xcconfig"
 #include "Shared.xcconfig"

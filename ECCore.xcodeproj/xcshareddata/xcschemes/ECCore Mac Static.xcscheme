@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2251B9FE15DBCC3E00F2FE40"
-               BuildableName = "ECLogging.framework"
-               BlueprintName = "ECLoggingMac"
+               BlueprintIdentifier = "228CF1E817562478003E1D25"
+               BuildableName = "libECLogging.a"
+               BlueprintName = "ECLoggingMacStatic"
                ReferencedContainer = "container:../ECLogging/ECLogging.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2260A2E815DFD7290057C9DA"
-               BuildableName = "ECCore.framework"
-               BlueprintName = "ECCoreMac"
+               BlueprintIdentifier = "2296287017621E33008D887F"
+               BuildableName = "libECCore.a"
+               BlueprintName = "ECCoreMacStatic"
                ReferencedContainer = "container:ECCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,10 +56,10 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2283A3F414F52EC0009142F7"
-               BuildableName = "ECCoreMacTests.xctest"
-               BlueprintName = "ECCoreMacTests"
-               ReferencedContainer = "container:ECCore.xcodeproj">
+               BlueprintIdentifier = "226889D81AEE4B49005510E5"
+               BuildableName = "ECLoggingMacTestsStatic.xctest"
+               BlueprintName = "ECLoggingMacTestsStatic"
+               ReferencedContainer = "container:../ECLogging/ECLogging.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -75,9 +75,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2283A3F414F52EC0009142F7"
-               BuildableName = "ECCoreMacTests.xctest"
-               BlueprintName = "ECCoreMacTests"
+               BlueprintIdentifier = "22FEF6E91B2787F000F585ED"
+               BuildableName = "ECCoreMacTestsStatic.xctest"
+               BlueprintName = "ECCoreMacTestsStatic"
                ReferencedContainer = "container:ECCore.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -85,9 +85,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "225EC67111EBAA4800A97AEA"
-               BuildableName = "ECLoggingMacTests.xctest"
-               BlueprintName = "ECLoggingMacTests"
+               BlueprintIdentifier = "226889D81AEE4B49005510E5"
+               BuildableName = "ECLoggingMacTestsStatic.xctest"
+               BlueprintName = "ECLoggingMacTestsStatic"
                ReferencedContainer = "container:../ECLogging/ECLogging.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -95,9 +95,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2260A2E815DFD7290057C9DA"
-            BuildableName = "ECCore.framework"
-            BlueprintName = "ECCoreMac"
+            BlueprintIdentifier = "2296287017621E33008D887F"
+            BuildableName = "libECCore.a"
+            BlueprintName = "ECCoreMacStatic"
             ReferencedContainer = "container:ECCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -112,14 +112,15 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      enableAddressSanitizer = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2260A2E815DFD7290057C9DA"
-            BuildableName = "ECCore.framework"
-            BlueprintName = "ECCoreMac"
+            BlueprintIdentifier = "2296287017621E33008D887F"
+            BuildableName = "libECCore.a"
+            BlueprintName = "ECCoreMacStatic"
             ReferencedContainer = "container:ECCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -135,9 +136,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2260A2E815DFD7290057C9DA"
-            BuildableName = "ECCore.framework"
-            BlueprintName = "ECCoreMac"
+            BlueprintIdentifier = "2296287017621E33008D887F"
+            BuildableName = "libECCore.a"
+            BlueprintName = "ECCoreMacStatic"
             ReferencedContainer = "container:ECCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
