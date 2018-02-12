@@ -1093,7 +1093,7 @@
 			name = ECCoreMacTests;
 			productName = libECCoreMacTests;
 			productReference = 2283A3F514F52EC0009142F7 /* ECCoreMacTests.xctest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2296287017621E33008D887F /* ECCoreMacStatic */ = {
 			isa = PBXNativeTarget;
@@ -1129,7 +1129,7 @@
 			name = ECCoreIOSTests;
 			productName = ECCoreIOSTests;
 			productReference = 22C2DB7114FB9CC8005D2E89 /* ECCoreIOSTests.xctest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -1137,6 +1137,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Elegant Chaos";
 			};

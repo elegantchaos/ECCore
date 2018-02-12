@@ -10,6 +10,8 @@
 
 @interface NSString(ECCoreGeneric)
 
++ (NSDictionary*)entities;
+
 - (BOOL)containsString:(NSString*)string;
 - (BOOL)beginsWithString:(NSString*)string;
 - (BOOL)endsWithString:(NSString*)string;

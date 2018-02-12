@@ -11,6 +11,20 @@
 
 @implementation NSString(ECCoreGeneric)
 
++ (NSDictionary*)entities
+{
+	NSDictionary* entities = [NSDictionary dictionaryWithObjectsAndKeys:
+							  @"&", @"&amp;",
+							  @"<", @"&lt;",
+							  @">", @"&gt;",
+							  @"\"", @"&quot;",
+							  @"'", @"&apos;",
+							  @"–", @"&mdash;",
+							  nil];
+	
+	return entities;
+}
+
 + (NSString*)stringWithOrdinal:(NSInteger)ordinal
 {
     NSString* suffix;
